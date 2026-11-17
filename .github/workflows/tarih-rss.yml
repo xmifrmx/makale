@@ -3,14 +3,14 @@ name: Günlük Tarihte Bugün RSS
 on:
   schedule:
     - cron: "17 3 * * *"    # 06:17 (TSİ) – ana çalışma
-    - cron: "47 11 * * *"   # 14:47 (TSİ) – yeniden deneme; bugünün makaleleri tamamsa hiçbir şey üretmez
+    - cron: "47 11 * * *"   # 14:47 (TSİ) – sabah alınanları denetler; yalnızca eksikleri ekler/tamamlar, tamamsa hiçbir şey değişmez
   workflow_dispatch:
     inputs:
       date:
         description: "YYYY-MM-DD (boş = Türkiye saatiyle bugün)"
         required: false
       count:
-        description: "Makale sayısı (boş = 3)"
+        description: "Günlük makale üst sınırı (boş = sınırsız: güne ait tüm uygun içerik)"
         required: false
 
 permissions:
@@ -24,9 +24,12 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 60
     env:
       SITE_URL: https://xmifrmx.github.io/makale/
+      WIKI_CONTACT: https://github.com/xmifrmx/makale
+      ARTICLES_PER_DAY: "0"      # 0 = sınırsız
+      MAX_BODY_CHARS: "0"        # 0 = karakter sınırı yok, maddenin tamamı
       PYTHONUTF8: "1"
     steps:
       - uses: actions/checkout@v4
