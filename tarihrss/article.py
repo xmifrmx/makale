@@ -1,0 +1,237 @@
+"""Seçilen adaydan Blogger uyumlu (H1'siz) tam makale HTML'i üretir.
+
+Makale yalnızca Vikipedi'den alınan bilgilere dayanır; uydurma bilgi eklenmez.
+Veri yetersizse ilgili bölüm atlanır (boş/dolgu bölüm üretilmez).
+"""
+from __future__ import annotations
+import hashlib
+import html
+import re
+import urllib.parse
+from datetime import datetime, timezone
+
+from . import config, wiki
+from .sources import _LINK, strip_markup
+from .textutil import (century_label, clean_name, date_phrase, first_sentences, make_title, norm_space,
+                       sentences, slugify, tr_lower, word_cut, year_label)
+
+def esc(s, quote=False):
+    return html.escape(s, quote=quote)
+
+SKIP_SECTIONS = re.compile(
+    r"kaynakça|dış bağlantı|ayrıca bak|^notlar|dipnot|konuyla ilgili|kaynaklar|bibliyografya|galeri|"
+    r"ilgili yayın|referans|dış kaynak|önemli kaynak|bağlantılar", re.I)
+BG_KEYS = re.compile(r"tarihçe|tarihi|arka plan|köken|öncesi|geçmiş|nedenleri|erken|çocukluk|gençlik|ilk yıl|hayatı|yaşamı|kuruluş", re.I)
+IMPACT_KEYS = re.compile(r"etki|sonuç|miras|sonras|değerlendirme|önemi|eleştiri|anma|anısı|ödül|günümüz|kültürel|popüler|bugün", re.I)
+
+
+def wiki_url(lang, title):
+    return f"https://{lang}.wikipedia.org/wiki/" + urllib.parse.quote(title.replace(" ", "_"), safe="()_,:'")
+
+
+def split_sections(text):
+    lead, sections, cur, skipping = [], [], None, False
+    for line in (text or "").splitlines():
+        s = line.strip()
+        m = re.match(r"^(={2,6})\s*(.+?)\s*\1$", s)
+        if m:
+            level, title = len(m.group(1)), m.group(2).strip()
+            if level == 2:
+                skipping = bool(SKIP_SECTIONS.search(title))
+            cur = {"title": title, "level": level, "paras": [], "skip": skipping or bool(SKIP_SECTIONS.search(title))}
+            sections.append(cur)
+            continue
+        if len(s) >= 25:
+            (cur["paras"] if cur else lead).append(norm_space(s))
+    return lead, [s for s in sections if s["paras"] and not s["skip"]]
+
+
+class Budget:
+    """limit <= 0 ise sınırsız: maddenin tüm paragrafları alınır."""
+
+    def __init__(self, limit):
+        self.left = limit if limit > 0 else None
+
+    def take(self, paras, n=None):
+        out = []
+        for p in (paras if n is None else paras[:n]):
+            if self.left is not None:
+                if self.left <= 0:
+                    break
+                p = p if len(p) <= self.left else word_cut(p, max(self.left, 200), ellipsis=True)
+                self.left -= len(p)
+            out.append(p)
+        return out
+
+
+def paras_html(paras):
+    return "".join(f"<p>{esc(p)}</p>\n" for p in paras)
+
+
+def blocks_html(blocks):
+    return "".join(f"<h3>{esc(t)}</h3>\n{paras_html(ps)}" for t, ps in blocks)
+
+
+def _first_sentence(text, limit=220):
+    s = sentences(norm_space(text))
+    return word_cut(s[0], limit, ellipsis=True) if s else ""
+
+
+def _related_titles(api, title, cand):
+    titles = [t for t in cand["links"] if cand["lang"] == "tr"]
+    try:
+        wt = wiki.get_wikitext(api, "tr", title) or ""
+    except wiki.WikiError:
+        wt = ""
+    for m in _LINK.finditer(wt[:7000]):
+        t = m.group(1).strip()
+        if ":" not in t and not re.fullmatch(r"\d{1,4}", t):
+            titles.append(t)
+    seen, out = {tr_lower(title)}, []
+    for t in titles:
+        if tr_lower(t) not in seen:
+            seen.add(tr_lower(t))
+            out.append(t)
+    return out[:30]
+
+
+def build_article(api, ev, day, now_utc, log=print):
+    """-> (kayıt sözlüğü, içerik HTML) ya da yetersiz içerikte None."""
+    c, title, info = ev["cand"], ev["title"], ev["info"]
+    kind, year = c["kind"], c["year"]
+    name = clean_name(title)
+    full = wiki.full_extract(api, "tr", title) or info.get("extract", "")
+    lead, sections = split_sections(full)
+    if not lead:
+        lead = [norm_space(p) for p in (info.get("extract") or "").splitlines() if len(p.strip()) >= 40]
+    total = sum(len(p) for p in lead) + sum(len(p) for s in sections for p in s["paras"])
+    if total < config.MIN_TOTAL_CHARS:
+        log(f"  atlandı (metin kısa: {total}): {title}")
+        return None
+
+    when = date_phrase(c["day"], c["month"], year)
+    event_sentence = c["text"].rstrip(" .") + "." if (kind == "olay" and c["lang"] == "tr") else ""
+    page_title = make_title(kind, year, title, c["text"] if event_sentence else "", ev["event_like"])
+
+    # --- kısa özet ---
+    if kind == "dogum":
+        s1 = f"{name}, {when} tarihinde dünyaya geldi."
+    elif kind == "olum":
+        s1 = f"{name}, {when} tarihinde hayatını kaybetti."
+    elif event_sentence:
+        s1 = f"Tarihte bugün, {when}: {event_sentence}"
+    else:
+        s1 = ""
+    summary_text = first_sentences(lead[0], 380)
+    summary = (f"<p>{esc(s1)}</p>\n" if s1 else "") + f"<p>{esc(summary_text)}</p>\n"
+
+    # --- bölümlerin dağıtımı ---
+    budget = Budget(config.MAX_BODY_CHARS)
+    bg_blocks, dev_blocks, impact_blocks = [], [], []
+    bg_paras = budget.take(lead[1:])                 # girişin tamamı (ilk paragraf özette de geçer)
+    parent_bucket = dev_blocks
+    for s in sections:
+        if s["level"] <= 2:
+            parent_bucket = (impact_blocks if IMPACT_KEYS.search(s["title"])
+                             else bg_blocks if BG_KEYS.search(s["title"]) else dev_blocks)
+        ps = budget.take(s["paras"])
+        if ps:
+            parent_bucket.append((s["title"], ps))
+    dev_intro = []
+
+    # --- önemli kişiler ---
+    people_items = []
+    try:
+        related = wiki.people_info(api, "tr", _related_titles(api, title, c))
+    except wiki.WikiError:
+        related = []
+    if kind in ("dogum", "olum"):
+        people_items.append((title, _first_sentence(info.get("extract", ""))))
+    for p in related[:5 if kind == "olay" else 4]:
+        people_items.append((p["title"], _first_sentence(p["intro"])))
+
+    # --- görsel ---
+    img = ev["image"]
+    cover_credit = {}
+    if img:
+        cover_credit = wiki.image_credit(api, "tr", img["name"]) if img.get("name") else {}
+        src, w, h = img["url"], img.get("width") or 1280, img.get("height") or 720
+    else:
+        src, w, h = f"{config.SITE_URL}/{config.DEFAULT_COVER}", 1280, 720
+    alt = f"{name} ile ilgili tarihî görsel ({year_label(year)})" if kind == "olay" else f"{name} ile ilgili görsel"
+    if img:
+        bits = ["Görsel: Vikipedi / Wikimedia Commons"]
+        if cover_credit.get("artist"):
+            bits.append(cover_credit["artist"])
+        if cover_credit.get("license"):
+            bits.append(cover_credit["license"])
+        cap_inner = esc(" – ".join(bits))
+        if cover_credit.get("page"):
+            cap_inner = f'<a href="{esc(cover_credit["page"], True)}" rel="noopener">{cap_inner}</a>'
+    else:
+        cap_inner = "Konuyla ilgili özgün görsel bulunamadı; varsayılan kapak kullanıldı."
+    cover = (f'<div class="separator" style="clear: both; text-align: center;">'
+             f'<img alt="{esc(alt, quote=True)}" border="0" height="{h}" src="{esc(src, quote=True)}" '
+             f'style="max-width: 100%; height: auto;" width="{w}" /></div>\n'
+             f'<p style="text-align: center; font-size: 85%;"><em>{cap_inner}</em></p>\n')
+
+    # --- gövde ---
+    h2_dev = "Olayın Gelişimi" if kind == "olay" else "Hayatı ve Öne Çıkan Gelişmeler"
+    h2_people = "Önemli Kişiler" if kind == "olay" else "Önemli Kişiler ve Çevresi"
+    parts = [cover, "<h2>Kısa Özet</h2>\n", summary]
+    if bg_paras or bg_blocks:
+        parts += ["<h2>Tarihî Arka Plan</h2>\n", paras_html(bg_paras), blocks_html(bg_blocks)]
+    if dev_intro or dev_blocks:
+        parts += [f"<h2>{h2_dev}</h2>\n", paras_html(dev_intro), blocks_html(dev_blocks)]
+    if people_items:
+        lis = "".join(f"<li><strong>{esc(t)}</strong>{' – ' + esc(d) if d else ''}</li>\n" for t, d in people_items)
+        parts += [f"<h2>{h2_people}</h2>\n<ul>\n{lis}</ul>\n"]
+    if impact_blocks:
+        parts += ["<h2>Dünya Tarihindeki Etkileri</h2>\n", blocks_html(impact_blocks)]
+
+    variant = int(hashlib.sha1(title.encode("utf-8")).hexdigest(), 16) % 3
+    topic_txt = esc(name)
+    conclusions = {
+        "olay": [f"{topic_txt}, {esc(when)} tarihiyle anılan ve Vikipedi kaynaklarında ayrıntılı biçimde ele alınan bir tarihî başlıktır. Yukarıdaki özet genel çerçeveyi sunar; kesin ve doğrulanmış ayrıntılar için aşağıdaki kaynaklara başvurulması önerilir.",
+                 f"Tarihte bugün hatırlanan bu gelişme, {esc(when)} tarihinden itibaren dönemin siyasi ve toplumsal hafızasında yer edinmiştir. Konuyu daha derinlemesine incelemek isteyenler için ilgili kaynaklar aşağıda listelenmiştir.",
+                 f"{topic_txt} konusu, tarihî olayların bugünle bağını anlamak açısından incelemeye değerdir. Bu yazı Vikipedi içeriğine dayanır; tarih, isim ve rakamları birincil kaynaklarla karşılaştırmak iyi bir uygulamadır."],
+        "kisi": [f"{topic_txt}, tarih yazımında ve kültürel hafızada adı anılan isimlerden biridir. Yukarıdaki bilgiler Vikipedi'ye dayanır; ayrıntılar ve doğrulama için kaynak bağlantılarına göz atılabilir.",
+                 f"{when} tarihiyle ilişkilendirilen {topic_txt}, yaşamı ve çalışmalarıyla incelenmeye değer bir isimdir. Kesin bilgiler için aşağıdaki kaynaklar esas alınmalıdır.",
+                 f"{topic_txt} hakkındaki bu derleme, konuya giriş niteliğindedir. Daha geniş bir değerlendirme için ilgili Vikipedi maddesi ve kaynakçası incelenebilir."],
+    }["olay" if kind == "olay" else "kisi"]
+    parts += ["<h2>Sonuç</h2>\n", f"<p>{conclusions[variant]}</p>\n"]
+
+    src_items = [f'<li><a href="{esc(wiki_url("tr", title), True)}" rel="noopener">{esc(title)} – Vikipedi</a></li>']
+    for lang, label in (("tr", "Türkçe"), ("en", "İngilizce")):
+        dt = wiki.date_page_title(lang, c["month"], c["day"])
+        src_items.append(f'<li><a href="{esc(wiki_url(lang, dt), True)}" rel="noopener">{esc(dt)} – {label} Vikipedi gün sayfası</a></li>')
+    if cover_credit.get("page"):
+        src_items.append(f'<li><a href="{esc(cover_credit["page"], True)}" rel="noopener">Kapak görseli – Wikimedia Commons</a></li>')
+    parts += ["<h2>Kaynaklar</h2>\n<ul>\n" + "\n".join(src_items) + "\n</ul>\n",
+              '<p><small>Metin, Vikipedi içeriğinden derlenmiştir ve <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.tr" '
+              'rel="noopener">CC BY-SA 4.0</a> lisansı kapsamındadır. Tarih bilgileri Vikipedi gün sayfalarından alınmıştır.</small></p>\n']
+    body = "".join(parts)
+    assert "<h1" not in body.lower()
+
+    # --- meta açıklama (<=155, mümkünse cümle sınırında) ---
+    sent1 = (sentences(summary_text) or [summary_text])[0]
+    options = [f"{s1} {sent1}".strip(), s1, sent1]
+    meta = next((norm_space(o) for o in options if o and len(norm_space(o)) <= 155), None) \
+        or word_cut(norm_space(options[0] or options[2]), 155, ellipsis=True)
+
+    day_iso = day.isoformat()
+    slug = f"{day_iso}-{slugify(name if kind != 'olay' else (c['text'] if event_sentence else name), 48)}"
+    guid_src = f"{c['id']}|{title}"
+    rec = {
+        "id": "tarih-" + hashlib.sha1(guid_src.encode("utf-8")).hexdigest()[:20],
+        "slug": slug, "title": page_title, "description": meta,
+        "pub": now_utc.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "date": day_iso, "kind": kind, "year": year, "topic_title": title,
+        "topic_key": "tr:" + tr_lower(title.strip()), "event_id": c["id"], "wiki_url": wiki_url("tr", title),
+        "image": {"url": src, "width": w, "height": h, "alt": alt, "fallback": not bool(img)},
+        "categories": [{"olay": "Olay", "dogum": "Doğum", "olum": "Ölüm"}[kind], name, century_label(year),
+                       "Tarihte Bugün", ev["topic"].capitalize()],
+        "content_file": f"data/content/{slug}.html",
+        "link": f"{config.SITE_URL}/makale/{slug}.html",
+    }
+    return rec, body

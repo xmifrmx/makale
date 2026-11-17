@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3b2a1a"/><stop offset="1" stop-color="#8a6b3f"/></linearGradient></defs>
+  <rect width="1280" height="720" fill="url(#g)"/>
+  <circle cx="640" cy="300" r="120" fill="none" stroke="#f3e3c3" stroke-width="10"/>
+  <path d="M640 300 L640 220 M640 300 L700 330" stroke="#f3e3c3" stroke-width="10" stroke-linecap="round"/>
+  <text x="640" y="520" font-family="Georgia, serif" font-size="72" fill="#f3e3c3" text-anchor="middle">Tarihte Bugün</text>
+  <text x="640" y="590" font-family="Georgia, serif" font-size="34" fill="#e7d3a9" text-anchor="middle">Dünya Tarihi</text>
+</svg>
