@@ -26,7 +26,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     env:
-      SITE_URL: https://umutevicom-commits.github.io/tarih
+      SITE_URL: https://xmifrmx.github.io/makale/
       PYTHONUTF8: "1"
     steps:
       - uses: actions/checkout@v4
