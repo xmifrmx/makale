@@ -6,6 +6,25 @@
    "slug": "2026-11-18-louis-daguerre",
    "title": "Louis Daguerre Kimdir? Hayatı, Eserleri ve Tarihteki Yeri",
    "description": "Louis Daguerre, 18 Kasım 1787 tarihinde dünyaya geldi.",
+   "v": 2,
+   "rev": 38097840,
+   "gaps": [],
+   "complete": true,
+   "chars": 1936,
+   "src": {
+    "cand": {
+     "id": "a36079242a932f03",
+     "lang": "en",
+     "kind": "dogum",
+     "year": 1787,
+     "text": "Louis Daguerre, French artist, photographer and inventor (died 1851)",
+     "links": [
+      "Louis Daguerre"
+     ],
+     "month": 11,
+     "day": 18
+    }
+   },
    "pub": "2026-11-17T22:27:51Z",
    "date": "2026-11-18",
    "kind": "dogum",
@@ -29,13 +48,36 @@
     "Bilim"
    ],
    "content_file": "data/content/2026-11-18-louis-daguerre.html",
-   "link": "https://umutevicom-commits.github.io/tarih/makale/2026-11-18-louis-daguerre.html"
+   "link": "https://xmifrmx.github.io/makale/makale/2026-11-18-louis-daguerre.html",
+   "updated": "2026-11-17T23:21:02Z"
   },
   {
    "id": "tarih-88b677e422f3a76294cd",
    "slug": "2026-11-18-birinci-hacli-seferi",
    "title": "Birinci Haçlı Seferi (1095): Gelişmeler ve Tarihî Önemi",
    "description": "Birinci Haçlı Seferi, 1096-1099 tarihleri arasında gerçekleşen tarihteki ilk haçlı seferidir.",
+   "v": 2,
+   "rev": 38267847,
+   "gaps": [],
+   "complete": true,
+   "chars": 69502,
+   "src": {
+    "cand": {
+     "id": "8b14de1471059082",
+     "lang": "en",
+     "kind": "olay",
+     "year": 1095,
+     "text": "The Council of Clermont begins: called by Pope Urban II, it led to the First Crusade to the Holy Land.",
+     "links": [
+      "Council of Clermont",
+      "Pope Urban II",
+      "First Crusade",
+      "Holy Land"
+     ],
+     "month": 11,
+     "day": 18
+    }
+   },
    "pub": "2026-11-17T22:27:52Z",
    "date": "2026-11-18",
    "kind": "olay",
@@ -59,13 +101,34 @@
     "Savaş"
    ],
    "content_file": "data/content/2026-11-18-birinci-hacli-seferi.html",
-   "link": "https://umutevicom-commits.github.io/tarih/makale/2026-11-18-birinci-hacli-seferi.html"
+   "link": "https://xmifrmx.github.io/makale/makale/2026-11-18-birinci-hacli-seferi.html",
+   "updated": "2026-11-17T23:21:02Z"
   },
   {
    "id": "tarih-0c4df8c31d98fdc78e88",
    "slug": "2026-11-18-bm-guvenlik-konseyi-kktc-yi-tanimadi",
    "title": "BM Güvenlik Konseyi, KKTC'yi tanımadı (1983) – Tarihte Bugün",
    "description": "Tarihte bugün, 18 Kasım 1983: BM Güvenlik Konseyi, KKTC'yi tanımadı.",
+   "v": 2,
+   "rev": 38391200,
+   "gaps": [],
+   "complete": true,
+   "chars": 3506,
+   "src": {
+    "cand": {
+     "id": "924285534bac6250",
+     "lang": "tr",
+     "kind": "olay",
+     "year": 1983,
+     "text": "BM Güvenlik Konseyi, KKTC'yi tanımadı.",
+     "links": [
+      "BM Güvenlik Konseyi",
+      "Kuzey Kıbrıs Türk Cumhuriyeti"
+     ],
+     "month": 11,
+     "day": 18
+    }
+   },
    "pub": "2026-11-17T22:27:53Z",
    "date": "2026-11-18",
    "kind": "olay",
@@ -89,7 +152,4966 @@
     "Genel"
    ],
    "content_file": "data/content/2026-11-18-bm-guvenlik-konseyi-kktc-yi-tanimadi.html",
-   "link": "https://umutevicom-commits.github.io/tarih/makale/2026-11-18-bm-guvenlik-konseyi-kktc-yi-tanimadi.html"
+   "link": "https://xmifrmx.github.io/makale/makale/2026-11-18-bm-guvenlik-konseyi-kktc-yi-tanimadi.html",
+   "updated": "2026-11-17T23:21:02Z"
+  },
+  {
+   "id": "tarih-74bce48da0f8d37f102a",
+   "slug": "2026-11-18-bulent-serttas",
+   "title": "Bülent Serttaş Kimdir? Hayatı, Eserleri ve Tarihteki Yeri",
+   "description": "Bülent Serttaş, 18 Kasım 1965 tarihinde dünyaya geldi.",
+   "v": 2,
+   "rev": 38043275,
+   "gaps": [],
+   "complete": true,
+   "chars": 1681,
+   "src": {
+    "cand": {
+     "id": "97f01beac0c81439",
+     "lang": "tr",
+     "kind": "dogum",
+     "year": 1965,
+     "text": "Bülent Serttaş, Türk halk müziği sanatçısı, söz yazarı ve oyuncu",
+     "links": [
+      "Bülent Serttaş"
+     ],
+     "month": 11,
+     "day": 18
+    }
+   },
+   "pub": "2026-11-17T23:21:02Z",
+   "date": "2026-11-18",
+   "kind": "dogum",
+   "year": 1965,
+   "topic_title": "Bülent Serttaş",
+   "topic_key": "tr:bülent serttaş",
+   "event_id": "97f01beac0c81439",
+   "wiki_url": "https://tr.wikipedia.org/wiki/B%C3%BClent_Sertta%C5%9F",
+   "image": {
+    "url": "https://xmifrmx.github.io/makale/assets/kapak-varsayilan.svg",
+    "width": 1280,
+    "height": 720,
+    "alt": "Bülent Serttaş ile ilgili görsel",
+    "fallback": true
+   },
+   "categories": [
+    "Doğum",
+    "Bülent Serttaş",
+    "20. yüzyıl",
+    "Tarihte Bugün",
+    "Kültür"
+   ],
+   "content_file": "data/content/2026-11-18-bulent-serttas.html",
+   "link": "https://xmifrmx.github.io/makale/makale/2026-11-18-bulent-serttas.html"
+  },
+  {
+   "id": "tarih-03b64c5d4486e707105e",
+   "slug": "2026-11-18-turk-standardlari-enstitusu-kuruldu",
+   "title": "Türk Standardları Enstitüsü kuruldu (1960) – Tarihte Bugün",
+   "description": "Tarihte bugün, 18 Kasım 1960: Türk Standardları Enstitüsü kuruldu.",
+   "v": 2,
+   "rev": 34770707,
+   "gaps": [],
+   "complete": true,
+   "chars": 1748,
+   "src": {
+    "cand": {
+     "id": "7edc08385c0edc35",
+     "lang": "tr",
+     "kind": "olay",
+     "year": 1960,
+     "text": "Türk Standardları Enstitüsü kuruldu.",
+     "links": [
+      "Türk Standardları Enstitüsü"
+     ],
+     "month": 11,
+     "day": 18
+    }
+   },
+   "pub": "2026-11-17T23:21:03Z",
+   "date": "2026-11-18",
+   "kind": "olay",
+   "year": 1960,
+   "topic_title": "Türk Standardları Enstitüsü",
+   "topic_key": "tr:türk standardları enstitüsü",
+   "event_id": "7edc08385c0edc35",
+   "wiki_url": "https://tr.wikipedia.org/wiki/T%C3%BCrk_Standardlar%C4%B1_Enstit%C3%BCs%C3%BC",
+   "image": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/T%C3%BCrkstandartlar%C4%B1enstit%C3%BCs%C3%BC.jpg/1280px-T%C3%BCrkstandartlar%C4%B1enstit%C3%BCs%C3%BC.jpg?utm_source=tr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "width": 1280,
+    "height": 1707,
+    "alt": "Türk Standardları Enstitüsü ile ilgili tarihî görsel (1960)",
+    "fallback": false
+   },
+   "categories": [
+    "Olay",
+    "Türk Standardları Enstitüsü",
+    "20. yüzyıl",
+    "Tarihte Bugün",
+    "Genel"
+   ],
+   "content_file": "data/content/2026-11-18-turk-standardlari-enstitusu-kuruldu.html",
+   "link": "https://xmifrmx.github.io/makale/makale/2026-11-18-turk-standardlari-enstitusu-kuruldu.html"
+  },
+  {
+   "id": "tarih-21946a7e68af4d8186ca",
+   "slug": "2026-11-18-dersim-isyani-bastirildi",
+   "title": "Dersim İsyanı bastırıldı (1937) – Tarihte Bugün",
+   "description": "Tarihte bugün, 18 Kasım 1937: Dersim İsyanı bastırıldı.",
+   "v": 2,
+   "rev": 38613378,
+   "gaps": [],
+   "complete": true,
+   "chars": 21245,
+   "src": {
+    "cand": {
+     "id": "abae4fec32e1f482",
+     "lang": "tr",
+     "kind": "olay",
+     "year": 1937,
+     "text": "Dersim İsyanı bastırıldı.",
+     "links": [
+      "Dersim İsyanı"
+     ],
+     "month": 11,
+     "day": 18
+    }
+   },
+   "pub": "2026-11-17T23:21:04Z",
+   "date": "2026-11-18",
+   "kind": "olay",
+   "year": 1937,
+   "topic_title": "Dersim İsyanı",
+   "topic_key": "tr:dersim isyanı",
+   "event_id": "abae4fec32e1f482",
+   "wiki_url": "https://tr.wikipedia.org/wiki/Dersim_%C4%B0syan%C4%B1",
+   "image": {
+    "url": "https://xmifrmx.github.io/makale/assets/kapak-varsayilan.svg",
+    "width": 1280,
+    "height": 720,
+    "alt": "Dersim İsyanı ile ilgili tarihî görsel (1937)",
+    "fallback": true
+   },
+   "categories": [
+    "Olay",
+    "Dersim İsyanı",
+    "20. yüzyıl",
+    "Tarihte Bugün",
+    "Siyaset"
+   ],
+   "content_file": "data/content/2026-11-18-dersim-isyani-bastirildi.html",
+   "link": "https://xmifrmx.github.io/makale/makale/2026-11-18-dersim-isyani-bastirildi.html"
+  },
+  {
+   "id": "tarih-280aa6b299b0c6d073ee",
+   "slug": "2026-11-18-galata-daki-saint-benoit-kilisesi-ne-yerlesen",
+   "title": "Galata'daki Saint Benoit Kilisesi'ne yerleşen Cizvitler (1583)",
+   "description": "Tarihte bugün, 18 Kasım 1583: Galata'daki Saint Benoit Kilisesi'ne yerleşen Cizvitler, St. Benoit mektebini açtılar.",
+   "v": 2,
+   "rev": 37698956,
+   "gaps": [],
+   "complete": true,
+   "chars": 20120,
+   "src": {
+    "cand": {
+     "id": "6b6857c98d011599",
+     "lang": "tr",
+     "kind": "olay",
+     "year": 1583,
+     "text": "Galata'daki Saint Benoit Kilisesi'ne yerleşen Cizvitler, St. Benoit mektebini açtılar.",
+     "links": [
+      "Galata",
+      "Saint Benoit Kilisesi",
+      "Cizvitler"
+     ],
+     "month": 11,
+     "day": 18
+    }
+   },
+   "pub": "2026-11-17T23:21:05Z",
+   "date": "2026-11-18",
+   "kind": "olay",
+   "year": 1583,
+   "topic_title": "Cizvitler",
+   "topic_key": "tr:cizvitler",
+   "event_id": "6b6857c98d011599",
+   "wiki_url": "https://tr.wikipedia.org/wiki/Cizvitler",
+   "image": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Ihs-logo.svg/1280px-Ihs-logo.svg.png?utm_source=tr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "width": 1280,
+    "height": 1280,
+    "alt": "Cizvitler ile ilgili tarihî görsel (1583)",
+    "fallback": false
+   },
+   "categories": [
+    "Olay",
+    "Cizvitler",
+    "16. yüzyıl",
+    "Tarihte Bugün",
+    "Genel"
+   ],
+   "content_file": "data/content/2026-11-18-galata-daki-saint-benoit-kilisesi-ne-yerlesen.html",
+   "link": "https://xmifrmx.github.io/makale/makale/2026-11-18-galata-daki-saint-benoit-kilisesi-ne-yerlesen.html"
+  },
+  {
+   "id": "tarih-45a517386050286d9427",
+   "slug": "2026-11-18-miklos-zrinyi",
+   "title": "Miklós Zrínyi: Hayatı, Mirası ve Tarihteki Etkisi (1664)",
+   "description": "Miklós Zrínyi, 18 Kasım 1664 tarihinde hayatını kaybetti. VII.",
+   "v": 2,
+   "rev": 38613555,
+   "gaps": [],
+   "complete": true,
+   "chars": 9416,
+   "src": {
+    "cand": {
+     "id": "7feba188181088c3",
+     "lang": "tr",
+     "kind": "olum",
+     "year": 1664,
+     "text": "Miklós Zrínyi, Hırvat ve Macar soylusu asker, devlet adamı ve şair (d. 1620)",
+     "links": [
+      "Miklós Zrínyi"
+     ],
+     "month": 11,
+     "day": 18
+    }
+   },
+   "pub": "2026-11-17T23:21:06Z",
+   "date": "2026-11-18",
+   "kind": "olum",
+   "year": 1664,
+   "topic_title": "Miklós Zrínyi",
+   "topic_key": "tr:miklós zrínyi",
+   "event_id": "7feba188181088c3",
+   "wiki_url": "https://tr.wikipedia.org/wiki/Mikl%C3%B3s_Zr%C3%ADnyi",
+   "image": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/3/37/Jan_Thomas_Portrait_of_Mikl%C3%B3s_Zr%C3%ADnyi.jpg?utm_source=tr.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+    "width": 788,
+    "height": 984,
+    "alt": "Miklós Zrínyi ile ilgili görsel",
+    "fallback": false
+   },
+   "categories": [
+    "Ölüm",
+    "Miklós Zrínyi",
+    "17. yüzyıl",
+    "Tarihte Bugün",
+    "Savaş"
+   ],
+   "content_file": "data/content/2026-11-18-miklos-zrinyi.html",
+   "link": "https://xmifrmx.github.io/makale/makale/2026-11-18-miklos-zrinyi.html"
+  },
+  {
+   "id": "tarih-3810381f90f579cde368",
+   "slug": "2026-11-18-dogan-kardes-sanat-musamerelerinin-ilki",
+   "title": "Doğan Kardeş Sanat Müsamerelerinin ilki Tepebaşı Çocuk (1945)",
+   "description": "Tarihte bugün, 18 Kasım 1945: Doğan Kardeş Sanat Müsamerelerinin ilki Tepebaşı Çocuk Tiyatrosu'nda yapıldı.",
+   "v": 2,
+   "rev": 36868150,
+   "gaps": [],
+   "complete": true,
+   "chars": 6295,
+   "src": {
+    "cand": {
+     "id": "668e3278292e6b38",
+     "lang": "tr",
+     "kind": "olay",
+     "year": 1945,
+     "text": "Doğan Kardeş Sanat Müsamerelerinin ilki Tepebaşı Çocuk Tiyatrosu'nda yapıldı.",
+     "links": [
+      "Doğan Kardeş"
+     ],
+     "month": 11,
+     "day": 18
+    }
+   },
+   "pub": "2026-11-17T23:21:07Z",
+   "date": "2026-11-18",
+   "kind": "olay",
+   "year": 1945,
+   "topic_title": "Doğan Kardeş",
+   "topic_key": "tr:doğan kardeş",
+   "event_id": "668e3278292e6b38",
+   "wiki_url": "https://tr.wikipedia.org/wiki/Do%C4%9Fan_Karde%C5%9F",
+   "image": {
+    "url": "https://xmifrmx.github.io/makale/assets/kapak-varsayilan.svg",
+    "width": 1280,
+    "height": 720,
+    "alt": "Doğan Kardeş ile ilgili tarihî görsel (1945)",
+    "fallback": true
+   },
+   "categories": [
+    "Olay",
+    "Doğan Kardeş",
+    "20. yüzyıl",
+    "Tarihte Bugün",
+    "Bilim"
+   ],
+   "content_file": "data/content/2026-11-18-dogan-kardes-sanat-musamerelerinin-ilki.html",
+   "link": "https://xmifrmx.github.io/makale/makale/2026-11-18-dogan-kardes-sanat-musamerelerinin-ilki.html"
+  },
+  {
+   "id": "tarih-841dec6c53edc994d717",
+   "slug": "2026-11-18-japonlar-mancurya-yi-isgal-ettiler",
+   "title": "Japonlar, Mançurya'yı işgal ettiler (1931) – Tarihte Bugün",
+   "description": "Tarihte bugün, 18 Kasım 1931: Japonlar, Mançurya'yı işgal ettiler.",
+   "v": 2,
+   "rev": 37018663,
+   "gaps": [],
+   "complete": true,
+   "chars": 10455,
+   "src": {
+    "cand": {
+     "id": "23b5a26189826f6b",
+     "lang": "tr",
+     "kind": "olay",
+     "year": 1931,
+     "text": "Japonlar, Mançurya'yı işgal ettiler.",
+     "links": [
+      "Mançurya"
+     ],
+     "month": 11,
+     "day": 18
+    }
+   },
+   "pub": "2026-11-17T23:21:08Z",
+   "date": "2026-11-18",
+   "kind": "olay",
+   "year": 1931,
+   "topic_title": "Mançurya",
+   "topic_key": "tr:mançurya",
+   "event_id": "23b5a26189826f6b",
+   "wiki_url": "https://tr.wikipedia.org/wiki/Man%C3%A7urya",
+   "image": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Man%C3%A7urya.png?utm_source=tr.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+    "width": 1097,
+    "height": 893,
+    "alt": "Mançurya ile ilgili tarihî görsel (1931)",
+    "fallback": false
+   },
+   "categories": [
+    "Olay",
+    "Mançurya",
+    "20. yüzyıl",
+    "Tarihte Bugün",
+    "Savaş"
+   ],
+   "content_file": "data/content/2026-11-18-japonlar-mancurya-yi-isgal-ettiler.html",
+   "link": "https://xmifrmx.github.io/makale/makale/2026-11-18-japonlar-mancurya-yi-isgal-ettiler.html"
+  },
+  {
+   "id": "tarih-7172baa66a37e787182d",
+   "slug": "2026-11-18-belkis-sevket-hanim-tek-motorlu-ustu-acik",
+   "title": "Belkıs Şevket Hanım, tek motorlu üstü açık tayyareye binme (1913)",
+   "description": "Belkıs Şevket ya da Belkıs Şevket Hanım, 1 Aralık 1913 tarihinde ilk defa uçan Türk kadını ve aktivist.",
+   "v": 2,
+   "rev": 34650004,
+   "gaps": [],
+   "complete": true,
+   "chars": 3608,
+   "src": {
+    "cand": {
+     "id": "84efcd0ada81fadf",
+     "lang": "tr",
+     "kind": "olay",
+     "year": 1913,
+     "text": "Belkıs Şevket Hanım, tek motorlu üstü açık tayyareye binme cesareti gösteren ilk kadın oldu. Belkıs Hanım İstanbul üzerinde uçarken aşağı attığı kartlarda, Osmanlı Müdafaa-i Hukuk-u Nisvan Derneği üyelerine selam yolluyordu.",
+     "links": [
+      "Belkıs Şevket Hanım"
+     ],
+     "month": 11,
+     "day": 18
+    }
+   },
+   "pub": "2026-11-17T23:21:09Z",
+   "date": "2026-11-18",
+   "kind": "olay",
+   "year": 1913,
+   "topic_title": "Belkıs Şevket",
+   "topic_key": "tr:belkıs şevket",
+   "event_id": "84efcd0ada81fadf",
+   "wiki_url": "https://tr.wikipedia.org/wiki/Belk%C4%B1s_%C5%9Eevket",
+   "image": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Belkis_Sevket_Hanim.jpg?utm_source=tr.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+    "width": 193,
+    "height": 280,
+    "alt": "Belkıs Şevket ile ilgili tarihî görsel (1913)",
+    "fallback": false
+   },
+   "categories": [
+    "Olay",
+    "Belkıs Şevket",
+    "20. yüzyıl",
+    "Tarihte Bugün",
+    "Savaş"
+   ],
+   "content_file": "data/content/2026-11-18-belkis-sevket-hanim-tek-motorlu-ustu-acik.html",
+   "link": "https://xmifrmx.github.io/makale/makale/2026-11-18-belkis-sevket-hanim-tek-motorlu-ustu-acik.html"
+  },
+  {
+   "id": "tarih-bc5eaa8d12938bcb9ef4",
+   "slug": "2026-11-18-istanbul-daki-avrupa-guvenlik-ve-isbirligi",
+   "title": "İstanbul'daki Avrupa Güvenlik (1999)",
+   "description": "Tarihte bugün, 18 Kasım 1999: İstanbul'daki Avrupa Güvenlik ve İşbirliği Teşkilatı (AGİT) Zirvesi'nde, Bakü-Tiflis-Ceyhan Petrol Boru Hattı ve Hazar…",
+   "v": 2,
+   "rev": 38576001,
+   "gaps": [],
+   "complete": true,
+   "chars": 6907,
+   "src": {
+    "cand": {
+     "id": "23ee381ff356d496",
+     "lang": "tr",
+     "kind": "olay",
+     "year": 1999,
+     "text": "İstanbul'daki Avrupa Güvenlik ve İşbirliği Teşkilatı (AGİT) Zirvesi'nde, Bakü-Tiflis-Ceyhan Petrol Boru Hattı ve Hazar geçişli doğal gaz projelerine ilişkin anlaşmalar, ilgili ülkelerin Devlet Başkanlarınca imzalandı.",
+     "links": [
+      "İstanbul",
+      "AGİT",
+      "Bakü-Tiflis-Ceyhan Petrol Boru Hattı",
+      "Hazar Denizi"
+     ],
+     "month": 11,
+     "day": 18
+    }
+   },
+   "pub": "2026-11-17T23:21:10Z",
+   "date": "2026-11-18",
+   "kind": "olay",
+   "year": 1999,
+   "topic_title": "Avrupa Güvenlik ve İşbirliği Teşkilatı",
+   "topic_key": "tr:avrupa güvenlik ve işbirliği teşkilatı",
+   "event_id": "23ee381ff356d496",
+   "wiki_url": "https://tr.wikipedia.org/wiki/Avrupa_G%C3%BCvenlik_ve_%C4%B0%C5%9Fbirli%C4%9Fi_Te%C5%9Fkilat%C4%B1",
+   "image": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Flag_of_the_Organization_for_Security_and_Co-operation_in_Europe.svg/1280px-Flag_of_the_Organization_for_Security_and_Co-operation_in_Europe.svg.png?utm_source=tr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "width": 1280,
+    "height": 853,
+    "alt": "Avrupa Güvenlik ve İşbirliği Teşkilatı ile ilgili tarihî görsel (1999)",
+    "fallback": false
+   },
+   "categories": [
+    "Olay",
+    "Avrupa Güvenlik ve İşbirliği Teşkilatı",
+    "20. yüzyıl",
+    "Tarihte Bugün",
+    "Savaş"
+   ],
+   "content_file": "data/content/2026-11-18-istanbul-daki-avrupa-guvenlik-ve-isbirligi.html",
+   "link": "https://xmifrmx.github.io/makale/makale/2026-11-18-istanbul-daki-avrupa-guvenlik-ve-isbirligi.html"
+  },
+  {
+   "id": "tarih-167979e4651015dfcb0a",
+   "slug": "2026-11-18-istanbul-darulfununu-istanbul-universitesi",
+   "title": "İstanbul Darülfünunu, İstanbul Üniversitesi olarak açıldı (1933)",
+   "description": "Tarihte bugün, 18 Kasım 1933: İstanbul Darülfünunu, İstanbul Üniversitesi olarak açıldı.",
+   "v": 2,
+   "rev": 38602495,
+   "gaps": [],
+   "complete": true,
+   "chars": 26809,
+   "src": {
+    "cand": {
+     "id": "2fb8791e7c339ba0",
+     "lang": "tr",
+     "kind": "olay",
+     "year": 1933,
+     "text": "İstanbul Darülfünunu, İstanbul Üniversitesi olarak açıldı.",
+     "links": [
+      "İstanbul Üniversitesi"
+     ],
+     "month": 11,
+     "day": 18
+    }
+   },
+   "pub": "2026-11-17T23:21:11Z",
+   "date": "2026-11-18",
+   "kind": "olay",
+   "year": 1933,
+   "topic_title": "İstanbul Üniversitesi",
+   "topic_key": "tr:istanbul üniversitesi",
+   "event_id": "2fb8791e7c339ba0",
+   "wiki_url": "https://tr.wikipedia.org/wiki/%C4%B0stanbul_%C3%9Cniversitesi",
+   "image": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/%C4%B0stanbul_%C3%9Cniversitesi_Logo.svg/1280px-%C4%B0stanbul_%C3%9Cniversitesi_Logo.svg.png?utm_source=tr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "width": 1280,
+    "height": 1280,
+    "alt": "İstanbul Üniversitesi ile ilgili tarihî görsel (1933)",
+    "fallback": false
+   },
+   "categories": [
+    "Olay",
+    "İstanbul Üniversitesi",
+    "20. yüzyıl",
+    "Tarihte Bugün",
+    "Siyaset"
+   ],
+   "content_file": "data/content/2026-11-18-istanbul-darulfununu-istanbul-universitesi.html",
+   "link": "https://xmifrmx.github.io/makale/makale/2026-11-18-istanbul-darulfununu-istanbul-universitesi.html"
+  },
+  {
+   "id": "tarih-dd8de8c2e457878b8c7e",
+   "slug": "2026-11-18-ispanya-da-37-yillik-diktatorlugun-ardindan",
+   "title": "İspanya'da 37 yıllık diktatörlüğün ardından demokrasinin (1976)",
+   "description": "Tarihte bugün, 18 Kasım 1976: İspanya'da 37 yıllık diktatörlüğün ardından demokrasinin kurulması kararı alındı.",
+   "v": 2,
+   "rev": 38215125,
+   "gaps": [],
+   "complete": true,
+   "chars": 19578,
+   "src": {
+    "cand": {
+     "id": "e47a1fe153544e40",
+     "lang": "tr",
+     "kind": "olay",
+     "year": 1976,
+     "text": "İspanya'da 37 yıllık diktatörlüğün ardından demokrasinin kurulması kararı alındı.",
+     "links": [
+      "İspanya",
+      "Franco diktatörlüğü"
+     ],
+     "month": 11,
+     "day": 18
+    }
+   },
+   "pub": "2026-11-17T23:21:12Z",
+   "date": "2026-11-18",
+   "kind": "olay",
+   "year": 1976,
+   "topic_title": "İspanya",
+   "topic_key": "tr:ispanya",
+   "event_id": "e47a1fe153544e40",
+   "wiki_url": "https://tr.wikipedia.org/wiki/%C4%B0spanya",
+   "image": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Flag_of_the_Kingdom_of_Spain.svg/1280px-Flag_of_the_Kingdom_of_Spain.svg.png?utm_source=tr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "width": 1280,
+    "height": 853,
+    "alt": "İspanya ile ilgili tarihî görsel (1976)",
+    "fallback": false
+   },
+   "categories": [
+    "Olay",
+    "İspanya",
+    "20. yüzyıl",
+    "Tarihte Bugün",
+    "Siyaset"
+   ],
+   "content_file": "data/content/2026-11-18-ispanya-da-37-yillik-diktatorlugun-ardindan.html",
+   "link": "https://xmifrmx.github.io/makale/makale/2026-11-18-ispanya-da-37-yillik-diktatorlugun-ardindan.html"
+  },
+  {
+   "id": "tarih-d181a201335af62e9ddd",
+   "slug": "2026-11-18-marcel-proust",
+   "title": "Marcel Proust: Hayatı, Mirası ve Tarihteki Etkisi (1922)",
+   "description": "Marcel Proust, 18 Kasım 1922 tarihinde hayatını kaybetti.",
+   "v": 2,
+   "rev": 38398363,
+   "gaps": [],
+   "complete": true,
+   "chars": 11087,
+   "src": {
+    "cand": {
+     "id": "36dc2752edc3b709",
+     "lang": "tr",
+     "kind": "olum",
+     "year": 1922,
+     "text": "Marcel Proust, Fransız romancı, deneme yazarı ve eleştirmen (d. 1871)",
+     "links": [
+      "Marcel Proust"
+     ],
+     "month": 11,
+     "day": 18
+    }
+   },
+   "pub": "2026-11-17T23:21:13Z",
+   "date": "2026-11-18",
+   "kind": "olum",
+   "year": 1922,
+   "topic_title": "Marcel Proust",
+   "topic_key": "tr:marcel proust",
+   "event_id": "36dc2752edc3b709",
+   "wiki_url": "https://tr.wikipedia.org/wiki/Marcel_Proust",
+   "image": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Marcel_Proust.jpg?utm_source=tr.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+    "width": 220,
+    "height": 320,
+    "alt": "Marcel Proust ile ilgili görsel",
+    "fallback": false
+   },
+   "categories": [
+    "Ölüm",
+    "Marcel Proust",
+    "20. yüzyıl",
+    "Tarihte Bugün",
+    "Kültür"
+   ],
+   "content_file": "data/content/2026-11-18-marcel-proust.html",
+   "link": "https://xmifrmx.github.io/makale/makale/2026-11-18-marcel-proust.html"
+  },
+  {
+   "id": "tarih-0b318583c53d46bd96c7",
+   "slug": "2026-11-18-phan-thi-mao-nun-oldurulmesi",
+   "title": "Phan Thi Mao'nun öldürülmesi (1966) – Tarihte Bugün",
+   "description": "Tarihte bugün, 18 Kasım 1966: Phan Thi Mao'nun öldürülmesi. Phan Thi Mao'nun öldürülmesi, Vietnam Savaşı sırasında gerçekleşen bir savaş suçudur.",
+   "v": 2,
+   "rev": 36496851,
+   "gaps": [],
+   "complete": true,
+   "chars": 2445,
+   "src": {
+    "cand": {
+     "id": "7b4cf18a2136ccdb",
+     "lang": "tr",
+     "kind": "olay",
+     "year": 1966,
+     "text": "Phan Thi Mao'nun öldürülmesi",
+     "links": [
+      "Phan Thi Mao'nun öldürülmesi"
+     ],
+     "month": 11,
+     "day": 18
+    }
+   },
+   "pub": "2026-11-17T23:21:14Z",
+   "date": "2026-11-18",
+   "kind": "olay",
+   "year": 1966,
+   "topic_title": "Phan Thi Mao'nun öldürülmesi",
+   "topic_key": "tr:phan thi mao'nun öldürülmesi",
+   "event_id": "7b4cf18a2136ccdb",
+   "wiki_url": "https://tr.wikipedia.org/wiki/Phan_Thi_Mao'nun_%C3%B6ld%C3%BCr%C3%BClmesi",
+   "image": {
+    "url": "https://xmifrmx.github.io/makale/assets/kapak-varsayilan.svg",
+    "width": 1280,
+    "height": 720,
+    "alt": "Phan Thi Mao'nun öldürülmesi ile ilgili tarihî görsel (1966)",
+    "fallback": true
+   },
+   "categories": [
+    "Olay",
+    "Phan Thi Mao'nun öldürülmesi",
+    "20. yüzyıl",
+    "Tarihte Bugün",
+    "Savaş"
+   ],
+   "content_file": "data/content/2026-11-18-phan-thi-mao-nun-oldurulmesi.html",
+   "link": "https://xmifrmx.github.io/makale/makale/2026-11-18-phan-thi-mao-nun-oldurulmesi.html"
+  },
+  {
+   "id": "tarih-d3255b5fdc51e9eb0a74",
+   "slug": "2026-11-18-bulgaristan-da-secimleri-komunist-partisi",
+   "title": "Bulgaristan'da seçimleri Komünist Partisi öncülüğündeki (1945)",
+   "description": "Tarihte bugün, 18 Kasım 1945: Bulgaristan'da seçimleri Komünist Partisi öncülüğündeki Yurtsever Cephe kazandı.",
+   "v": 2,
+   "rev": 37071545,
+   "gaps": [],
+   "complete": true,
+   "chars": 25188,
+   "src": {
+    "cand": {
+     "id": "9346e23d05dae91a",
+     "lang": "tr",
+     "kind": "olay",
+     "year": 1945,
+     "text": "Bulgaristan'da seçimleri Komünist Partisi öncülüğündeki Yurtsever Cephe kazandı.",
+     "links": [
+      "Bulgaristan",
+      "Komünist Partisi",
+      "Yurtsever Cephe"
+     ],
+     "month": 11,
+     "day": 18
+    }
+   },
+   "pub": "2026-11-17T23:21:15Z",
+   "date": "2026-11-18",
+   "kind": "olay",
+   "year": 1945,
+   "topic_title": "Sovyetler Birliği Komünist Partisi",
+   "topic_key": "tr:sovyetler birliği komünist partisi",
+   "event_id": "9346e23d05dae91a",
+   "wiki_url": "https://tr.wikipedia.org/wiki/Sovyetler_Birli%C4%9Fi_Kom%C3%BCnist_Partisi",
+   "image": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/%D0%9A%D0%9F%D0%A1%D0%A1.svg/1280px-%D0%9A%D0%9F%D0%A1%D0%A1.svg.png?utm_source=tr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "width": 1280,
+    "height": 1064,
+    "alt": "Sovyetler Birliği Komünist Partisi ile ilgili tarihî görsel (1945)",
+    "fallback": false
+   },
+   "categories": [
+    "Olay",
+    "Sovyetler Birliği Komünist Partisi",
+    "20. yüzyıl",
+    "Tarihte Bugün",
+    "Siyaset"
+   ],
+   "content_file": "data/content/2026-11-18-bulgaristan-da-secimleri-komunist-partisi.html",
+   "link": "https://xmifrmx.github.io/makale/makale/2026-11-18-bulgaristan-da-secimleri-komunist-partisi.html"
+  },
+  {
+   "id": "tarih-9ffc292f2113ff5e8dd7",
+   "slug": "2026-11-18-turkiye-de-nesko-sebinkarahisar-maden-isletmesi",
+   "title": "Nesko Şebinkarahisar Maden İşletmesi felaketi (2021): Tarihî Önemi",
+   "description": "Tarihte bugün, 18 Kasım 2021: Türkiye'de Nesko Şebinkarahisar Maden İşletmesi felaketi yaşandı.",
+   "v": 2,
+   "rev": 36896551,
+   "gaps": [],
+   "complete": true,
+   "chars": 15970,
+   "src": {
+    "cand": {
+     "id": "c703d8ff442ecb32",
+     "lang": "tr",
+     "kind": "olay",
+     "year": 2021,
+     "text": "Türkiye'de Nesko Şebinkarahisar Maden İşletmesi felaketi yaşandı.",
+     "links": [
+      "Türkiye",
+      "Nesko Şebinkarahisar Maden İşletmesi felaketi"
+     ],
+     "month": 11,
+     "day": 18
+    }
+   },
+   "pub": "2026-11-17T23:21:16Z",
+   "date": "2026-11-18",
+   "kind": "olay",
+   "year": 2021,
+   "topic_title": "Nesko Şebinkarahisar Maden İşletmesi felaketi",
+   "topic_key": "tr:nesko şebinkarahisar maden işletmesi felaketi",
+   "event_id": "c703d8ff442ecb32",
+   "wiki_url": "https://tr.wikipedia.org/wiki/Nesko_%C5%9Eebinkarahisar_Maden_%C4%B0%C5%9Fletmesi_felaketi",
+   "image": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Turkey_relief_location_map.jpg/1280px-Turkey_relief_location_map.jpg?utm_source=tr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "width": 1280,
+    "height": 549,
+    "alt": "Nesko Şebinkarahisar Maden İşletmesi felaketi ile ilgili tarihî görsel (2021)",
+    "fallback": false
+   },
+   "categories": [
+    "Olay",
+    "Nesko Şebinkarahisar Maden İşletmesi felaketi",
+    "21. yüzyıl",
+    "Tarihte Bugün",
+    "Doğa"
+   ],
+   "content_file": "data/content/2026-11-18-turkiye-de-nesko-sebinkarahisar-maden-isletmesi.html",
+   "link": "https://xmifrmx.github.io/makale/makale/2026-11-18-turkiye-de-nesko-sebinkarahisar-maden-isletmesi.html"
+  },
+  {
+   "id": "tarih-868d24f928d7b8beea92",
+   "slug": "2026-11-18-istanbul-da-kolera-salgini-basladi",
+   "title": "İstanbul'da kolera salgını başladı (1912) – Tarihte Bugün",
+   "description": "Tarihte bugün, 18 Kasım 1912: İstanbul'da kolera salgını başladı.",
+   "v": 2,
+   "rev": 38205872,
+   "gaps": [],
+   "complete": true,
+   "chars": 5806,
+   "src": {
+    "cand": {
+     "id": "269e0a4b1956b646",
+     "lang": "tr",
+     "kind": "olay",
+     "year": 1912,
+     "text": "İstanbul'da kolera salgını başladı.",
+     "links": [
+      "İstanbul",
+      "kolera"
+     ],
+     "month": 11,
+     "day": 18
+    }
+   },
+   "pub": "2026-11-17T23:21:17Z",
+   "date": "2026-11-18",
+   "kind": "olay",
+   "year": 1912,
+   "topic_title": "Kolera",
+   "topic_key": "tr:kolera",
+   "event_id": "269e0a4b1956b646",
+   "wiki_url": "https://tr.wikipedia.org/wiki/Kolera",
+   "image": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Cholera_bacteria_SEM.jpg?utm_source=tr.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+    "width": 1228,
+    "height": 960,
+    "alt": "Kolera ile ilgili tarihî görsel (1912)",
+    "fallback": false
+   },
+   "categories": [
+    "Olay",
+    "Kolera",
+    "20. yüzyıl",
+    "Tarihte Bugün",
+    "Bilim"
+   ],
+   "content_file": "data/content/2026-11-18-istanbul-da-kolera-salgini-basladi.html",
+   "link": "https://xmifrmx.github.io/makale/makale/2026-11-18-istanbul-da-kolera-salgini-basladi.html"
+  },
+  {
+   "id": "tarih-b65beb93bfe36ab01b23",
+   "slug": "2026-11-18-zasyadko-maden-felaketi-ukrayna-nin-dogusundaki",
+   "title": "Zasyadko maden felaketi: Ukrayna'nın doğusundaki Donetsk (2007)",
+   "description": "Tarihte bugün, 18 Kasım 2007: Zasyadko maden felaketi: Ukrayna'nın doğusundaki Donetsk bölgesinde meydana gelen bir maden kazasında, 101 madenci hayatını…",
+   "v": 2,
+   "rev": 38614962,
+   "gaps": [],
+   "complete": true,
+   "chars": 7493,
+   "src": {
+    "cand": {
+     "id": "fdf259ce21b50449",
+     "lang": "tr",
+     "kind": "olay",
+     "year": 2007,
+     "text": "Zasyadko maden felaketi: Ukrayna'nın doğusundaki Donetsk bölgesinde meydana gelen bir maden kazasında, 101 madenci hayatını kaybetti.",
+     "links": [
+      "2007 Zasyadko maden felaketi",
+      "Ukrayna",
+      "Donetsk"
+     ],
+     "month": 11,
+     "day": 18
+    }
+   },
+   "pub": "2026-11-17T23:21:18Z",
+   "date": "2026-11-18",
+   "kind": "olay",
+   "year": 2007,
+   "topic_title": "Donetsk",
+   "topic_key": "tr:donetsk",
+   "event_id": "fdf259ce21b50449",
+   "wiki_url": "https://tr.wikipedia.org/wiki/Donetsk",
+   "image": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/%D0%A1%D0%B0%D0%BC%D1%8B%D0%B9_%D0%B1%D0%BE%D0%BB%D1%8C%D1%88%D0%BE%D0%B9_%D1%85%D1%80%D0%B0%D0%BC_%D0%94%D0%BE%D0%BD%D0%B5%D1%86%D0%BA%D0%B0._-_panoramio.jpg/1280px-%D0%A1%D0%B0%D0%BC%D1%8B%D0%B9_%D0%B1%D0%BE%D0%BB%D1%8C%D1%88%D0%BE%D0%B9_%D1%85%D1%80%D0%B0%D0%BC_%D0%94%D0%BE%D0%BD%D0%B5%D1%86%D0%BA%D0%B0._-_panoramio.jpg?utm_source=tr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "width": 1280,
+    "height": 992,
+    "alt": "Donetsk ile ilgili tarihî görsel (2007)",
+    "fallback": false
+   },
+   "categories": [
+    "Olay",
+    "Donetsk",
+    "21. yüzyıl",
+    "Tarihte Bugün",
+    "Doğa"
+   ],
+   "content_file": "data/content/2026-11-18-zasyadko-maden-felaketi-ukrayna-nin-dogusundaki.html",
+   "link": "https://xmifrmx.github.io/makale/makale/2026-11-18-zasyadko-maden-felaketi-ukrayna-nin-dogusundaki.html"
+  },
+  {
+   "id": "tarih-ef1d2c2bbaef85f7fd62",
+   "slug": "2026-11-18-letonya-rus-imparatorlugu-ndan-bagimsizligini",
+   "title": "Letonya, Rus İmparatorluğu'ndan bağımsızlığını ilan etti (1918)",
+   "description": "Tarihte bugün, 18 Kasım 1918: Letonya, Rus İmparatorluğu'ndan bağımsızlığını ilan etti.",
+   "v": 2,
+   "rev": 38021042,
+   "gaps": [],
+   "complete": true,
+   "chars": 47880,
+   "src": {
+    "cand": {
+     "id": "f821b21a8ed0119e",
+     "lang": "tr",
+     "kind": "olay",
+     "year": 1918,
+     "text": "Letonya, Rus İmparatorluğu'ndan bağımsızlığını ilan etti.",
+     "links": [
+      "Letonya",
+      "Rus İmparatorluğu"
+     ],
+     "month": 11,
+     "day": 18
+    }
+   },
+   "pub": "2026-11-17T23:21:19Z",
+   "date": "2026-11-18",
+   "kind": "olay",
+   "year": 1918,
+   "topic_title": "Rus İmparatorluğu",
+   "topic_key": "tr:rus imparatorluğu",
+   "event_id": "f821b21a8ed0119e",
+   "wiki_url": "https://tr.wikipedia.org/wiki/Rus_%C4%B0mparatorlu%C4%9Fu",
+   "image": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Flag_of_Russia.svg/1280px-Flag_of_Russia.svg.png?utm_source=tr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "width": 1280,
+    "height": 853,
+    "alt": "Rus İmparatorluğu ile ilgili tarihî görsel (1918)",
+    "fallback": false
+   },
+   "categories": [
+    "Olay",
+    "Rus İmparatorluğu",
+    "20. yüzyıl",
+    "Tarihte Bugün",
+    "Savaş"
+   ],
+   "content_file": "data/content/2026-11-18-letonya-rus-imparatorlugu-ndan-bagimsizligini.html",
+   "link": "https://xmifrmx.github.io/makale/makale/2026-11-18-letonya-rus-imparatorlugu-ndan-bagimsizligini.html"
+  },
+  {
+   "id": "tarih-66c4dffd7002b5d3506a",
+   "slug": "2026-11-18-jim-jones-un-liderlik-ettigi-halklar-tapinagi",
+   "title": "Jim Jones'un liderlik ettiği Halklar Tapınağı adlı tarikatın (1978)",
+   "description": "Tarihte bugün, 18 Kasım 1978: Jim Jones'un liderlik ettiği Halklar Tapınağı adlı tarikatın 913 üyesi intihar etti.",
+   "v": 2,
+   "rev": 38398345,
+   "gaps": [],
+   "complete": true,
+   "chars": 37900,
+   "src": {
+    "cand": {
+     "id": "3baae7f2b9416c83",
+     "lang": "tr",
+     "kind": "olay",
+     "year": 1978,
+     "text": "Jim Jones'un liderlik ettiği Halklar Tapınağı adlı tarikatın 913 üyesi intihar etti.",
+     "links": [
+      "Jim Jones",
+      "Halklar Tapınağı"
+     ],
+     "month": 11,
+     "day": 18
+    }
+   },
+   "pub": "2026-11-17T23:21:20Z",
+   "date": "2026-11-18",
+   "kind": "olay",
+   "year": 1978,
+   "topic_title": "Jim Jones",
+   "topic_key": "tr:jim jones",
+   "event_id": "3baae7f2b9416c83",
+   "wiki_url": "https://tr.wikipedia.org/wiki/Jim_Jones",
+   "image": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Rev._Jim_Jones%2C_1977_%28cropped%29.jpg/1280px-Rev._Jim_Jones%2C_1977_%28cropped%29.jpg?utm_source=tr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "width": 1280,
+    "height": 1001,
+    "alt": "Jim Jones ile ilgili tarihî görsel (1978)",
+    "fallback": false
+   },
+   "categories": [
+    "Olay",
+    "Jim Jones",
+    "20. yüzyıl",
+    "Tarihte Bugün",
+    "Genel"
+   ],
+   "content_file": "data/content/2026-11-18-jim-jones-un-liderlik-ettigi-halklar-tapinagi.html",
+   "link": "https://xmifrmx.github.io/makale/makale/2026-11-18-jim-jones-un-liderlik-ettigi-halklar-tapinagi.html"
+  },
+  {
+   "id": "tarih-b0b25ff5a2e0d6890688",
+   "slug": "2026-11-18-turkiye-buyuk-millet-meclisi-abdulmecid-efendi",
+   "title": "Türkiye Büyük Millet Meclisi (1922)",
+   "description": "Tarihte bugün, 18 Kasım 1922: Türkiye Büyük Millet Meclisi, Abdülmecid Efendi'yi halife olarak seçti.",
+   "v": 2,
+   "rev": 38113292,
+   "gaps": [],
+   "complete": true,
+   "chars": 13396,
+   "src": {
+    "cand": {
+     "id": "44d68bfd8be3b4e8",
+     "lang": "tr",
+     "kind": "olay",
+     "year": 1922,
+     "text": "Türkiye Büyük Millet Meclisi, Abdülmecid Efendi'yi halife olarak seçti.",
+     "links": [
+      "Türkiye Büyük Millet Meclisi",
+      "Abdülmecid Efendi"
+     ],
+     "month": 11,
+     "day": 18
+    }
+   },
+   "pub": "2026-11-17T23:21:21Z",
+   "date": "2026-11-18",
+   "kind": "olay",
+   "year": 1922,
+   "topic_title": "Abdülmecid Efendi",
+   "topic_key": "tr:abdülmecid efendi",
+   "event_id": "44d68bfd8be3b4e8",
+   "wiki_url": "https://tr.wikipedia.org/wiki/Abd%C3%BClmecid_Efendi",
+   "image": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Portrait_Caliph_Abdulmecid_II.jpg?utm_source=tr.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+    "width": 1185,
+    "height": 1600,
+    "alt": "Abdülmecid Efendi ile ilgili tarihî görsel (1922)",
+    "fallback": false
+   },
+   "categories": [
+    "Olay",
+    "Abdülmecid Efendi",
+    "20. yüzyıl",
+    "Tarihte Bugün",
+    "Siyaset"
+   ],
+   "content_file": "data/content/2026-11-18-turkiye-buyuk-millet-meclisi-abdulmecid-efendi.html",
+   "link": "https://xmifrmx.github.io/makale/makale/2026-11-18-turkiye-buyuk-millet-meclisi-abdulmecid-efendi.html"
+  },
+  {
+   "id": "tarih-d1be1ac9bd037d845219",
+   "slug": "2026-11-18-uzunkopru-dusman-isgalinden-kurtuldu",
+   "title": "Uzunköprü düşman işgalinden kurtuldu (1922) – Tarihte Bugün",
+   "description": "Tarihte bugün, 18 Kasım 1922: Uzunköprü düşman işgalinden kurtuldu. Uzunköprü, Edirne'nin bir ilçesidir.",
+   "v": 2,
+   "rev": 37608632,
+   "gaps": [],
+   "complete": true,
+   "chars": 18145,
+   "src": {
+    "cand": {
+     "id": "c185ff6c3e3e9e5c",
+     "lang": "tr",
+     "kind": "olay",
+     "year": 1922,
+     "text": "Uzunköprü düşman işgalinden kurtuldu.",
+     "links": [
+      "Uzunköprü"
+     ],
+     "month": 11,
+     "day": 18
+    }
+   },
+   "pub": "2026-11-17T23:21:22Z",
+   "date": "2026-11-18",
+   "kind": "olay",
+   "year": 1922,
+   "topic_title": "Uzunköprü",
+   "topic_key": "tr:uzunköprü",
+   "event_id": "c185ff6c3e3e9e5c",
+   "wiki_url": "https://tr.wikipedia.org/wiki/Uzunk%C3%B6pr%C3%BC",
+   "image": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Uzunk%C3%B6pr%C3%BC_%282%29.jpg/1280px-Uzunk%C3%B6pr%C3%BC_%282%29.jpg?utm_source=tr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "width": 1280,
+    "height": 848,
+    "alt": "Uzunköprü ile ilgili tarihî görsel (1922)",
+    "fallback": false
+   },
+   "categories": [
+    "Olay",
+    "Uzunköprü",
+    "20. yüzyıl",
+    "Tarihte Bugün",
+    "Savaş"
+   ],
+   "content_file": "data/content/2026-11-18-uzunkopru-dusman-isgalinden-kurtuldu.html",
+   "link": "https://xmifrmx.github.io/makale/makale/2026-11-18-uzunkopru-dusman-isgalinden-kurtuldu.html"
+  },
+  {
+   "id": "tarih-a4dc9fd218577c0ea207",
+   "slug": "2026-11-18-adolf-hitler-ve-benito-mussolini-general-franco",
+   "title": "Adolf Hitler ve Benito Mussolini (1936)",
+   "description": "Tarihte bugün, 18 Kasım 1936: Adolf Hitler ve Benito Mussolini, General Franco'nun İspanya'da kurduğu Geçici Hükûmeti tanıdı.",
+   "v": 2,
+   "rev": 38548314,
+   "gaps": [],
+   "complete": true,
+   "chars": 65248,
+   "src": {
+    "cand": {
+     "id": "8519f3828437b2bf",
+     "lang": "tr",
+     "kind": "olay",
+     "year": 1936,
+     "text": "Adolf Hitler ve Benito Mussolini, General Franco'nun İspanya'da kurduğu Geçici Hükûmeti tanıdı.",
+     "links": [
+      "Adolf Hitler",
+      "Benito Mussolini",
+      "General Franco",
+      "İspanya",
+      "Franco İspanyası"
+     ],
+     "month": 11,
+     "day": 18
+    }
+   },
+   "pub": "2026-11-17T23:21:23Z",
+   "date": "2026-11-18",
+   "kind": "olay",
+   "year": 1936,
+   "topic_title": "Adolf Hitler",
+   "topic_key": "tr:adolf hitler",
+   "event_id": "8519f3828437b2bf",
+   "wiki_url": "https://tr.wikipedia.org/wiki/Adolf_Hitler",
+   "image": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Hitler_portrait_crop.jpg/1280px-Hitler_portrait_crop.jpg?utm_source=tr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "width": 1280,
+    "height": 1704,
+    "alt": "Adolf Hitler ile ilgili tarihî görsel (1936)",
+    "fallback": false
+   },
+   "categories": [
+    "Olay",
+    "Adolf Hitler",
+    "20. yüzyıl",
+    "Tarihte Bugün",
+    "Siyaset"
+   ],
+   "content_file": "data/content/2026-11-18-adolf-hitler-ve-benito-mussolini-general-franco.html",
+   "link": "https://xmifrmx.github.io/makale/makale/2026-11-18-adolf-hitler-ve-benito-mussolini-general-franco.html"
+  },
+  {
+   "id": "tarih-ab79f7ff501c98ece828",
+   "slug": "2026-11-18-ii-dunya-savasi",
+   "title": "II. Dünya Savaşı (1940): Gelişmeler ve Tarihî Önemi",
+   "description": "II. Dünya Savaşı, 1939'dan 1945'e kadar süren küresel savaştır.",
+   "v": 2,
+   "rev": 38588516,
+   "gaps": [],
+   "complete": true,
+   "chars": 77732,
+   "src": {
+    "cand": {
+     "id": "0cf903826e50ac56",
+     "lang": "en",
+     "kind": "olay",
+     "year": 1940,
+     "text": "World War II: German leader Adolf Hitler and Italian Foreign Minister Galeazzo Ciano meet to discuss Benito Mussolini's disastrous Italian invasion of Greece.",
+     "links": [
+      "World War II",
+      "Adolf Hitler",
+      "Galeazzo Ciano",
+      "Benito Mussolini",
+      "Italian invasion of Greece"
+     ],
+     "month": 11,
+     "day": 18
+    }
+   },
+   "pub": "2026-11-17T23:21:24Z",
+   "date": "2026-11-18",
+   "kind": "olay",
+   "year": 1940,
+   "topic_title": "II. Dünya Savaşı",
+   "topic_key": "tr:ıı. dünya savaşı",
+   "event_id": "0cf903826e50ac56",
+   "wiki_url": "https://tr.wikipedia.org/wiki/II._D%C3%BCnya_Sava%C5%9F%C4%B1",
+   "image": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/3/34/Changde_battle.jpg?utm_source=tr.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+    "width": 400,
+    "height": 286,
+    "alt": "II. Dünya Savaşı ile ilgili tarihî görsel (1940)",
+    "fallback": false
+   },
+   "categories": [
+    "Olay",
+    "II. Dünya Savaşı",
+    "20. yüzyıl",
+    "Tarihte Bugün",
+    "Savaş"
+   ],
+   "content_file": "data/content/2026-11-18-ii-dunya-savasi.html",
+   "link": "https://xmifrmx.github.io/makale/makale/2026-11-18-ii-dunya-savasi.html"
+  },
+  {
+   "id": "tarih-d8ea8a0d2de6f23dc6d7",
+   "slug": "2026-11-18-agustin-gamarra",
+   "title": "Agustín Gamarra: Hayatı, Mirası ve Tarihteki Etkisi (1841)",
+   "description": "Agustín Gamarra, 18 Kasım 1841 tarihinde hayatını kaybetti.",
+   "v": 2,
+   "rev": 38549477,
+   "gaps": [],
+   "complete": true,
+   "chars": 2715,
+   "src": {
+    "cand": {
+     "id": "45b9c173b562a2e5",
+     "lang": "en",
+     "kind": "olum",
+     "year": 1841,
+     "text": "Agustín Gamarra, Peruvian general and politician, 10th and 14th President of Peru (born 1785)",
+     "links": [
+      "Agustín Gamarra"
+     ],
+     "month": 11,
+     "day": 18
+    }
+   },
+   "pub": "2026-11-17T23:21:25Z",
+   "date": "2026-11-18",
+   "kind": "olum",
+   "year": 1841,
+   "topic_title": "Agustín Gamarra",
+   "topic_key": "tr:agustín gamarra",
+   "event_id": "45b9c173b562a2e5",
+   "wiki_url": "https://tr.wikipedia.org/wiki/Agust%C3%ADn_Gamarra",
+   "image": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/3/31/Agustin_Gamarra.jpg?utm_source=tr.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+    "width": 981,
+    "height": 1102,
+    "alt": "Agustín Gamarra ile ilgili görsel",
+    "fallback": false
+   },
+   "categories": [
+    "Ölüm",
+    "Agustín Gamarra",
+    "19. yüzyıl",
+    "Tarihte Bugün",
+    "Savaş"
+   ],
+   "content_file": "data/content/2026-11-18-agustin-gamarra.html",
+   "link": "https://xmifrmx.github.io/makale/makale/2026-11-18-agustin-gamarra.html"
+  },
+  {
+   "id": "tarih-6886ca664c693b4f583c",
+   "slug": "2026-11-18-i-dunya-savasi",
+   "title": "I. Dünya Savaşı (1916): Gelişmeler ve Tarihî Önemi",
+   "description": "I. Dünya Savaşı, 28 Temmuz 1914 tarihinde başlayıp 11 Kasım 1918 tarihinde sona eren Avrupa merkezli küresel bir savaştır.",
+   "v": 2,
+   "rev": 38276524,
+   "gaps": [],
+   "complete": true,
+   "chars": 49144,
+   "src": {
+    "cand": {
+     "id": "bbd9fe96da4fbef6",
+     "lang": "en",
+     "kind": "olay",
+     "year": 1916,
+     "text": "World War I: First Battle of the Somme: In France, British Expeditionary Force commander Douglas Haig calls off the battle which started on July 1, 1916.",
+     "links": [
+      "World War I",
+      "Battle of the Somme",
+      "British Expeditionary Force (World War I)",
+      "Douglas Haig, 1st Earl Haig"
+     ],
+     "month": 11,
+     "day": 18
+    }
+   },
+   "pub": "2026-11-17T23:21:26Z",
+   "date": "2026-11-18",
+   "kind": "olay",
+   "year": 1916,
+   "topic_title": "I. Dünya Savaşı",
+   "topic_key": "tr:ı. dünya savaşı",
+   "event_id": "bbd9fe96da4fbef6",
+   "wiki_url": "https://tr.wikipedia.org/wiki/I._D%C3%BCnya_Sava%C5%9F%C4%B1",
+   "image": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/WWImontage.jpg/1280px-WWImontage.jpg?utm_source=tr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "width": 1280,
+    "height": 1299,
+    "alt": "I. Dünya Savaşı ile ilgili tarihî görsel (1916)",
+    "fallback": false
+   },
+   "categories": [
+    "Olay",
+    "I. Dünya Savaşı",
+    "20. yüzyıl",
+    "Tarihte Bugün",
+    "Savaş"
+   ],
+   "content_file": "data/content/2026-11-18-i-dunya-savasi.html",
+   "link": "https://xmifrmx.github.io/makale/makale/2026-11-18-i-dunya-savasi.html"
+  },
+  {
+   "id": "tarih-f2eb98c1c64b1c09e006",
+   "slug": "2026-11-18-vietnam-savasi",
+   "title": "Vietnam Savaşı (1961): Gelişmeler ve Tarihî Önemi",
+   "description": "Vietnam Savaşı ya da İkinci Çinhindi Savaşı, 1 Kasım 1955 ile 30 Nisan 1975 tarihleri arasında Vietnam, Laos ve Kamboçya'da gerçekleşen, Kuzey Vietnam…",
+   "v": 2,
+   "rev": 38615324,
+   "gaps": [],
+   "complete": true,
+   "chars": 12888,
+   "src": {
+    "cand": {
+     "id": "c4abf3c3977bcf4c",
+     "lang": "en",
+     "kind": "olay",
+     "year": 1961,
+     "text": "Vietnam War: United States President John F. Kennedy sends 18,000 military advisors to South Vietnam.",
+     "links": [
+      "Vietnam War",
+      "John F. Kennedy",
+      "South Vietnam"
+     ],
+     "month": 11,
+     "day": 18
+    }
+   },
+   "pub": "2026-11-17T23:21:27Z",
+   "date": "2026-11-18",
+   "kind": "olay",
+   "year": 1961,
+   "topic_title": "Vietnam Savaşı",
+   "topic_key": "tr:vietnam savaşı",
+   "event_id": "c4abf3c3977bcf4c",
+   "wiki_url": "https://tr.wikipedia.org/wiki/Vietnam_Sava%C5%9F%C4%B1",
+   "image": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/f/fc/VietnamMural.jpg?utm_source=tr.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+    "width": 1188,
+    "height": 974,
+    "alt": "Vietnam Savaşı ile ilgili tarihî görsel (1961)",
+    "fallback": false
+   },
+   "categories": [
+    "Olay",
+    "Vietnam Savaşı",
+    "20. yüzyıl",
+    "Tarihte Bugün",
+    "Savaş"
+   ],
+   "content_file": "data/content/2026-11-18-vietnam-savasi.html",
+   "link": "https://xmifrmx.github.io/makale/makale/2026-11-18-vietnam-savasi.html"
+  },
+  {
+   "id": "tarih-9222d410842336142c0d",
+   "slug": "2026-11-18-napolyon-savaslari",
+   "title": "Napolyon Savaşları (1809): Gelişmeler ve Tarihî Önemi",
+   "description": "Napolyon Savaşları, Fransız Devrim Savaşları'nın ardından Napolyon önderliğindeki Fransa ile Avrupa'nın diğer güçlü devletlerinin oluşturduğu koalisyon…",
+   "v": 2,
+   "rev": 38161548,
+   "gaps": [],
+   "complete": true,
+   "chars": 19748,
+   "src": {
+    "cand": {
+     "id": "adbc28eba0534076",
+     "lang": "en",
+     "kind": "olay",
+     "year": 1809,
+     "text": "Napoleonic Wars: In a naval action, French frigates defeat British East Indiamen in the Bay of Bengal.",
+     "links": [
+      "Napoleonic Wars",
+      "Action of 18 November 1809",
+      "frigate",
+      "East Indiamen",
+      "Bay of Bengal"
+     ],
+     "month": 11,
+     "day": 18
+    }
+   },
+   "pub": "2026-11-17T23:21:28Z",
+   "date": "2026-11-18",
+   "kind": "olay",
+   "year": 1809,
+   "topic_title": "Napolyon Savaşları",
+   "topic_key": "tr:napolyon savaşları",
+   "event_id": "adbc28eba0534076",
+   "wiki_url": "https://tr.wikipedia.org/wiki/Napolyon_Sava%C5%9Flar%C4%B1",
+   "image": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Napoleonic_Wars.jpg?utm_source=tr.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+    "width": 1280,
+    "height": 2880,
+    "alt": "Napolyon Savaşları ile ilgili tarihî görsel (1809)",
+    "fallback": false
+   },
+   "categories": [
+    "Olay",
+    "Napolyon Savaşları",
+    "19. yüzyıl",
+    "Tarihte Bugün",
+    "Savaş"
+   ],
+   "content_file": "data/content/2026-11-18-napolyon-savaslari.html",
+   "link": "https://xmifrmx.github.io/makale/makale/2026-11-18-napolyon-savaslari.html"
+  },
+  {
+   "id": "tarih-a3ce67243222a7b1def1",
+   "slug": "2026-11-18-kurt-schuschnigg",
+   "title": "Kurt Schuschnigg: Hayatı, Mirası ve Tarihteki Etkisi (1977)",
+   "description": "Kurt Schuschnigg, 18 Kasım 1977 tarihinde hayatını kaybetti.",
+   "v": 2,
+   "rev": 37701850,
+   "gaps": [],
+   "complete": true,
+   "chars": 6171,
+   "src": {
+    "cand": {
+     "id": "8fe916b5174b9cab",
+     "lang": "tr",
+     "kind": "olum",
+     "year": 1977,
+     "text": "Kurt Schuschnigg, Avusturyalı siyasetçi (d. 1897)",
+     "links": [
+      "Kurt Schuschnigg"
+     ],
+     "month": 11,
+     "day": 18
+    }
+   },
+   "pub": "2026-11-17T23:21:29Z",
+   "date": "2026-11-18",
+   "kind": "olum",
+   "year": 1977,
+   "topic_title": "Kurt Schuschnigg",
+   "topic_key": "tr:kurt schuschnigg",
+   "event_id": "8fe916b5174b9cab",
+   "wiki_url": "https://tr.wikipedia.org/wiki/Kurt_Schuschnigg",
+   "image": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/KurtVonSchuschnigg1936-3.jpg/1280px-KurtVonSchuschnigg1936-3.jpg?utm_source=tr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "width": 1280,
+    "height": 1584,
+    "alt": "Kurt Schuschnigg ile ilgili görsel",
+    "fallback": false
+   },
+   "categories": [
+    "Ölüm",
+    "Kurt Schuschnigg",
+    "20. yüzyıl",
+    "Tarihte Bugün",
+    "Siyaset"
+   ],
+   "content_file": "data/content/2026-11-18-kurt-schuschnigg.html",
+   "link": "https://xmifrmx.github.io/makale/makale/2026-11-18-kurt-schuschnigg.html"
+  },
+  {
+   "id": "tarih-4676a0e5fdffe96aaa45",
+   "slug": "2026-11-18-vukovar-muharebesi",
+   "title": "Vukovar Muharebesi (1991): Gelişmeler ve Tarihî Önemi",
+   "description": "Vukovar Muharebesi ya da Vukovar Kuşatması, Ağustos ve Kasım 1991 tarihleri arasında Yugoslav Halk Ordusu (JNA) tarafından, Sırbistan'dan gelen çeşitli…",
+   "v": 2,
+   "rev": 36669823,
+   "gaps": [],
+   "complete": true,
+   "chars": 2581,
+   "src": {
+    "cand": {
+     "id": "4473a56063caf6a8",
+     "lang": "en",
+     "kind": "olay",
+     "year": 1991,
+     "text": "After an 87-day siege, the Croatian city of Vukovar capitulates to the besieging Yugoslav People's Army and allied Serb paramilitary forces.",
+     "links": [
+      "Battle of Vukovar",
+      "Croatia",
+      "Vukovar"
+     ],
+     "month": 11,
+     "day": 18
+    }
+   },
+   "pub": "2026-11-17T23:21:30Z",
+   "date": "2026-11-18",
+   "kind": "olay",
+   "year": 1991,
+   "topic_title": "Vukovar Muharebesi",
+   "topic_key": "tr:vukovar muharebesi",
+   "event_id": "4473a56063caf6a8",
+   "wiki_url": "https://tr.wikipedia.org/wiki/Vukovar_Muharebesi",
+   "image": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/8/83/Vukovar-watertower-after-war.jpg?utm_source=tr.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+    "width": 854,
+    "height": 1286,
+    "alt": "Vukovar Muharebesi ile ilgili tarihî görsel (1991)",
+    "fallback": false
+   },
+   "categories": [
+    "Olay",
+    "Vukovar Muharebesi",
+    "20. yüzyıl",
+    "Tarihte Bugün",
+    "Savaş"
+   ],
+   "content_file": "data/content/2026-11-18-vukovar-muharebesi.html",
+   "link": "https://xmifrmx.github.io/makale/makale/2026-11-18-vukovar-muharebesi.html"
+  },
+  {
+   "id": "tarih-590fbb7a83b12255bcb7",
+   "slug": "2026-11-18-haiti-devrimi",
+   "title": "Haiti Devrimi (1803): Gelişmeler ve Tarihî Önemi",
+   "description": "Haiti Devrimi (1791–1804), Batı yarımküredeki en başarılı Afrikalı köle ayaklanmasıdır.",
+   "v": 2,
+   "rev": 36352395,
+   "gaps": [],
+   "complete": true,
+   "chars": 14161,
+   "src": {
+    "cand": {
+     "id": "cd329e663ad4db64",
+     "lang": "en",
+     "kind": "olay",
+     "year": 1803,
+     "text": "The Battle of Vertières, the last major battle of the Haitian Revolution, is fought, leading to the establishment of the Republic of Haiti, the first black republic in the Western Hemisphere.",
+     "links": [
+      "Battle of Vertières",
+      "Haitian Revolution",
+      "Republic of Haiti",
+      "Western Hemisphere"
+     ],
+     "month": 11,
+     "day": 18
+    }
+   },
+   "pub": "2026-11-17T23:21:31Z",
+   "date": "2026-11-18",
+   "kind": "olay",
+   "year": 1803,
+   "topic_title": "Haiti Devrimi",
+   "topic_key": "tr:haiti devrimi",
+   "event_id": "cd329e663ad4db64",
+   "wiki_url": "https://tr.wikipedia.org/wiki/Haiti_Devrimi",
+   "image": {
+    "url": "https://xmifrmx.github.io/makale/assets/kapak-varsayilan.svg",
+    "width": 1280,
+    "height": 720,
+    "alt": "Haiti Devrimi ile ilgili tarihî görsel (1803)",
+    "fallback": true
+   },
+   "categories": [
+    "Olay",
+    "Haiti Devrimi",
+    "19. yüzyıl",
+    "Tarihte Bugün",
+    "Siyaset"
+   ],
+   "content_file": "data/content/2026-11-18-haiti-devrimi.html",
+   "link": "https://xmifrmx.github.io/makale/makale/2026-11-18-haiti-devrimi.html"
+  },
+  {
+   "id": "tarih-53bc12e42c76880d6839",
+   "slug": "2026-11-18-renee-vivien",
+   "title": "Renée Vivien: Hayatı, Mirası ve Tarihteki Etkisi (1909)",
+   "description": "Renée Vivien, 18 Kasım 1909 tarihinde hayatını kaybetti.",
+   "v": 2,
+   "rev": 38243950,
+   "gaps": [],
+   "complete": true,
+   "chars": 7588,
+   "src": {
+    "cand": {
+     "id": "7e6081739db1ecf2",
+     "lang": "en",
+     "kind": "olum",
+     "year": 1909,
+     "text": "Renée Vivien, English-French poet (born 1877)",
+     "links": [
+      "Renée Vivien"
+     ],
+     "month": 11,
+     "day": 18
+    }
+   },
+   "pub": "2026-11-17T23:21:32Z",
+   "date": "2026-11-18",
+   "kind": "olum",
+   "year": 1909,
+   "topic_title": "Renée Vivien",
+   "topic_key": "tr:renée vivien",
+   "event_id": "7e6081739db1ecf2",
+   "wiki_url": "https://tr.wikipedia.org/wiki/Ren%C3%A9e_Vivien",
+   "image": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/2/23/Ren%C3%A9e_Vivien_1.png?utm_source=tr.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+    "width": 619,
+    "height": 883,
+    "alt": "Renée Vivien ile ilgili görsel",
+    "fallback": false
+   },
+   "categories": [
+    "Ölüm",
+    "Renée Vivien",
+    "20. yüzyıl",
+    "Tarihte Bugün",
+    "Kültür"
+   ],
+   "content_file": "data/content/2026-11-18-renee-vivien.html",
+   "link": "https://xmifrmx.github.io/makale/makale/2026-11-18-renee-vivien.html"
+  },
+  {
+   "id": "tarih-9bec8db48bfe616d28b8",
+   "slug": "2026-11-18-carl-maria-von-weber",
+   "title": "Carl Maria von Weber Kimdir? Hayatı, Eserleri ve Tarihteki Yeri",
+   "description": "Carl Maria von Weber, 18 Kasım 1786 tarihinde dünyaya geldi.",
+   "v": 2,
+   "rev": 38332680,
+   "gaps": [],
+   "complete": true,
+   "chars": 2095,
+   "src": {
+    "cand": {
+     "id": "8bdd248562d26069",
+     "lang": "tr",
+     "kind": "dogum",
+     "year": 1786,
+     "text": "Carl Maria von Weber, Alman besteci (ö. 1826)",
+     "links": [
+      "Carl Maria von Weber"
+     ],
+     "month": 11,
+     "day": 18
+    }
+   },
+   "pub": "2026-11-17T23:21:33Z",
+   "date": "2026-11-18",
+   "kind": "dogum",
+   "year": 1786,
+   "topic_title": "Carl Maria von Weber",
+   "topic_key": "tr:carl maria von weber",
+   "event_id": "8bdd248562d26069",
+   "wiki_url": "https://tr.wikipedia.org/wiki/Carl_Maria_von_Weber",
+   "image": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Caroline_Bardua_-_Bildnis_des_Komponisten_Carl_Maria_von_Weber.jpg/1280px-Caroline_Bardua_-_Bildnis_des_Komponisten_Carl_Maria_von_Weber.jpg?utm_source=tr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "width": 1280,
+    "height": 1668,
+    "alt": "Carl Maria von Weber ile ilgili görsel",
+    "fallback": false
+   },
+   "categories": [
+    "Doğum",
+    "Carl Maria von Weber",
+    "18. yüzyıl",
+    "Tarihte Bugün",
+    "Kültür"
+   ],
+   "content_file": "data/content/2026-11-18-carl-maria-von-weber.html",
+   "link": "https://xmifrmx.github.io/makale/makale/2026-11-18-carl-maria-von-weber.html"
+  },
+  {
+   "id": "tarih-204853319e96bbda7cb3",
+   "slug": "2026-11-18-robert-fox-bacher",
+   "title": "Robert Fox Bacher: Hayatı, Mirası ve Tarihteki Etkisi (2004)",
+   "description": "Robert Fox Bacher, 18 Kasım 2004 tarihinde hayatını kaybetti. Robert Fox Bacher (31 Ağustos 1905 - 18 Kasım 2004), Amerikalı nükleer fizikçi",
+   "v": 2,
+   "rev": 37922283,
+   "gaps": [],
+   "complete": true,
+   "chars": 17269,
+   "src": {
+    "cand": {
+     "id": "9a750f52168d25bc",
+     "lang": "en",
+     "kind": "olum",
+     "year": 2004,
+     "text": "Robert Bacher, American physicist and academic (born 1905)",
+     "links": [
+      "Robert Bacher"
+     ],
+     "month": 11,
+     "day": 18
+    }
+   },
+   "pub": "2026-11-17T23:21:34Z",
+   "date": "2026-11-18",
+   "kind": "olum",
+   "year": 2004,
+   "topic_title": "Robert Fox Bacher",
+   "topic_key": "tr:robert fox bacher",
+   "event_id": "9a750f52168d25bc",
+   "wiki_url": "https://tr.wikipedia.org/wiki/Robert_Fox_Bacher",
+   "image": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Robert_F._Bacher.GIF?utm_source=tr.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+    "width": 485,
+    "height": 615,
+    "alt": "Robert Fox Bacher ile ilgili görsel",
+    "fallback": false
+   },
+   "categories": [
+    "Ölüm",
+    "Robert Fox Bacher",
+    "21. yüzyıl",
+    "Tarihte Bugün",
+    "Bilim"
+   ],
+   "content_file": "data/content/2026-11-18-robert-fox-bacher.html",
+   "link": "https://xmifrmx.github.io/makale/makale/2026-11-18-robert-fox-bacher.html"
+  },
+  {
+   "id": "tarih-c192ee9751a63413a6ea",
+   "slug": "2026-11-18-stanislav-kosior",
+   "title": "Stanislav Kosior Kimdir? Hayatı, Eserleri ve Tarihteki Yeri",
+   "description": "Stanislav Kosior, 18 Kasım 1889 tarihinde dünyaya geldi.",
+   "v": 2,
+   "rev": 37862613,
+   "gaps": [],
+   "complete": true,
+   "chars": 2432,
+   "src": {
+    "cand": {
+     "id": "e1a74516214b92d2",
+     "lang": "tr",
+     "kind": "dogum",
+     "year": 1889,
+     "text": "Stanislav Kosior, Sovyet devlet adamı (ö. 1939)",
+     "links": [
+      "Stanislav Kosior"
+     ],
+     "month": 11,
+     "day": 18
+    }
+   },
+   "pub": "2026-11-17T23:21:35Z",
+   "date": "2026-11-18",
+   "kind": "dogum",
+   "year": 1889,
+   "topic_title": "Stanislav Kosior",
+   "topic_key": "tr:stanislav kosior",
+   "event_id": "e1a74516214b92d2",
+   "wiki_url": "https://tr.wikipedia.org/wiki/Stanislav_Kosior",
+   "image": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/5/57/Stanislaw_Kosior2.jpg?utm_source=tr.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+    "width": 409,
+    "height": 543,
+    "alt": "Stanislav Kosior ile ilgili görsel",
+    "fallback": false
+   },
+   "categories": [
+    "Doğum",
+    "Stanislav Kosior",
+    "19. yüzyıl",
+    "Tarihte Bugün",
+    "Siyaset"
+   ],
+   "content_file": "data/content/2026-11-18-stanislav-kosior.html",
+   "link": "https://xmifrmx.github.io/makale/makale/2026-11-18-stanislav-kosior.html"
+  },
+  {
+   "id": "tarih-99dac403a9730fc7185a",
+   "slug": "2026-11-18-amerika-birlesik-devletleri-kongresi",
+   "title": "Amerika Birleşik Devletleri Kongresi (1970): Tarihî Önemi",
+   "description": "Birleşik Devletler Kongresi (İngilizce: United States Congress), Birleşik Devletler federal hükûmetinin iki meclisli yasama organıdır ve iki bölümden…",
+   "v": 2,
+   "rev": 38562023,
+   "gaps": [],
+   "complete": true,
+   "chars": 16494,
+   "src": {
+    "cand": {
+     "id": "85dfc38f77aa02af",
+     "lang": "en",
+     "kind": "olay",
+     "year": 1970,
+     "text": "U.S. President Richard Nixon asks the U.S. Congress for $155&nbsp;million in supplemental aid for the Cambodian government.",
+     "links": [
+      "Richard Nixon",
+      "United States Congress",
+      "Cambodia"
+     ],
+     "month": 11,
+     "day": 18
+    }
+   },
+   "pub": "2026-11-17T23:21:36Z",
+   "date": "2026-11-18",
+   "kind": "olay",
+   "year": 1970,
+   "topic_title": "Amerika Birleşik Devletleri Kongresi",
+   "topic_key": "tr:amerika birleşik devletleri kongresi",
+   "event_id": "85dfc38f77aa02af",
+   "wiki_url": "https://tr.wikipedia.org/wiki/Amerika_Birle%C5%9Fik_Devletleri_Kongresi",
+   "image": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Seal_of_the_United_States_Congress.svg/1280px-Seal_of_the_United_States_Congress.svg.png?utm_source=tr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "width": 1280,
+    "height": 1276,
+    "alt": "Amerika Birleşik Devletleri Kongresi ile ilgili tarihî görsel (1970)",
+    "fallback": false
+   },
+   "categories": [
+    "Olay",
+    "Amerika Birleşik Devletleri Kongresi",
+    "20. yüzyıl",
+    "Tarihte Bugün",
+    "Siyaset"
+   ],
+   "content_file": "data/content/2026-11-18-amerika-birlesik-devletleri-kongresi.html",
+   "link": "https://xmifrmx.github.io/makale/makale/2026-11-18-amerika-birlesik-devletleri-kongresi.html"
+  },
+  {
+   "id": "tarih-90612ab8ae1ce9c8f842",
+   "slug": "2026-11-18-margaret-atwood",
+   "title": "Margaret Atwood Kimdir? Hayatı, Eserleri ve Tarihteki Yeri",
+   "description": "Margaret Atwood, 18 Kasım 1939 tarihinde dünyaya geldi.",
+   "v": 2,
+   "rev": 38596065,
+   "gaps": [],
+   "complete": true,
+   "chars": 3843,
+   "src": {
+    "cand": {
+     "id": "c8fe135b12b28cb6",
+     "lang": "en",
+     "kind": "dogum",
+     "year": 1939,
+     "text": "Margaret Atwood, Canadian author",
+     "links": [
+      "Margaret Atwood"
+     ],
+     "month": 11,
+     "day": 18
+    }
+   },
+   "pub": "2026-11-17T23:21:37Z",
+   "date": "2026-11-18",
+   "kind": "dogum",
+   "year": 1939,
+   "topic_title": "Margaret Atwood",
+   "topic_key": "tr:margaret atwood",
+   "event_id": "c8fe135b12b28cb6",
+   "wiki_url": "https://tr.wikipedia.org/wiki/Margaret_Atwood",
+   "image": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Margaret_Atwood_%283x4_cropped%29.jpg/1280px-Margaret_Atwood_%283x4_cropped%29.jpg?utm_source=tr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "width": 1280,
+    "height": 1708,
+    "alt": "Margaret Atwood ile ilgili görsel",
+    "fallback": false
+   },
+   "categories": [
+    "Doğum",
+    "Margaret Atwood",
+    "20. yüzyıl",
+    "Tarihte Bugün",
+    "Kültür"
+   ],
+   "content_file": "data/content/2026-11-18-margaret-atwood.html",
+   "link": "https://xmifrmx.github.io/makale/makale/2026-11-18-margaret-atwood.html"
+  },
+  {
+   "id": "tarih-a3282d02e2322c229c9b",
+   "slug": "2026-11-18-aytunc-altindal",
+   "title": "Aytunç Altındal: Hayatı, Mirası ve Tarihteki Etkisi (2013)",
+   "description": "Aytunç Altındal, 18 Kasım 2013 tarihinde hayatını kaybetti.",
+   "v": 2,
+   "rev": 38579048,
+   "gaps": [],
+   "complete": true,
+   "chars": 11405,
+   "src": {
+    "cand": {
+     "id": "3cedb15faadf5c77",
+     "lang": "tr",
+     "kind": "olum",
+     "year": 2013,
+     "text": "Aytunç Altındal, Türk gazeteci ve yazar (d. 1945)",
+     "links": [
+      "Aytunç Altındal"
+     ],
+     "month": 11,
+     "day": 18
+    }
+   },
+   "pub": "2026-11-17T23:21:38Z",
+   "date": "2026-11-18",
+   "kind": "olum",
+   "year": 2013,
+   "topic_title": "Aytunç Altındal",
+   "topic_key": "tr:aytunç altındal",
+   "event_id": "3cedb15faadf5c77",
+   "wiki_url": "https://tr.wikipedia.org/wiki/Aytun%C3%A7_Alt%C4%B1ndal",
+   "image": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/Aytun%C3%A7_Alt%C4%B1ndal_grave1.jpg/1280px-Aytun%C3%A7_Alt%C4%B1ndal_grave1.jpg?utm_source=tr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "width": 1280,
+    "height": 607,
+    "alt": "Aytunç Altındal ile ilgili görsel",
+    "fallback": false
+   },
+   "categories": [
+    "Ölüm",
+    "Aytunç Altındal",
+    "21. yüzyıl",
+    "Tarihte Bugün",
+    "Bilim"
+   ],
+   "content_file": "data/content/2026-11-18-aytunc-altindal.html",
+   "link": "https://xmifrmx.github.io/makale/makale/2026-11-18-aytunc-altindal.html"
+  },
+  {
+   "id": "tarih-bfc4782101c686bd5dfe",
+   "slug": "2026-11-18-hasan-basri-cantay",
+   "title": "Hasan Basri Çantay Kimdir? Hayatı, Eserleri ve Tarihteki Yeri",
+   "description": "Hasan Basri Çantay, 18 Kasım 1887 tarihinde dünyaya geldi.",
+   "v": 2,
+   "rev": 37388241,
+   "gaps": [],
+   "complete": true,
+   "chars": 9641,
+   "src": {
+    "cand": {
+     "id": "1a3c5420f4e50d06",
+     "lang": "tr",
+     "kind": "dogum",
+     "year": 1887,
+     "text": "Hasan Basri Çantay, Türk gazeteci, Kur'an müfessiri, politikacı ve TBMM 1. Dönem Milletvekili (ö. 1964)",
+     "links": [
+      "Hasan Basri Çantay",
+      "TBMM 1. dönem milletvekilleri listesi"
+     ],
+     "month": 11,
+     "day": 18
+    }
+   },
+   "pub": "2026-11-17T23:21:39Z",
+   "date": "2026-11-18",
+   "kind": "dogum",
+   "year": 1887,
+   "topic_title": "Hasan Basri Çantay",
+   "topic_key": "tr:hasan basri çantay",
+   "event_id": "1a3c5420f4e50d06",
+   "wiki_url": "https://tr.wikipedia.org/wiki/Hasan_Basri_%C3%87antay",
+   "image": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Hasan_Basri_%C3%87antay_1.jpg/1280px-Hasan_Basri_%C3%87antay_1.jpg?utm_source=tr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "width": 1280,
+    "height": 606,
+    "alt": "Hasan Basri Çantay ile ilgili görsel",
+    "fallback": false
+   },
+   "categories": [
+    "Doğum",
+    "Hasan Basri Çantay",
+    "19. yüzyıl",
+    "Tarihte Bugün",
+    "Savaş"
+   ],
+   "content_file": "data/content/2026-11-18-hasan-basri-cantay.html",
+   "link": "https://xmifrmx.github.io/makale/makale/2026-11-18-hasan-basri-cantay.html"
+  },
+  {
+   "id": "tarih-8ea5f2715e4dcf4647d9",
+   "slug": "2026-11-18-johnny-christ",
+   "title": "Johnny Christ Kimdir? Hayatı, Eserleri ve Tarihteki Yeri",
+   "description": "Johnny Christ, 18 Kasım 1984 tarihinde dünyaya geldi.",
+   "v": 2,
+   "rev": 37429611,
+   "gaps": [],
+   "complete": true,
+   "chars": 2439,
+   "src": {
+    "cand": {
+     "id": "ce2e5148090e6833",
+     "lang": "tr",
+     "kind": "dogum",
+     "year": 1984,
+     "text": "Johnny Christ, Amerikalı mizisyen ve Avenged Sevenfold grubunun bas gitaristi",
+     "links": [
+      "Johnny Christ",
+      "Avenged Sevenfold"
+     ],
+     "month": 11,
+     "day": 18
+    }
+   },
+   "pub": "2026-11-17T23:21:40Z",
+   "date": "2026-11-18",
+   "kind": "dogum",
+   "year": 1984,
+   "topic_title": "Johnny Christ",
+   "topic_key": "tr:johnny christ",
+   "event_id": "ce2e5148090e6833",
+   "wiki_url": "https://tr.wikipedia.org/wiki/Johnny_Christ",
+   "image": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Johnny_Christ_in_2018_%28cropped%29.jpg/1280px-Johnny_Christ_in_2018_%28cropped%29.jpg?utm_source=tr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "width": 1280,
+    "height": 1300,
+    "alt": "Johnny Christ ile ilgili görsel",
+    "fallback": false
+   },
+   "categories": [
+    "Doğum",
+    "Johnny Christ",
+    "20. yüzyıl",
+    "Tarihte Bugün",
+    "Genel"
+   ],
+   "content_file": "data/content/2026-11-18-johnny-christ.html",
+   "link": "https://xmifrmx.github.io/makale/makale/2026-11-18-johnny-christ.html"
+  },
+  {
+   "id": "tarih-15f4735cfbd25cae7fc7",
+   "slug": "2026-11-18-ali-haydar-kaytan",
+   "title": "Ali Haydar Kaytan: Hayatı, Mirası ve Tarihteki Etkisi (2021)",
+   "description": "Ali Haydar Kaytan, 18 Kasım 2021 tarihinde hayatını kaybetti.",
+   "v": 2,
+   "rev": 37705822,
+   "gaps": [],
+   "complete": true,
+   "chars": 2041,
+   "src": {
+    "cand": {
+     "id": "b0fba10afaf162f4",
+     "lang": "tr",
+     "kind": "olum",
+     "year": 2021,
+     "text": "Ali Haydar Kaytan, PKK kurucu kadrosunda yer alan KCK Yürütme Konseyi üyesi (d. 1952)",
+     "links": [
+      "Ali Haydar Kaytan",
+      "PKK",
+      "KCK"
+     ],
+     "month": 11,
+     "day": 18
+    }
+   },
+   "pub": "2026-11-17T23:21:41Z",
+   "date": "2026-11-18",
+   "kind": "olum",
+   "year": 2021,
+   "topic_title": "Ali Haydar Kaytan",
+   "topic_key": "tr:ali haydar kaytan",
+   "event_id": "b0fba10afaf162f4",
+   "wiki_url": "https://tr.wikipedia.org/wiki/Ali_Haydar_Kaytan",
+   "image": {
+    "url": "https://xmifrmx.github.io/makale/assets/kapak-varsayilan.svg",
+    "width": 1280,
+    "height": 720,
+    "alt": "Ali Haydar Kaytan ile ilgili görsel",
+    "fallback": true
+   },
+   "categories": [
+    "Ölüm",
+    "Ali Haydar Kaytan",
+    "21. yüzyıl",
+    "Tarihte Bugün",
+    "Genel"
+   ],
+   "content_file": "data/content/2026-11-18-ali-haydar-kaytan.html",
+   "link": "https://xmifrmx.github.io/makale/makale/2026-11-18-ali-haydar-kaytan.html"
+  },
+  {
+   "id": "tarih-c1aa232426cf306fae80",
+   "slug": "2026-11-18-paul-bowles",
+   "title": "Paul Bowles: Hayatı, Mirası ve Tarihteki Etkisi (1999)",
+   "description": "Paul Bowles, 18 Kasım 1999 tarihinde hayatını kaybetti.",
+   "v": 2,
+   "rev": 38573120,
+   "gaps": [],
+   "complete": true,
+   "chars": 3458,
+   "src": {
+    "cand": {
+     "id": "b5126f64ea85f4f4",
+     "lang": "tr",
+     "kind": "olum",
+     "year": 1999,
+     "text": "Paul Bowles, Amerikalı yazar, besteci ve gezgin (d. 1910)",
+     "links": [
+      "Paul Bowles"
+     ],
+     "month": 11,
+     "day": 18
+    }
+   },
+   "pub": "2026-11-17T23:21:42Z",
+   "date": "2026-11-18",
+   "kind": "olum",
+   "year": 1999,
+   "topic_title": "Paul Bowles",
+   "topic_key": "tr:paul bowles",
+   "event_id": "b5126f64ea85f4f4",
+   "wiki_url": "https://tr.wikipedia.org/wiki/Paul_Bowles",
+   "image": {
+    "url": "https://xmifrmx.github.io/makale/assets/kapak-varsayilan.svg",
+    "width": 1280,
+    "height": 720,
+    "alt": "Paul Bowles ile ilgili görsel",
+    "fallback": true
+   },
+   "categories": [
+    "Ölüm",
+    "Paul Bowles",
+    "20. yüzyıl",
+    "Tarihte Bugün",
+    "Kültür"
+   ],
+   "content_file": "data/content/2026-11-18-paul-bowles.html",
+   "link": "https://xmifrmx.github.io/makale/makale/2026-11-18-paul-bowles.html"
+  },
+  {
+   "id": "tarih-c00a3ad9603edf763524",
+   "slug": "2026-11-18-malcolm-young",
+   "title": "Malcolm Young: Hayatı, Mirası ve Tarihteki Etkisi (2017)",
+   "description": "Malcolm Young, 18 Kasım 2017 tarihinde hayatını kaybetti.",
+   "v": 2,
+   "rev": 36306894,
+   "gaps": [],
+   "complete": true,
+   "chars": 1827,
+   "src": {
+    "cand": {
+     "id": "f6a4697e8d027038",
+     "lang": "tr",
+     "kind": "olum",
+     "year": 2017,
+     "text": "Malcolm Young, Avustralyalı ritim gitaristi ve şarkı yazarı (d. 1953)",
+     "links": [
+      "Malcolm Young"
+     ],
+     "month": 11,
+     "day": 18
+    }
+   },
+   "pub": "2026-11-17T23:21:43Z",
+   "date": "2026-11-18",
+   "kind": "olum",
+   "year": 2017,
+   "topic_title": "Malcolm Young",
+   "topic_key": "tr:malcolm young",
+   "event_id": "f6a4697e8d027038",
+   "wiki_url": "https://tr.wikipedia.org/wiki/Malcolm_Young",
+   "image": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Malcolm_Young_at_ACDC_Monster_of_Rock_Tour.jpg?utm_source=tr.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+    "width": 400,
+    "height": 446,
+    "alt": "Malcolm Young ile ilgili görsel",
+    "fallback": false
+   },
+   "categories": [
+    "Ölüm",
+    "Malcolm Young",
+    "21. yüzyıl",
+    "Tarihte Bugün",
+    "Kültür"
+   ],
+   "content_file": "data/content/2026-11-18-malcolm-young.html",
+   "link": "https://xmifrmx.github.io/makale/makale/2026-11-18-malcolm-young.html"
+  },
+  {
+   "id": "tarih-beefd389cdfc97b6e803",
+   "slug": "2026-11-18-sait-faik-abasiyanik",
+   "title": "Sait Faik Abasıyanık Kimdir? Hayatı, Eserleri ve Tarihteki Yeri",
+   "description": "Sait Faik Abasıyanık, 18 Kasım 1906 tarihinde dünyaya geldi.",
+   "v": 2,
+   "rev": 38316648,
+   "gaps": [],
+   "complete": true,
+   "chars": 44126,
+   "src": {
+    "cand": {
+     "id": "df5e81b110d23ded",
+     "lang": "tr",
+     "kind": "dogum",
+     "year": 1906,
+     "text": "Sait Faik Abasıyanık, Türk öykü yazarı (ö. 1954)",
+     "links": [
+      "Sait Faik Abasıyanık"
+     ],
+     "month": 11,
+     "day": 18
+    }
+   },
+   "pub": "2026-11-17T23:21:44Z",
+   "date": "2026-11-18",
+   "kind": "dogum",
+   "year": 1906,
+   "topic_title": "Sait Faik Abasıyanık",
+   "topic_key": "tr:sait faik abasıyanık",
+   "event_id": "df5e81b110d23ded",
+   "wiki_url": "https://tr.wikipedia.org/wiki/Sait_Faik_Abas%C4%B1yan%C4%B1k",
+   "image": {
+    "url": "https://xmifrmx.github.io/makale/assets/kapak-varsayilan.svg",
+    "width": 1280,
+    "height": 720,
+    "alt": "Sait Faik Abasıyanık ile ilgili görsel",
+    "fallback": true
+   },
+   "categories": [
+    "Doğum",
+    "Sait Faik Abasıyanık",
+    "20. yüzyıl",
+    "Tarihte Bugün",
+    "Kültür"
+   ],
+   "content_file": "data/content/2026-11-18-sait-faik-abasiyanik.html",
+   "link": "https://xmifrmx.github.io/makale/makale/2026-11-18-sait-faik-abasiyanik.html"
+  },
+  {
+   "id": "tarih-62ead69c17c407989c34",
+   "slug": "2026-11-18-naim-suleymanoglu",
+   "title": "Naim Süleymanoğlu: Hayatı, Mirası ve Tarihteki Etkisi (2017)",
+   "description": "Naim Süleymanoğlu, 18 Kasım 2017 tarihinde hayatını kaybetti.",
+   "v": 2,
+   "rev": 38540929,
+   "gaps": [],
+   "complete": true,
+   "chars": 8738,
+   "src": {
+    "cand": {
+     "id": "8e94232d72003395",
+     "lang": "tr",
+     "kind": "olum",
+     "year": 2017,
+     "text": "Naim Süleymanoğlu, Türk halterci (d. 1967)",
+     "links": [
+      "Naim Süleymanoğlu"
+     ],
+     "month": 11,
+     "day": 18
+    }
+   },
+   "pub": "2026-11-17T23:21:45Z",
+   "date": "2026-11-18",
+   "kind": "olum",
+   "year": 2017,
+   "topic_title": "Naim Süleymanoğlu",
+   "topic_key": "tr:naim süleymanoğlu",
+   "event_id": "8e94232d72003395",
+   "wiki_url": "https://tr.wikipedia.org/wiki/Naim_S%C3%BCleymano%C4%9Flu",
+   "image": {
+    "url": "https://xmifrmx.github.io/makale/assets/kapak-varsayilan.svg",
+    "width": 1280,
+    "height": 720,
+    "alt": "Naim Süleymanoğlu ile ilgili görsel",
+    "fallback": true
+   },
+   "categories": [
+    "Ölüm",
+    "Naim Süleymanoğlu",
+    "21. yüzyıl",
+    "Tarihte Bugün",
+    "Kültür"
+   ],
+   "content_file": "data/content/2026-11-18-naim-suleymanoglu.html",
+   "link": "https://xmifrmx.github.io/makale/makale/2026-11-18-naim-suleymanoglu.html"
+  },
+  {
+   "id": "tarih-0436b47802c4c3123c7a",
+   "slug": "2026-11-18-patrick-blackett",
+   "title": "Patrick Blackett Kimdir? Hayatı, Eserleri ve Tarihteki Yeri",
+   "description": "Patrick Blackett, 18 Kasım 1897 tarihinde dünyaya geldi.",
+   "v": 2,
+   "rev": 38387429,
+   "gaps": [],
+   "complete": true,
+   "chars": 2350,
+   "src": {
+    "cand": {
+     "id": "8368d60c36b1a090",
+     "lang": "en",
+     "kind": "dogum",
+     "year": 1897,
+     "text": "Patrick Blackett, Baron Blackett, English physicist and academic, Nobel Prize laureate (died 1974)",
+     "links": [
+      "Patrick Blackett, Baron Blackett",
+      "Nobel Prize in Physics"
+     ],
+     "month": 11,
+     "day": 18
+    }
+   },
+   "pub": "2026-11-17T23:21:46Z",
+   "date": "2026-11-18",
+   "kind": "dogum",
+   "year": 1897,
+   "topic_title": "Patrick Blackett",
+   "topic_key": "tr:patrick blackett",
+   "event_id": "8368d60c36b1a090",
+   "wiki_url": "https://tr.wikipedia.org/wiki/Patrick_Blackett",
+   "image": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Blackett-large.jpg?utm_source=tr.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+    "width": 133,
+    "height": 194,
+    "alt": "Patrick Blackett ile ilgili görsel",
+    "fallback": false
+   },
+   "categories": [
+    "Doğum",
+    "Patrick Blackett",
+    "19. yüzyıl",
+    "Tarihte Bugün",
+    "Savaş"
+   ],
+   "content_file": "data/content/2026-11-18-patrick-blackett.html",
+   "link": "https://xmifrmx.github.io/makale/makale/2026-11-18-patrick-blackett.html"
+  },
+  {
+   "id": "tarih-bd1eeb91bc39fc990bc9",
+   "slug": "2026-11-18-steven-moffat",
+   "title": "Steven Moffat Kimdir? Hayatı, Eserleri ve Tarihteki Yeri",
+   "description": "Steven Moffat, 18 Kasım 1961 tarihinde dünyaya geldi.",
+   "v": 2,
+   "rev": 36084175,
+   "gaps": [],
+   "complete": true,
+   "chars": 1469,
+   "src": {
+    "cand": {
+     "id": "2899dbe2ecf0dd25",
+     "lang": "tr",
+     "kind": "dogum",
+     "year": 1961,
+     "text": "Steven Moffat, İskoç senarist ve yapımcı",
+     "links": [
+      "Steven Moffat"
+     ],
+     "month": 11,
+     "day": 18
+    }
+   },
+   "pub": "2026-11-17T23:21:47Z",
+   "date": "2026-11-18",
+   "kind": "dogum",
+   "year": 1961,
+   "topic_title": "Steven Moffat",
+   "topic_key": "tr:steven moffat",
+   "event_id": "2899dbe2ecf0dd25",
+   "wiki_url": "https://tr.wikipedia.org/wiki/Steven_Moffat",
+   "image": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Steven_Moffat_by_Gage_Skidmore.jpg/1280px-Steven_Moffat_by_Gage_Skidmore.jpg?utm_source=tr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "width": 1280,
+    "height": 1544,
+    "alt": "Steven Moffat ile ilgili görsel",
+    "fallback": false
+   },
+   "categories": [
+    "Doğum",
+    "Steven Moffat",
+    "20. yüzyıl",
+    "Tarihte Bugün",
+    "Genel"
+   ],
+   "content_file": "data/content/2026-11-18-steven-moffat.html",
+   "link": "https://xmifrmx.github.io/makale/makale/2026-11-18-steven-moffat.html"
+  },
+  {
+   "id": "tarih-eb830a968222c7823e07",
+   "slug": "2026-11-18-adolf-erik-nordenskiold",
+   "title": "Adolf Erik Nordenskiöld Kimdir? Hayatı, Eserleri ve Tarihteki Yeri",
+   "description": "Adolf Erik Nordenskiöld, 18 Kasım 1832 tarihinde dünyaya geldi.",
+   "v": 2,
+   "rev": 38017085,
+   "gaps": [],
+   "complete": true,
+   "chars": 10591,
+   "src": {
+    "cand": {
+     "id": "56eaed0c14fb908d",
+     "lang": "en",
+     "kind": "dogum",
+     "year": 1832,
+     "text": "Adolf Erik Nordenskiöld, Finnish-Swedish geologist and explorer (died 1901)",
+     "links": [
+      "Adolf Erik Nordenskiöld"
+     ],
+     "month": 11,
+     "day": 18
+    }
+   },
+   "pub": "2026-11-17T23:21:48Z",
+   "date": "2026-11-18",
+   "kind": "dogum",
+   "year": 1832,
+   "topic_title": "Adolf Erik Nordenskiöld",
+   "topic_key": "tr:adolf erik nordenskiöld",
+   "event_id": "56eaed0c14fb908d",
+   "wiki_url": "https://tr.wikipedia.org/wiki/Adolf_Erik_Nordenski%C3%B6ld",
+   "image": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/4/46/MECHELIN%281894%29_p311_Adolf_Erik_Nordenski%C3%B6ld.jpg?utm_source=tr.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+    "width": 1009,
+    "height": 1262,
+    "alt": "Adolf Erik Nordenskiöld ile ilgili görsel",
+    "fallback": false
+   },
+   "categories": [
+    "Doğum",
+    "Adolf Erik Nordenskiöld",
+    "19. yüzyıl",
+    "Tarihte Bugün",
+    "Savaş"
+   ],
+   "content_file": "data/content/2026-11-18-adolf-erik-nordenskiold.html",
+   "link": "https://xmifrmx.github.io/makale/makale/2026-11-18-adolf-erik-nordenskiold.html"
+  },
+  {
+   "id": "tarih-da190fad3b091dd88d40",
+   "slug": "2026-11-18-peter-schmeichel",
+   "title": "Peter Schmeichel Kimdir? Hayatı, Eserleri ve Tarihteki Yeri",
+   "description": "Peter Schmeichel, 18 Kasım 1963 tarihinde dünyaya geldi.",
+   "v": 2,
+   "rev": 38189452,
+   "gaps": [],
+   "complete": true,
+   "chars": 2665,
+   "src": {
+    "cand": {
+     "id": "2495a93a7ca3e1b6",
+     "lang": "tr",
+     "kind": "dogum",
+     "year": 1963,
+     "text": "Peter Schmeichel, Danimarkalı eski millî kaleci",
+     "links": [
+      "Peter Schmeichel"
+     ],
+     "month": 11,
+     "day": 18
+    }
+   },
+   "pub": "2026-11-17T23:21:49Z",
+   "date": "2026-11-18",
+   "kind": "dogum",
+   "year": 1963,
+   "topic_title": "Peter Schmeichel",
+   "topic_key": "tr:peter schmeichel",
+   "event_id": "2495a93a7ca3e1b6",
+   "wiki_url": "https://tr.wikipedia.org/wiki/Peter_Schmeichel",
+   "image": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/5/56/Peter_Schmeichel-2011.jpeg?utm_source=tr.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+    "width": 352,
+    "height": 531,
+    "alt": "Peter Schmeichel ile ilgili görsel",
+    "fallback": false
+   },
+   "categories": [
+    "Doğum",
+    "Peter Schmeichel",
+    "20. yüzyıl",
+    "Tarihte Bugün",
+    "Genel"
+   ],
+   "content_file": "data/content/2026-11-18-peter-schmeichel.html",
+   "link": "https://xmifrmx.github.io/makale/makale/2026-11-18-peter-schmeichel.html"
+  },
+  {
+   "id": "tarih-486c70cd9b7a4558827c",
+   "slug": "2026-11-18-niels-bohr",
+   "title": "Niels Bohr: Hayatı, Mirası ve Tarihteki Etkisi (1962)",
+   "description": "Niels Bohr, 18 Kasım 1962 tarihinde hayatını kaybetti.",
+   "v": 2,
+   "rev": 38202757,
+   "gaps": [],
+   "complete": true,
+   "chars": 7013,
+   "src": {
+    "cand": {
+     "id": "e5e991b0f163e045",
+     "lang": "tr",
+     "kind": "olum",
+     "year": 1962,
+     "text": "Niels Bohr, Danimarkalı fizikçi ve Nobel Fizik Ödülü sahibi (d. 1885)",
+     "links": [
+      "Niels Bohr",
+      "Nobel Fizik Ödülü"
+     ],
+     "month": 11,
+     "day": 18
+    }
+   },
+   "pub": "2026-11-17T23:21:50Z",
+   "date": "2026-11-18",
+   "kind": "olum",
+   "year": 1962,
+   "topic_title": "Niels Bohr",
+   "topic_key": "tr:niels bohr",
+   "event_id": "e5e991b0f163e045",
+   "wiki_url": "https://tr.wikipedia.org/wiki/Niels_Bohr",
+   "image": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/Niels_Bohr.jpg/1280px-Niels_Bohr.jpg?utm_source=tr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "width": 1280,
+    "height": 1800,
+    "alt": "Niels Bohr ile ilgili görsel",
+    "fallback": false
+   },
+   "categories": [
+    "Ölüm",
+    "Niels Bohr",
+    "20. yüzyıl",
+    "Tarihte Bugün",
+    "Bilim"
+   ],
+   "content_file": "data/content/2026-11-18-niels-bohr.html",
+   "link": "https://xmifrmx.github.io/makale/makale/2026-11-18-niels-bohr.html"
+  },
+  {
+   "id": "tarih-c0b47fbeb4158177aa05",
+   "slug": "2026-11-18-klaus-mann",
+   "title": "Klaus Mann Kimdir? Hayatı, Eserleri ve Tarihteki Yeri",
+   "description": "Klaus Mann, 18 Kasım 1906 tarihinde dünyaya geldi. Klaus Heinrich Thomas Mann (d. 18 Kasım 1906, Münih - ö. 21 Mayıs 1949, Cannes, Fransa), Alman yazar.",
+   "v": 2,
+   "rev": 38250597,
+   "gaps": [],
+   "complete": true,
+   "chars": 41110,
+   "src": {
+    "cand": {
+     "id": "93c1347da011808c",
+     "lang": "tr",
+     "kind": "dogum",
+     "year": 1906,
+     "text": "Klaus Mann, Alman yazar (ö. 1949)",
+     "links": [
+      "Klaus Mann"
+     ],
+     "month": 11,
+     "day": 18
+    }
+   },
+   "pub": "2026-11-17T23:21:51Z",
+   "date": "2026-11-18",
+   "kind": "dogum",
+   "year": 1906,
+   "topic_title": "Klaus Mann",
+   "topic_key": "tr:klaus mann",
+   "event_id": "93c1347da011808c",
+   "wiki_url": "https://tr.wikipedia.org/wiki/Klaus_Mann",
+   "image": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/1/10/Klaus_Mann.jpg?utm_source=tr.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+    "width": 588,
+    "height": 786,
+    "alt": "Klaus Mann ile ilgili görsel",
+    "fallback": false
+   },
+   "categories": [
+    "Doğum",
+    "Klaus Mann",
+    "20. yüzyıl",
+    "Tarihte Bugün",
+    "Siyaset"
+   ],
+   "content_file": "data/content/2026-11-18-klaus-mann.html",
+   "link": "https://xmifrmx.github.io/makale/makale/2026-11-18-klaus-mann.html"
+  },
+  {
+   "id": "tarih-6c6406434e441dfd3d65",
+   "slug": "2026-11-18-adelaide-de-maurienne",
+   "title": "Adélaide de Maurienne: Hayatı, Mirası ve Tarihteki Etkisi (1154)",
+   "description": "Adélaide de Maurienne, 18 Kasım 1154 tarihinde hayatını kaybetti.",
+   "v": 2,
+   "rev": 38363279,
+   "gaps": [],
+   "complete": true,
+   "chars": 2691,
+   "src": {
+    "cand": {
+     "id": "81de9eaf01db8102",
+     "lang": "en",
+     "kind": "olum",
+     "year": 1154,
+     "text": "Adelaide of Maurienne, French queen consort (born 1092)",
+     "links": [
+      "Adelaide of Maurienne"
+     ],
+     "month": 11,
+     "day": 18
+    }
+   },
+   "pub": "2026-11-17T23:21:52Z",
+   "date": "2026-11-18",
+   "kind": "olum",
+   "year": 1154,
+   "topic_title": "Adélaide de Maurienne",
+   "topic_key": "tr:adélaide de maurienne",
+   "event_id": "81de9eaf01db8102",
+   "wiki_url": "https://tr.wikipedia.org/wiki/Ad%C3%A9laide_de_Maurienne",
+   "image": {
+    "url": "https://xmifrmx.github.io/makale/assets/kapak-varsayilan.svg",
+    "width": 1280,
+    "height": 720,
+    "alt": "Adélaide de Maurienne ile ilgili görsel",
+    "fallback": true
+   },
+   "categories": [
+    "Ölüm",
+    "Adélaide de Maurienne",
+    "12. yüzyıl",
+    "Tarihte Bugün",
+    "Siyaset"
+   ],
+   "content_file": "data/content/2026-11-18-adelaide-de-maurienne.html",
+   "link": "https://xmifrmx.github.io/makale/makale/2026-11-18-adelaide-de-maurienne.html"
+  },
+  {
+   "id": "tarih-15886a802ed60285752e",
+   "slug": "2026-11-18-ilhan-berk",
+   "title": "İlhan Berk Kimdir? Hayatı, Eserleri ve Tarihteki Yeri",
+   "description": "İlhan Berk, 18 Kasım 1918 tarihinde dünyaya geldi. İlhan Berk (18 Kasım 1918 - 28 Ağustos 2008), Türk şair, çevirmen.",
+   "v": 2,
+   "rev": 38204436,
+   "gaps": [],
+   "complete": true,
+   "chars": 3666,
+   "src": {
+    "cand": {
+     "id": "b32d55d905dd4d38",
+     "lang": "tr",
+     "kind": "dogum",
+     "year": 1918,
+     "text": "İlhan Berk, Türk şair (ö. 2008)",
+     "links": [
+      "İlhan Berk"
+     ],
+     "month": 11,
+     "day": 18
+    }
+   },
+   "pub": "2026-11-17T23:21:53Z",
+   "date": "2026-11-18",
+   "kind": "dogum",
+   "year": 1918,
+   "topic_title": "İlhan Berk",
+   "topic_key": "tr:ilhan berk",
+   "event_id": "b32d55d905dd4d38",
+   "wiki_url": "https://tr.wikipedia.org/wiki/%C4%B0lhan_Berk",
+   "image": {
+    "url": "https://xmifrmx.github.io/makale/assets/kapak-varsayilan.svg",
+    "width": 1280,
+    "height": 720,
+    "alt": "İlhan Berk ile ilgili görsel",
+    "fallback": true
+   },
+   "categories": [
+    "Doğum",
+    "İlhan Berk",
+    "20. yüzyıl",
+    "Tarihte Bugün",
+    "Kültür"
+   ],
+   "content_file": "data/content/2026-11-18-ilhan-berk.html",
+   "link": "https://xmifrmx.github.io/makale/makale/2026-11-18-ilhan-berk.html"
+  },
+  {
+   "id": "tarih-24939b6becc34d25044c",
+   "slug": "2026-11-18-joseph-p-kennedy-sr",
+   "title": "Joseph P. Kennedy Sr.: Hayatı, Mirası ve Tarihteki Etkisi (1969)",
+   "description": "Joseph P. Kennedy Sr., 18 Kasım 1969 tarihinde hayatını kaybetti.",
+   "v": 2,
+   "rev": 36601526,
+   "gaps": [],
+   "complete": true,
+   "chars": 4586,
+   "src": {
+    "cand": {
+     "id": "3fa6dbcf8bd8d874",
+     "lang": "en",
+     "kind": "olum",
+     "year": 1969,
+     "text": "Joseph P. Kennedy Sr., American businessman and diplomat, 44th United States Ambassador to the United Kingdom (born 1888)",
+     "links": [
+      "Joseph P. Kennedy Sr.",
+      "United States Ambassador to the United Kingdom"
+     ],
+     "month": 11,
+     "day": 18
+    }
+   },
+   "pub": "2026-11-17T23:21:54Z",
+   "date": "2026-11-18",
+   "kind": "olum",
+   "year": 1969,
+   "topic_title": "Joseph P. Kennedy Sr.",
+   "topic_key": "tr:joseph p. kennedy sr.",
+   "event_id": "3fa6dbcf8bd8d874",
+   "wiki_url": "https://tr.wikipedia.org/wiki/Joseph_P._Kennedy_Sr.",
+   "image": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Joseph_P._Kennedy%2C_Sr._1938.jpg?utm_source=tr.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+    "width": 1060,
+    "height": 1480,
+    "alt": "Joseph P. Kennedy Sr. ile ilgili görsel",
+    "fallback": false
+   },
+   "categories": [
+    "Ölüm",
+    "Joseph P. Kennedy Sr.",
+    "20. yüzyıl",
+    "Tarihte Bugün",
+    "Savaş"
+   ],
+   "content_file": "data/content/2026-11-18-joseph-p-kennedy-sr.html",
+   "link": "https://xmifrmx.github.io/makale/makale/2026-11-18-joseph-p-kennedy-sr.html"
+  },
+  {
+   "id": "tarih-193445f41224c792e799",
+   "slug": "2026-11-18-luka-romero",
+   "title": "Luka Romero Kimdir? Hayatı, Eserleri ve Tarihteki Yeri",
+   "description": "Luka Romero, 18 Kasım 2004 tarihinde dünyaya geldi.",
+   "v": 2,
+   "rev": 38178581,
+   "gaps": [],
+   "complete": true,
+   "chars": 4954,
+   "src": {
+    "cand": {
+     "id": "ffcf6ff4faddb83e",
+     "lang": "en",
+     "kind": "dogum",
+     "year": 2004,
+     "text": "Luka Romero, Mexican-Argentine footballer",
+     "links": [
+      "Luka Romero"
+     ],
+     "month": 11,
+     "day": 18
+    }
+   },
+   "pub": "2026-11-17T23:21:55Z",
+   "date": "2026-11-18",
+   "kind": "dogum",
+   "year": 2004,
+   "topic_title": "Luka Romero",
+   "topic_key": "tr:luka romero",
+   "event_id": "ffcf6ff4faddb83e",
+   "wiki_url": "https://tr.wikipedia.org/wiki/Luka_Romero",
+   "image": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Luka_Romero_%28cropped%29.jpg?utm_source=tr.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+    "width": 507,
+    "height": 794,
+    "alt": "Luka Romero ile ilgili görsel",
+    "fallback": false
+   },
+   "categories": [
+    "Doğum",
+    "Luka Romero",
+    "21. yüzyıl",
+    "Tarihte Bugün",
+    "Genel"
+   ],
+   "content_file": "data/content/2026-11-18-luka-romero.html",
+   "link": "https://xmifrmx.github.io/makale/makale/2026-11-18-luka-romero.html"
+  },
+  {
+   "id": "tarih-db83fafb8097bcf52e8b",
+   "slug": "2026-11-18-mahinda-rajapaksa",
+   "title": "Mahinda Rajapaksa Kimdir? Hayatı, Eserleri ve Tarihteki Yeri",
+   "description": "Mahinda Rajapaksa, 18 Kasım 1945 tarihinde dünyaya geldi.",
+   "v": 2,
+   "rev": 37972625,
+   "gaps": [],
+   "complete": true,
+   "chars": 2403,
+   "src": {
+    "cand": {
+     "id": "b4165f488e4134d1",
+     "lang": "tr",
+     "kind": "dogum",
+     "year": 1945,
+     "text": "Mahinda Rajapaksa, Sri Lankalı avukat ve siyasetçi",
+     "links": [
+      "Mahinda Rajapaksa"
+     ],
+     "month": 11,
+     "day": 18
+    }
+   },
+   "pub": "2026-11-17T23:21:56Z",
+   "date": "2026-11-18",
+   "kind": "dogum",
+   "year": 1945,
+   "topic_title": "Mahinda Rajapaksa",
+   "topic_key": "tr:mahinda rajapaksa",
+   "event_id": "b4165f488e4134d1",
+   "wiki_url": "https://tr.wikipedia.org/wiki/Mahinda_Rajapaksa",
+   "image": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/Mahinda_Rajapaksa.jpg?utm_source=tr.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+    "width": 266,
+    "height": 327,
+    "alt": "Mahinda Rajapaksa ile ilgili görsel",
+    "fallback": false
+   },
+   "categories": [
+    "Doğum",
+    "Mahinda Rajapaksa",
+    "20. yüzyıl",
+    "Tarihte Bugün",
+    "Siyaset"
+   ],
+   "content_file": "data/content/2026-11-18-mahinda-rajapaksa.html",
+   "link": "https://xmifrmx.github.io/makale/makale/2026-11-18-mahinda-rajapaksa.html"
+  },
+  {
+   "id": "tarih-46e5032aae1a49774f5d",
+   "slug": "2026-11-18-dilek-imamoglu",
+   "title": "Dilek İmamoğlu Kimdir? Hayatı, Eserleri ve Tarihteki Yeri",
+   "description": "Dilek İmamoğlu, 18 Kasım 1974 tarihinde dünyaya geldi.",
+   "v": 2,
+   "rev": 38613965,
+   "gaps": [],
+   "complete": true,
+   "chars": 4178,
+   "src": {
+    "cand": {
+     "id": "42ada39d935f7105",
+     "lang": "tr",
+     "kind": "dogum",
+     "year": 1974,
+     "text": "Dilek İmamoğlu, Türk aktivist ve akademisyen",
+     "links": [
+      "Dilek İmamoğlu"
+     ],
+     "month": 11,
+     "day": 18
+    }
+   },
+   "pub": "2026-11-17T23:21:57Z",
+   "date": "2026-11-18",
+   "kind": "dogum",
+   "year": 1974,
+   "topic_title": "Dilek İmamoğlu",
+   "topic_key": "tr:dilek imamoğlu",
+   "event_id": "42ada39d935f7105",
+   "wiki_url": "https://tr.wikipedia.org/wiki/Dilek_%C4%B0mamo%C4%9Flu",
+   "image": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/03/Dilek_%C4%B0mamo%C4%9Flu.png?utm_source=tr.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+    "width": 867,
+    "height": 1153,
+    "alt": "Dilek İmamoğlu ile ilgili görsel",
+    "fallback": false
+   },
+   "categories": [
+    "Doğum",
+    "Dilek İmamoğlu",
+    "20. yüzyıl",
+    "Tarihte Bugün",
+    "Siyaset"
+   ],
+   "content_file": "data/content/2026-11-18-dilek-imamoglu.html",
+   "link": "https://xmifrmx.github.io/makale/makale/2026-11-18-dilek-imamoglu.html"
+  },
+  {
+   "id": "tarih-1831eef723eb883393d9",
+   "slug": "2026-11-18-gustav-husak",
+   "title": "Gustáv Husák: Hayatı, Mirası ve Tarihteki Etkisi (1991)",
+   "description": "Gustáv Husák, 18 Kasım 1991 tarihinde hayatını kaybetti.",
+   "v": 2,
+   "rev": 36789012,
+   "gaps": [],
+   "complete": true,
+   "chars": 3110,
+   "src": {
+    "cand": {
+     "id": "ccd79dda23896c79",
+     "lang": "en",
+     "kind": "olum",
+     "year": 1991,
+     "text": "Gustáv Husák, Slovak lawyer and politician, 9th President of Czechoslovakia (born 1913)",
+     "links": [
+      "Gustáv Husák",
+      "President of Czechoslovakia"
+     ],
+     "month": 11,
+     "day": 18
+    }
+   },
+   "pub": "2026-11-17T23:21:58Z",
+   "date": "2026-11-18",
+   "kind": "olum",
+   "year": 1991,
+   "topic_title": "Gustáv Husák",
+   "topic_key": "tr:gustáv husák",
+   "event_id": "ccd79dda23896c79",
+   "wiki_url": "https://tr.wikipedia.org/wiki/Gust%C3%A1v_Hus%C3%A1k",
+   "image": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Gust%C3%A1v_Hus%C3%A1k_-_o%C5%99%C3%ADznuto.JPG?utm_source=tr.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+    "width": 500,
+    "height": 651,
+    "alt": "Gustáv Husák ile ilgili görsel",
+    "fallback": false
+   },
+   "categories": [
+    "Ölüm",
+    "Gustáv Husák",
+    "20. yüzyıl",
+    "Tarihte Bugün",
+    "Siyaset"
+   ],
+   "content_file": "data/content/2026-11-18-gustav-husak.html",
+   "link": "https://xmifrmx.github.io/makale/makale/2026-11-18-gustav-husak.html"
+  },
+  {
+   "id": "tarih-72b9c9c7ba0f845f819f",
+   "slug": "2026-11-18-hamza-el-gamdi",
+   "title": "Hamza el-Gamdi Kimdir? Hayatı, Eserleri ve Tarihteki Yeri",
+   "description": "Hamza el-Gamdi, 18 Kasım 1980 tarihinde dünyaya geldi.",
+   "v": 2,
+   "rev": 37859931,
+   "gaps": [],
+   "complete": true,
+   "chars": 4379,
+   "src": {
+    "cand": {
+     "id": "634b938842ebe6f1",
+     "lang": "en",
+     "kind": "dogum",
+     "year": 1980,
+     "text": "Hamza al-Ghamdi, Saudi Arabian terrorist, hijacker of United Airlines Flight 175 (died 2001)",
+     "links": [
+      "Hamza al-Ghamdi",
+      "United Airlines Flight 175"
+     ],
+     "month": 11,
+     "day": 18
+    }
+   },
+   "pub": "2026-11-17T23:21:59Z",
+   "date": "2026-11-18",
+   "kind": "dogum",
+   "year": 1980,
+   "topic_title": "Hamza el-Gamdi",
+   "topic_key": "tr:hamza el-gamdi",
+   "event_id": "634b938842ebe6f1",
+   "wiki_url": "https://tr.wikipedia.org/wiki/Hamza_el-Gamdi",
+   "image": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Hamza_al-Ghamdi.jpg/1280px-Hamza_al-Ghamdi.jpg?utm_source=tr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "width": 1280,
+    "height": 1635,
+    "alt": "Hamza el-Gamdi ile ilgili görsel",
+    "fallback": false
+   },
+   "categories": [
+    "Doğum",
+    "Hamza el-Gamdi",
+    "20. yüzyıl",
+    "Tarihte Bugün",
+    "Savaş"
+   ],
+   "content_file": "data/content/2026-11-18-hamza-el-gamdi.html",
+   "link": "https://xmifrmx.github.io/makale/makale/2026-11-18-hamza-el-gamdi.html"
   }
- ]
+ ],
+ "days": {
+  "2026-11-18": {
+   "c44c4e03306dbd75": {
+    "s": "skip",
+    "n": 1
+   },
+   "d4fd1f9d65df0f46": {
+    "s": "skip",
+    "n": 1
+   },
+   "a0ccb2e3945babf5": {
+    "s": "skip",
+    "n": 1
+   },
+   "c79c134a05b1cfb4": {
+    "s": "skip",
+    "n": 1
+   },
+   "84ad8c9280a700ea": {
+    "s": "skip",
+    "n": 1
+   },
+   "00ce96900bb2feda": {
+    "s": "skip",
+    "n": 1
+   },
+   "d81b96c6fc403965": {
+    "s": "skip",
+    "n": 1
+   },
+   "70e6fe6cee8164b1": {
+    "s": "skip",
+    "n": 1
+   },
+   "765f5ec7c8f252f8": {
+    "s": "skip",
+    "n": 1
+   },
+   "82b9c3db70c3fd8a": {
+    "s": "skip",
+    "n": 1
+   },
+   "88c196196ee2152d": {
+    "s": "skip",
+    "n": 1
+   },
+   "97ac412fafa53746": {
+    "s": "skip",
+    "n": 1
+   },
+   "79a803f1b46a2221": {
+    "s": "skip",
+    "n": 1
+   },
+   "5c4a80d72a4d5827": {
+    "s": "skip",
+    "n": 1
+   },
+   "3da63470a9755e94": {
+    "s": "dup",
+    "n": 1
+   },
+   "b45dc7959d0b598d": {
+    "s": "skip",
+    "n": 1
+   },
+   "75fef029c746d4c3": {
+    "s": "skip",
+    "n": 1
+   },
+   "3148aafde168adf0": {
+    "s": "skip",
+    "n": 1
+   },
+   "3f21fb148c7b1115": {
+    "s": "skip",
+    "n": 1
+   },
+   "cb718c3c150b6526": {
+    "s": "skip",
+    "n": 1
+   },
+   "f97f229782cb8c64": {
+    "s": "skip",
+    "n": 1
+   },
+   "6bf615346cbfa257": {
+    "s": "skip",
+    "n": 1
+   },
+   "07d7571eee2ca545": {
+    "s": "skip",
+    "n": 1
+   },
+   "b5d9cebd8bd9701f": {
+    "s": "dup",
+    "n": 1
+   },
+   "c486434af6e1b380": {
+    "s": "skip",
+    "n": 1
+   },
+   "3005fe510c8550e8": {
+    "s": "skip",
+    "n": 1
+   },
+   "0a45465d8891cec3": {
+    "s": "skip",
+    "n": 1
+   },
+   "be0172bb1302df3b": {
+    "s": "skip",
+    "n": 1
+   },
+   "3cae94df2a6f632f": {
+    "s": "skip",
+    "n": 1
+   },
+   "c962ce4f471a0d93": {
+    "s": "skip",
+    "n": 1
+   },
+   "aee1f87ef16ab7d3": {
+    "s": "skip",
+    "n": 1
+   },
+   "e308cb0239bf5cce": {
+    "s": "skip",
+    "n": 1
+   },
+   "0a0044b5a772e247": {
+    "s": "skip",
+    "n": 1
+   },
+   "3cc2628bd67eee20": {
+    "s": "skip",
+    "n": 1
+   },
+   "432b9baed7bb7d6f": {
+    "s": "skip",
+    "n": 1
+   },
+   "398c9086364ec54b": {
+    "s": "skip",
+    "n": 1
+   },
+   "e6891dc50aec43b4": {
+    "s": "skip",
+    "n": 1
+   },
+   "bf8c9be27c8ff9b3": {
+    "s": "skip",
+    "n": 1
+   },
+   "c21fa012fa3fe974": {
+    "s": "skip",
+    "n": 1
+   },
+   "cf87042d48d1a54b": {
+    "s": "skip",
+    "n": 1
+   },
+   "aa45ecd56c3f3d87": {
+    "s": "skip",
+    "n": 1
+   },
+   "5d34eaae5fd75cdf": {
+    "s": "skip",
+    "n": 1
+   },
+   "432336ded0b38152": {
+    "s": "skip",
+    "n": 1
+   },
+   "b7d4d5c7bc7f41a9": {
+    "s": "skip",
+    "n": 1
+   },
+   "0f203cb555e64d7b": {
+    "s": "skip",
+    "n": 1
+   },
+   "e6fbb9e1fe4c9bbc": {
+    "s": "skip",
+    "n": 1
+   },
+   "6ffeb211ea720253": {
+    "s": "dup",
+    "n": 1
+   },
+   "24515640a7085841": {
+    "s": "skip",
+    "n": 1
+   },
+   "cee5dbb118250874": {
+    "s": "skip",
+    "n": 1
+   },
+   "b1beb33e10e10d43": {
+    "s": "skip",
+    "n": 1
+   },
+   "ee4a54b536876e8d": {
+    "s": "skip",
+    "n": 1
+   },
+   "497c8a0aae925ef8": {
+    "s": "skip",
+    "n": 1
+   },
+   "525f98a98eee2b19": {
+    "s": "dup",
+    "n": 1
+   },
+   "6b9c31fec5327a9e": {
+    "s": "dup",
+    "n": 1
+   },
+   "c31fac13c213560c": {
+    "s": "skip",
+    "n": 1
+   },
+   "1fc454ebb3a94341": {
+    "s": "skip",
+    "n": 1
+   },
+   "09987eef29865a4b": {
+    "s": "skip",
+    "n": 1
+   },
+   "c4bf03eb05f7c0dd": {
+    "s": "skip",
+    "n": 1
+   },
+   "6336b0954e674cb1": {
+    "s": "skip",
+    "n": 1
+   },
+   "e549a482e5f0da47": {
+    "s": "skip",
+    "n": 1
+   },
+   "889822ee3c23139a": {
+    "s": "skip",
+    "n": 1
+   },
+   "212f7b41eddd47f0": {
+    "s": "skip",
+    "n": 1
+   },
+   "a4feb94c2b0c4d20": {
+    "s": "skip",
+    "n": 1
+   },
+   "1ad50284524f8e12": {
+    "s": "skip",
+    "n": 1
+   },
+   "845d64e03652ae5c": {
+    "s": "skip",
+    "n": 1
+   },
+   "9455eb51453f6112": {
+    "s": "skip",
+    "n": 1
+   },
+   "0f60b4302936ad91": {
+    "s": "skip",
+    "n": 1
+   },
+   "990fd7608ddfad22": {
+    "s": "skip",
+    "n": 1
+   },
+   "2e8464381c2c29b3": {
+    "s": "skip",
+    "n": 1
+   },
+   "daf789a7e33f4d84": {
+    "s": "skip",
+    "n": 1
+   },
+   "8af50de5373a758f": {
+    "s": "skip",
+    "n": 1
+   },
+   "a187abdde9f359bf": {
+    "s": "skip",
+    "n": 1
+   },
+   "1c9f168f133ecbc8": {
+    "s": "skip",
+    "n": 1
+   },
+   "6624a280c0d7ef1f": {
+    "s": "skip",
+    "n": 1
+   },
+   "1c013f131a5d1291": {
+    "s": "skip",
+    "n": 1
+   },
+   "7b178fa583877e27": {
+    "s": "skip",
+    "n": 1
+   },
+   "0bd43bd45aa38248": {
+    "s": "skip",
+    "n": 1
+   },
+   "36c0ebad4471d003": {
+    "s": "skip",
+    "n": 1
+   },
+   "c52165fb87e1c62d": {
+    "s": "skip",
+    "n": 1
+   },
+   "1333ac15c194c9fb": {
+    "s": "skip",
+    "n": 1
+   },
+   "281eb30ece396f62": {
+    "s": "skip",
+    "n": 1
+   },
+   "fce5fc4b8a3b34e4": {
+    "s": "skip",
+    "n": 1
+   },
+   "d0e223458b225ab3": {
+    "s": "skip",
+    "n": 1
+   },
+   "58d77edfcb16695b": {
+    "s": "skip",
+    "n": 1
+   },
+   "8b6539a82085a02d": {
+    "s": "skip",
+    "n": 1
+   },
+   "c628d6cf246dde47": {
+    "s": "skip",
+    "n": 1
+   },
+   "7f697e61c01ad775": {
+    "s": "skip",
+    "n": 1
+   },
+   "e4b359cef111cffd": {
+    "s": "skip",
+    "n": 1
+   },
+   "d342a39230e8120b": {
+    "s": "skip",
+    "n": 1
+   },
+   "65944eda3aaefaa7": {
+    "s": "dup",
+    "n": 1
+   },
+   "16b746c17bba048f": {
+    "s": "skip",
+    "n": 1
+   },
+   "df0b32f114b17b1a": {
+    "s": "skip",
+    "n": 1
+   },
+   "201751ca60e83f9c": {
+    "s": "skip",
+    "n": 1
+   },
+   "80ec699fe2f19e5a": {
+    "s": "skip",
+    "n": 1
+   },
+   "f38b62a119867ac2": {
+    "s": "skip",
+    "n": 1
+   },
+   "3a4166a4cc4c1712": {
+    "s": "skip",
+    "n": 1
+   },
+   "8666980770c736c0": {
+    "s": "skip",
+    "n": 1
+   },
+   "a9b17c6ac9999c54": {
+    "s": "skip",
+    "n": 1
+   },
+   "d7c2e2b0eed31104": {
+    "s": "skip",
+    "n": 1
+   },
+   "a9c964416371157c": {
+    "s": "skip",
+    "n": 1
+   },
+   "67c1edcd02805a4c": {
+    "s": "skip",
+    "n": 1
+   },
+   "bf49a43ac0d33313": {
+    "s": "skip",
+    "n": 1
+   },
+   "17b5c487f66c4faa": {
+    "s": "dup",
+    "n": 1
+   },
+   "af3161f0be211091": {
+    "s": "skip",
+    "n": 1
+   },
+   "ee579250e7a2ae46": {
+    "s": "skip",
+    "n": 1
+   },
+   "be8daa56bc3d3235": {
+    "s": "skip",
+    "n": 1
+   },
+   "9e2087007ec87617": {
+    "s": "skip",
+    "n": 1
+   },
+   "3d49e494bc2baff7": {
+    "s": "skip",
+    "n": 1
+   },
+   "96af43db9ca410e3": {
+    "s": "skip",
+    "n": 1
+   },
+   "d0b3c102bc0a8632": {
+    "s": "skip",
+    "n": 1
+   },
+   "c54a057bb6020a37": {
+    "s": "skip",
+    "n": 1
+   },
+   "992fcca9affd2ac9": {
+    "s": "skip",
+    "n": 1
+   },
+   "ad6a647799bccc09": {
+    "s": "skip",
+    "n": 1
+   },
+   "40ad44646f377b62": {
+    "s": "skip",
+    "n": 1
+   },
+   "6b22f33a113822e2": {
+    "s": "skip",
+    "n": 1
+   },
+   "9304730d83c27beb": {
+    "s": "skip",
+    "n": 1
+   },
+   "a888458d244fdc66": {
+    "s": "skip",
+    "n": 1
+   },
+   "6d60cad307049bc6": {
+    "s": "skip",
+    "n": 1
+   },
+   "a3920a8782b8dfe0": {
+    "s": "skip",
+    "n": 1
+   },
+   "7bcfdc60ebda4a3a": {
+    "s": "skip",
+    "n": 1
+   },
+   "0b5e433fbb8e1c3f": {
+    "s": "skip",
+    "n": 1
+   },
+   "81395b5e358ad5cd": {
+    "s": "dup",
+    "n": 1
+   },
+   "1cc0d8c0ae3ee763": {
+    "s": "skip",
+    "n": 1
+   },
+   "8f85b26ab7084511": {
+    "s": "skip",
+    "n": 1
+   },
+   "327c87a7844600d1": {
+    "s": "skip",
+    "n": 1
+   },
+   "0f1c1187db338479": {
+    "s": "skip",
+    "n": 1
+   },
+   "ad4465d83db21077": {
+    "s": "skip",
+    "n": 1
+   },
+   "0ddc5f0bcd32e293": {
+    "s": "skip",
+    "n": 1
+   },
+   "796db262d5dc5b7b": {
+    "s": "skip",
+    "n": 1
+   },
+   "f1ae1f797d85aa32": {
+    "s": "skip",
+    "n": 1
+   },
+   "52d44ac48f03d243": {
+    "s": "skip",
+    "n": 1
+   },
+   "22fbd6bd5c9173ea": {
+    "s": "skip",
+    "n": 1
+   },
+   "f40030b31abd66e6": {
+    "s": "skip",
+    "n": 1
+   },
+   "fcb77de1f3d923f0": {
+    "s": "dup",
+    "n": 1
+   },
+   "3f547f8ce5dc132f": {
+    "s": "skip",
+    "n": 1
+   },
+   "b45e70f1f7a6cc05": {
+    "s": "skip",
+    "n": 1
+   },
+   "33ddf73dea52c451": {
+    "s": "skip",
+    "n": 1
+   },
+   "dbb3dc8d6d5a8b13": {
+    "s": "skip",
+    "n": 1
+   },
+   "7dec90c90fa44ce0": {
+    "s": "skip",
+    "n": 1
+   },
+   "1f08a09399899c00": {
+    "s": "skip",
+    "n": 1
+   },
+   "6e168c0c5e37dd21": {
+    "s": "dup",
+    "n": 1
+   },
+   "ef78fd137555e74a": {
+    "s": "skip",
+    "n": 1
+   },
+   "e7d532999c995222": {
+    "s": "skip",
+    "n": 1
+   },
+   "2877371a310ea843": {
+    "s": "skip",
+    "n": 1
+   },
+   "c7e5ab4a67c8aadd": {
+    "s": "skip",
+    "n": 1
+   },
+   "56731d0dfeb4b0a5": {
+    "s": "skip",
+    "n": 1
+   },
+   "f2e1ca7fea4aef29": {
+    "s": "skip",
+    "n": 1
+   },
+   "84b1c807383d5a3c": {
+    "s": "skip",
+    "n": 1
+   },
+   "3594d1fa3bb5fdf2": {
+    "s": "skip",
+    "n": 1
+   },
+   "5eb43759e4f133d0": {
+    "s": "skip",
+    "n": 1
+   },
+   "e8ff5961a7bf769f": {
+    "s": "skip",
+    "n": 1
+   },
+   "73d2e1f352222690": {
+    "s": "skip",
+    "n": 1
+   },
+   "1708d67051deec1a": {
+    "s": "skip",
+    "n": 1
+   },
+   "48ab1113bab57272": {
+    "s": "skip",
+    "n": 1
+   },
+   "595de8b11f77015d": {
+    "s": "skip",
+    "n": 1
+   },
+   "86d9390ae79b0f49": {
+    "s": "skip",
+    "n": 1
+   },
+   "6cf9b65ac710fe45": {
+    "s": "skip",
+    "n": 1
+   },
+   "e0d5a46f8a1e9a2b": {
+    "s": "skip",
+    "n": 1
+   },
+   "92929c99d3222f89": {
+    "s": "skip",
+    "n": 1
+   },
+   "dc85455325ed019f": {
+    "s": "skip",
+    "n": 1
+   },
+   "5f0fb6551a94443f": {
+    "s": "skip",
+    "n": 1
+   },
+   "dc8aaa089d41a91b": {
+    "s": "skip",
+    "n": 1
+   },
+   "1e717b32d57d2f38": {
+    "s": "skip",
+    "n": 1
+   },
+   "094722166afd97b3": {
+    "s": "skip",
+    "n": 1
+   },
+   "e5abe04fc035ab27": {
+    "s": "dup",
+    "n": 1
+   },
+   "dd9756763e49dcea": {
+    "s": "dup",
+    "n": 1
+   },
+   "285bf97c0a1c48dc": {
+    "s": "skip",
+    "n": 1
+   },
+   "4f6b39e88b586401": {
+    "s": "skip",
+    "n": 1
+   },
+   "38f0cd15d337238a": {
+    "s": "skip",
+    "n": 1
+   },
+   "ee824042e92cc9cd": {
+    "s": "skip",
+    "n": 1
+   },
+   "6503c31731f34fa5": {
+    "s": "skip",
+    "n": 1
+   },
+   "eb0fb1aaeef378fc": {
+    "s": "dup",
+    "n": 1
+   },
+   "1f9d8da0b0a26073": {
+    "s": "skip",
+    "n": 1
+   },
+   "819dc0b821406e45": {
+    "s": "skip",
+    "n": 1
+   },
+   "e2f5d5566b0f75d9": {
+    "s": "skip",
+    "n": 1
+   },
+   "7466f7e88625ff27": {
+    "s": "skip",
+    "n": 1
+   },
+   "1512b3d35094e842": {
+    "s": "skip",
+    "n": 1
+   },
+   "1aa680bd3d818ac2": {
+    "s": "skip",
+    "n": 1
+   },
+   "c2ed34c6e0f5c397": {
+    "s": "dup",
+    "n": 1
+   },
+   "2d92332f8f1d81c2": {
+    "s": "skip",
+    "n": 1
+   },
+   "0a851166492f3133": {
+    "s": "skip",
+    "n": 1
+   },
+   "ac7256baf49b1153": {
+    "s": "skip",
+    "n": 1
+   },
+   "1d02899d5ee48847": {
+    "s": "skip",
+    "n": 1
+   },
+   "cdd3b30143dce192": {
+    "s": "skip",
+    "n": 1
+   },
+   "9fa52d9b4cfe13db": {
+    "s": "dup",
+    "n": 1
+   },
+   "4968006c582b2587": {
+    "s": "skip",
+    "n": 1
+   },
+   "3fd5decd9ce03f81": {
+    "s": "skip",
+    "n": 1
+   },
+   "318222561d6ae6b2": {
+    "s": "skip",
+    "n": 1
+   },
+   "e4aa3f56e049fa0c": {
+    "s": "skip",
+    "n": 1
+   },
+   "2e8bb75c065d4dab": {
+    "s": "skip",
+    "n": 1
+   },
+   "7e34d23b56ed2a1f": {
+    "s": "skip",
+    "n": 1
+   },
+   "a9b318e10d8cee21": {
+    "s": "skip",
+    "n": 1
+   },
+   "38f397121e18462b": {
+    "s": "skip",
+    "n": 1
+   },
+   "30872ed85bad2622": {
+    "s": "skip",
+    "n": 1
+   },
+   "9c78bc40e4c89a0e": {
+    "s": "skip",
+    "n": 1
+   },
+   "80028ea47b8ac426": {
+    "s": "skip",
+    "n": 1
+   },
+   "dcae057fae84eff2": {
+    "s": "skip",
+    "n": 1
+   },
+   "825e042bd6735a1c": {
+    "s": "skip",
+    "n": 1
+   },
+   "c1f82710cf73cef2": {
+    "s": "skip",
+    "n": 1
+   },
+   "8a1695358b18c4d7": {
+    "s": "skip",
+    "n": 1
+   },
+   "79e2588d8f660739": {
+    "s": "skip",
+    "n": 1
+   },
+   "346a38271a03c1f5": {
+    "s": "skip",
+    "n": 1
+   },
+   "9700f9587b959722": {
+    "s": "skip",
+    "n": 1
+   },
+   "0402f28822e33278": {
+    "s": "skip",
+    "n": 1
+   },
+   "d7f83d32ee666f7d": {
+    "s": "skip",
+    "n": 1
+   },
+   "ee5e8def81298d59": {
+    "s": "skip",
+    "n": 1
+   },
+   "12ceed0b176f7f6b": {
+    "s": "skip",
+    "n": 1
+   },
+   "24cc3cc805a6a4d5": {
+    "s": "skip",
+    "n": 1
+   },
+   "3bca67d3a749d449": {
+    "s": "skip",
+    "n": 1
+   },
+   "cb98bced7c8c4c56": {
+    "s": "skip",
+    "n": 1
+   },
+   "e3c4dd292f00c547": {
+    "s": "skip",
+    "n": 1
+   },
+   "b036c1485aad48f6": {
+    "s": "skip",
+    "n": 1
+   },
+   "f3e5e041fbb05065": {
+    "s": "skip",
+    "n": 1
+   },
+   "6954d200186bcb49": {
+    "s": "skip",
+    "n": 1
+   },
+   "00538ce3d8cecf0a": {
+    "s": "skip",
+    "n": 1
+   },
+   "6f0ffe9c48a22015": {
+    "s": "skip",
+    "n": 1
+   },
+   "57a62f433348301e": {
+    "s": "skip",
+    "n": 1
+   },
+   "07d40d7a3c5f76ce": {
+    "s": "skip",
+    "n": 1
+   },
+   "f0e0f2fbb747b865": {
+    "s": "skip",
+    "n": 1
+   },
+   "c051fb45dd3a1f6a": {
+    "s": "skip",
+    "n": 1
+   },
+   "c4e2b311b4e6136b": {
+    "s": "skip",
+    "n": 1
+   },
+   "e791f4ec141bc45d": {
+    "s": "skip",
+    "n": 1
+   },
+   "b81cb9ef831aa4b5": {
+    "s": "skip",
+    "n": 1
+   },
+   "cf51d9b578d39983": {
+    "s": "skip",
+    "n": 1
+   },
+   "317dc20833c3da22": {
+    "s": "skip",
+    "n": 1
+   },
+   "03aa442c36263247": {
+    "s": "skip",
+    "n": 1
+   },
+   "41d924a411aa634f": {
+    "s": "skip",
+    "n": 1
+   },
+   "1f7b64c49ba1a747": {
+    "s": "skip",
+    "n": 1
+   },
+   "0de51775a7de762d": {
+    "s": "skip",
+    "n": 1
+   },
+   "9e702e0ea6fb787d": {
+    "s": "skip",
+    "n": 1
+   },
+   "8cae8b19bb58293d": {
+    "s": "skip",
+    "n": 1
+   },
+   "dd71fc04ade7172c": {
+    "s": "skip",
+    "n": 1
+   },
+   "5eedd9dc5418a32e": {
+    "s": "skip",
+    "n": 1
+   },
+   "6fbc38cea78391e2": {
+    "s": "dup",
+    "n": 1
+   },
+   "22402ab161f27b81": {
+    "s": "skip",
+    "n": 1
+   },
+   "d957d3daac5e53c0": {
+    "s": "skip",
+    "n": 1
+   },
+   "ba2fa1a05132e7c5": {
+    "s": "skip",
+    "n": 1
+   },
+   "7f36a547da9f9664": {
+    "s": "skip",
+    "n": 1
+   },
+   "8014b4a921ebf470": {
+    "s": "skip",
+    "n": 1
+   },
+   "18abb58bac759b14": {
+    "s": "skip",
+    "n": 1
+   },
+   "00db889673c4ef4f": {
+    "s": "skip",
+    "n": 1
+   },
+   "815176f1451386c3": {
+    "s": "dup",
+    "n": 1
+   },
+   "d7059a1c91368faa": {
+    "s": "skip",
+    "n": 1
+   },
+   "2c7952998b431ee7": {
+    "s": "skip",
+    "n": 1
+   },
+   "3130cc2883c37142": {
+    "s": "skip",
+    "n": 1
+   },
+   "dbf6e603d8ba626c": {
+    "s": "skip",
+    "n": 1
+   },
+   "3a1d880cb0d28543": {
+    "s": "skip",
+    "n": 1
+   },
+   "915807602766aaff": {
+    "s": "skip",
+    "n": 1
+   },
+   "68043eeeb2bfdce0": {
+    "s": "dup",
+    "n": 1
+   },
+   "948d16d090f3b5be": {
+    "s": "skip",
+    "n": 1
+   },
+   "cef00671db699b2d": {
+    "s": "skip",
+    "n": 1
+   },
+   "80406237ebbdbf8c": {
+    "s": "skip",
+    "n": 1
+   },
+   "edf7bdf0f53aabd1": {
+    "s": "skip",
+    "n": 1
+   },
+   "41a03b73706c2865": {
+    "s": "skip",
+    "n": 1
+   },
+   "5f6768d606ddb308": {
+    "s": "dup",
+    "n": 1
+   },
+   "7ffacfb042b74ca2": {
+    "s": "dup",
+    "n": 1
+   },
+   "2712505f71c8cab1": {
+    "s": "skip",
+    "n": 1
+   },
+   "1ae3fd096a9d4793": {
+    "s": "skip",
+    "n": 1
+   },
+   "d43bc5785a39ad03": {
+    "s": "skip",
+    "n": 1
+   },
+   "4b75ce9d22465703": {
+    "s": "skip",
+    "n": 1
+   },
+   "008668847fcbdec9": {
+    "s": "skip",
+    "n": 1
+   },
+   "b8ae6480caba2417": {
+    "s": "skip",
+    "n": 1
+   },
+   "5dbeaa92979ac88c": {
+    "s": "skip",
+    "n": 1
+   },
+   "44c501f76a91525c": {
+    "s": "dup",
+    "n": 1
+   },
+   "bf04e1f9eae9a2d8": {
+    "s": "skip",
+    "n": 1
+   },
+   "aefc4130b9dcaf2f": {
+    "s": "skip",
+    "n": 1
+   },
+   "082460b8ee52f788": {
+    "s": "skip",
+    "n": 1
+   },
+   "86a78b1be27b1e62": {
+    "s": "skip",
+    "n": 1
+   },
+   "3ec58f4f91c3dea5": {
+    "s": "skip",
+    "n": 1
+   },
+   "5e43d12a510b93e9": {
+    "s": "skip",
+    "n": 1
+   },
+   "506f5ed603a931b2": {
+    "s": "dup",
+    "n": 1
+   },
+   "6a408fd0b9e17fde": {
+    "s": "dup",
+    "n": 1
+   },
+   "1d7a50783aa9079b": {
+    "s": "skip",
+    "n": 1
+   },
+   "15f097db39fa862b": {
+    "s": "skip",
+    "n": 1
+   },
+   "4fc66652a0515c34": {
+    "s": "skip",
+    "n": 1
+   },
+   "42a71c99a1c026b7": {
+    "s": "skip",
+    "n": 1
+   },
+   "c786aa0ef9867160": {
+    "s": "skip",
+    "n": 1
+   },
+   "a94014dcec19ca3e": {
+    "s": "skip",
+    "n": 1
+   },
+   "f4ae093eb6834b5b": {
+    "s": "skip",
+    "n": 1
+   },
+   "586349d5d1fb98fa": {
+    "s": "skip",
+    "n": 1
+   },
+   "016ece66692a6c30": {
+    "s": "skip",
+    "n": 1
+   },
+   "9d8a47fe0cfa82be": {
+    "s": "skip",
+    "n": 1
+   },
+   "d68d649a9564f26a": {
+    "s": "skip",
+    "n": 1
+   },
+   "fc1281b6d594cd73": {
+    "s": "skip",
+    "n": 1
+   },
+   "0c20479efa254b77": {
+    "s": "skip",
+    "n": 1
+   },
+   "c7982e0c21cb8a34": {
+    "s": "skip",
+    "n": 1
+   },
+   "de24d4a0974055e4": {
+    "s": "skip",
+    "n": 1
+   },
+   "8fef73c20c9f3ccc": {
+    "s": "skip",
+    "n": 1
+   },
+   "a1d7ec8a75881f29": {
+    "s": "skip",
+    "n": 1
+   },
+   "28029fe88f9f2e02": {
+    "s": "skip",
+    "n": 1
+   },
+   "4e6e5082f61d295a": {
+    "s": "skip",
+    "n": 1
+   },
+   "09638095158ff580": {
+    "s": "skip",
+    "n": 1
+   },
+   "ad5339cd765ea963": {
+    "s": "skip",
+    "n": 1
+   },
+   "26c980659f735aae": {
+    "s": "skip",
+    "n": 1
+   },
+   "140b47d2c0c8fe22": {
+    "s": "skip",
+    "n": 1
+   },
+   "ec645d0618377dae": {
+    "s": "skip",
+    "n": 1
+   },
+   "f670691f453ee5ed": {
+    "s": "skip",
+    "n": 1
+   },
+   "e9f7f487163c3069": {
+    "s": "skip",
+    "n": 1
+   },
+   "44d2bc8c738f9910": {
+    "s": "skip",
+    "n": 1
+   },
+   "36c1fe9f0d721e3c": {
+    "s": "skip",
+    "n": 1
+   },
+   "87559dd7c2085ba8": {
+    "s": "skip",
+    "n": 1
+   },
+   "ca1914c1a47b9b9f": {
+    "s": "skip",
+    "n": 1
+   },
+   "3d68b2c19e1217de": {
+    "s": "skip",
+    "n": 1
+   },
+   "cf14d41c2c4f3c39": {
+    "s": "skip",
+    "n": 1
+   },
+   "480e36b6a5b1d2bc": {
+    "s": "skip",
+    "n": 1
+   },
+   "6b2b6497897cb8d9": {
+    "s": "skip",
+    "n": 1
+   },
+   "6419eba685af17b5": {
+    "s": "skip",
+    "n": 1
+   },
+   "b3e7f787e766f202": {
+    "s": "skip",
+    "n": 1
+   },
+   "4477fa9681507833": {
+    "s": "skip",
+    "n": 1
+   },
+   "d5ca4350b0dc000a": {
+    "s": "skip",
+    "n": 1
+   },
+   "108fed38d785272e": {
+    "s": "skip",
+    "n": 1
+   },
+   "2355bcbf2a5d0f2e": {
+    "s": "skip",
+    "n": 1
+   },
+   "85f597c1f9bf9cf1": {
+    "s": "skip",
+    "n": 1
+   },
+   "02c21aa2b3b5c7e4": {
+    "s": "skip",
+    "n": 1
+   },
+   "562982664c49df25": {
+    "s": "skip",
+    "n": 1
+   },
+   "4c2f524e9498b077": {
+    "s": "skip",
+    "n": 1
+   },
+   "8d0ec06bf0f4a908": {
+    "s": "skip",
+    "n": 1
+   },
+   "8fc69e73a49cb60e": {
+    "s": "skip",
+    "n": 1
+   },
+   "3ad1b6c390726bc9": {
+    "s": "skip",
+    "n": 1
+   },
+   "16aff34616e81194": {
+    "s": "skip",
+    "n": 1
+   },
+   "7b06c63bcb7e93ba": {
+    "s": "skip",
+    "n": 1
+   },
+   "4904b0429da1bd69": {
+    "s": "skip",
+    "n": 1
+   },
+   "d5b7b5c8cde03214": {
+    "s": "skip",
+    "n": 1
+   },
+   "6aba2703ae421d95": {
+    "s": "skip",
+    "n": 1
+   },
+   "5dee583f1ac9fc10": {
+    "s": "skip",
+    "n": 1
+   },
+   "97336e7ffc8b6545": {
+    "s": "skip",
+    "n": 1
+   },
+   "b715cefce15e63ed": {
+    "s": "skip",
+    "n": 1
+   },
+   "fc156af325e257ca": {
+    "s": "dup",
+    "n": 1
+   },
+   "620a053e3485fdd1": {
+    "s": "skip",
+    "n": 1
+   },
+   "ff3fb4c7a5a9df7b": {
+    "s": "skip",
+    "n": 1
+   },
+   "81282563e58121dc": {
+    "s": "skip",
+    "n": 1
+   },
+   "aa03602a1412bf46": {
+    "s": "skip",
+    "n": 1
+   },
+   "8b674c6e37284adb": {
+    "s": "skip",
+    "n": 1
+   },
+   "6a7276246947bc86": {
+    "s": "skip",
+    "n": 1
+   },
+   "e06b79175307835e": {
+    "s": "skip",
+    "n": 1
+   },
+   "fc9a31aedaa91ea7": {
+    "s": "skip",
+    "n": 1
+   },
+   "c0caa8f01c09839e": {
+    "s": "skip",
+    "n": 1
+   },
+   "11d2cb7b4bd0bc6a": {
+    "s": "skip",
+    "n": 1
+   },
+   "c31966f6504e7ad8": {
+    "s": "skip",
+    "n": 1
+   },
+   "792ccb4b7050199c": {
+    "s": "skip",
+    "n": 1
+   },
+   "4abba5cbc56a12e0": {
+    "s": "skip",
+    "n": 1
+   },
+   "776cc5ac687fd019": {
+    "s": "skip",
+    "n": 1
+   },
+   "1d601a31baac09a1": {
+    "s": "skip",
+    "n": 1
+   },
+   "c32d0a4052ce8cee": {
+    "s": "skip",
+    "n": 1
+   },
+   "7cd87fa988bc224f": {
+    "s": "skip",
+    "n": 1
+   },
+   "be7602a7250ebc14": {
+    "s": "skip",
+    "n": 1
+   },
+   "e73e4f279701b98c": {
+    "s": "skip",
+    "n": 1
+   },
+   "5f37a5af33f92d34": {
+    "s": "skip",
+    "n": 1
+   },
+   "2a418c00112edb1f": {
+    "s": "skip",
+    "n": 1
+   },
+   "77bd67ced5d66c99": {
+    "s": "skip",
+    "n": 1
+   },
+   "851b753e46c56d53": {
+    "s": "skip",
+    "n": 1
+   },
+   "5a02b96799c317a9": {
+    "s": "skip",
+    "n": 1
+   },
+   "8a13900461f686dc": {
+    "s": "skip",
+    "n": 1
+   },
+   "12c21b0e43fc0e2d": {
+    "s": "skip",
+    "n": 1
+   },
+   "ceea6ed8d5f00866": {
+    "s": "skip",
+    "n": 1
+   },
+   "2459a89d527363d3": {
+    "s": "skip",
+    "n": 1
+   },
+   "7e845bce81947c62": {
+    "s": "skip",
+    "n": 1
+   },
+   "14c5b4dad24dc7a6": {
+    "s": "skip",
+    "n": 1
+   },
+   "5a5ff3356a3bb52b": {
+    "s": "skip",
+    "n": 1
+   },
+   "fe6bf0a0536d8924": {
+    "s": "dup",
+    "n": 1
+   },
+   "0b433cee4a9117bd": {
+    "s": "skip",
+    "n": 1
+   },
+   "6d40e0a3b927cb4f": {
+    "s": "skip",
+    "n": 1
+   },
+   "272c27970dd28682": {
+    "s": "skip",
+    "n": 1
+   },
+   "ee74aa874e40e0f6": {
+    "s": "skip",
+    "n": 1
+   },
+   "9385572c378ffb56": {
+    "s": "skip",
+    "n": 1
+   },
+   "8d936eeb60678da8": {
+    "s": "skip",
+    "n": 1
+   },
+   "691cbb93e22c0b02": {
+    "s": "skip",
+    "n": 1
+   },
+   "63cb4fa4e730aaca": {
+    "s": "skip",
+    "n": 1
+   },
+   "3c746e8cb9858b0a": {
+    "s": "skip",
+    "n": 1
+   },
+   "5b96686ae99bef52": {
+    "s": "skip",
+    "n": 1
+   },
+   "4fc602092062eb67": {
+    "s": "skip",
+    "n": 1
+   },
+   "52074e395a42ef04": {
+    "s": "skip",
+    "n": 1
+   },
+   "84f8e52e5405c4fa": {
+    "s": "skip",
+    "n": 1
+   },
+   "3c1aa77022913cb5": {
+    "s": "skip",
+    "n": 1
+   },
+   "78d7f8bbdaa47463": {
+    "s": "dup",
+    "n": 1
+   },
+   "2e412f06b51068d8": {
+    "s": "dup",
+    "n": 1
+   },
+   "c638b1143e62e50f": {
+    "s": "skip",
+    "n": 1
+   },
+   "26cb53a861a9573e": {
+    "s": "skip",
+    "n": 1
+   },
+   "759cb689e90fb755": {
+    "s": "skip",
+    "n": 1
+   },
+   "6ccb0dca9d404d27": {
+    "s": "skip",
+    "n": 1
+   },
+   "28852a70c136cdf8": {
+    "s": "skip",
+    "n": 1
+   },
+   "c6ce6ec032516d07": {
+    "s": "skip",
+    "n": 1
+   },
+   "f6f9f227ce4729f4": {
+    "s": "skip",
+    "n": 1
+   },
+   "d4b63cff33babde8": {
+    "s": "skip",
+    "n": 1
+   },
+   "a2b4029db4180b0d": {
+    "s": "skip",
+    "n": 1
+   },
+   "960e49362e5a4d8e": {
+    "s": "skip",
+    "n": 1
+   },
+   "36337d9511d2dbac": {
+    "s": "skip",
+    "n": 1
+   },
+   "e5cef6cae73309d7": {
+    "s": "skip",
+    "n": 1
+   },
+   "8ddd1a02e85614c4": {
+    "s": "skip",
+    "n": 1
+   },
+   "9209e5049a5fb89b": {
+    "s": "skip",
+    "n": 1
+   },
+   "0493aeb90e421ef9": {
+    "s": "dup",
+    "n": 1
+   },
+   "f69bf007a643041d": {
+    "s": "dup",
+    "n": 1
+   },
+   "4868666d61dbc25d": {
+    "s": "skip",
+    "n": 1
+   },
+   "6c90933941828a15": {
+    "s": "skip",
+    "n": 1
+   },
+   "1430b37ebe03b0e5": {
+    "s": "skip",
+    "n": 1
+   },
+   "6aa90b0440684e15": {
+    "s": "skip",
+    "n": 1
+   },
+   "2904b5a87860ed28": {
+    "s": "skip",
+    "n": 1
+   },
+   "fb29fdf416d5a64b": {
+    "s": "skip",
+    "n": 1
+   },
+   "2bcded604fa6919a": {
+    "s": "dup",
+    "n": 1
+   },
+   "78e2a249521cd87a": {
+    "s": "skip",
+    "n": 1
+   },
+   "c92cba9c0c1a9582": {
+    "s": "skip",
+    "n": 1
+   },
+   "ec60c070a41f2851": {
+    "s": "skip",
+    "n": 1
+   },
+   "93b22d33c070a46c": {
+    "s": "skip",
+    "n": 1
+   },
+   "8f379e4055e22814": {
+    "s": "skip",
+    "n": 1
+   },
+   "a2fb3a084e1cf861": {
+    "s": "skip",
+    "n": 1
+   },
+   "a6e7cdfe2f5fe450": {
+    "s": "skip",
+    "n": 1
+   },
+   "edbc3a1e4c1aa8ec": {
+    "s": "skip",
+    "n": 1
+   },
+   "6540d64bee4f24ba": {
+    "s": "skip",
+    "n": 1
+   },
+   "46616964f1abbe85": {
+    "s": "skip",
+    "n": 1
+   },
+   "452ef3ebe04c6146": {
+    "s": "skip",
+    "n": 1
+   },
+   "333962ad42f508bf": {
+    "s": "skip",
+    "n": 1
+   },
+   "c05811c3b7e7ff86": {
+    "s": "skip",
+    "n": 1
+   },
+   "f18187dad7001691": {
+    "s": "skip",
+    "n": 1
+   },
+   "890cf36423aaf586": {
+    "s": "dup",
+    "n": 1
+   },
+   "2288200fe14ffb66": {
+    "s": "dup",
+    "n": 1
+   },
+   "9b6907bd754e14cd": {
+    "s": "skip",
+    "n": 1
+   },
+   "8e44d956955d64b5": {
+    "s": "skip",
+    "n": 1
+   },
+   "f8149d08979339a1": {
+    "s": "skip",
+    "n": 1
+   },
+   "cdb54cb79a76ae18": {
+    "s": "skip",
+    "n": 1
+   },
+   "54b50fa8118960c6": {
+    "s": "skip",
+    "n": 1
+   },
+   "cb7693f2f58f9f83": {
+    "s": "skip",
+    "n": 1
+   },
+   "6ed18ab767e80dc7": {
+    "s": "skip",
+    "n": 1
+   },
+   "038ce2e7615327e8": {
+    "s": "skip",
+    "n": 1
+   },
+   "023e1ca5ea280f4b": {
+    "s": "skip",
+    "n": 1
+   },
+   "7a6ca9749c71aa81": {
+    "s": "skip",
+    "n": 1
+   },
+   "8f752f075b284191": {
+    "s": "skip",
+    "n": 1
+   },
+   "5532a69cf76a160b": {
+    "s": "skip",
+    "n": 1
+   },
+   "a24431a432508131": {
+    "s": "skip",
+    "n": 1
+   },
+   "e033339f5e854446": {
+    "s": "skip",
+    "n": 1
+   },
+   "2a06a1e8206d4a50": {
+    "s": "skip",
+    "n": 1
+   },
+   "684c2cef50de090b": {
+    "s": "skip",
+    "n": 1
+   },
+   "565dccf7bf828bbf": {
+    "s": "skip",
+    "n": 1
+   },
+   "8e98622c8b562815": {
+    "s": "skip",
+    "n": 1
+   },
+   "97f01beac0c81439": {
+    "s": "published",
+    "n": 1
+   },
+   "7edc08385c0edc35": {
+    "s": "published",
+    "n": 1
+   },
+   "abae4fec32e1f482": {
+    "s": "published",
+    "n": 1
+   },
+   "6b6857c98d011599": {
+    "s": "published",
+    "n": 1
+   },
+   "7feba188181088c3": {
+    "s": "published",
+    "n": 1
+   },
+   "e47141eaf0198b40": {
+    "s": "skip",
+    "n": 1
+   },
+   "668e3278292e6b38": {
+    "s": "published",
+    "n": 1
+   },
+   "960b859fd1a40c90": {
+    "s": "skip",
+    "n": 1
+   },
+   "23b5a26189826f6b": {
+    "s": "published",
+    "n": 1
+   },
+   "84efcd0ada81fadf": {
+    "s": "published",
+    "n": 1
+   },
+   "23ee381ff356d496": {
+    "s": "published",
+    "n": 1
+   },
+   "2fb8791e7c339ba0": {
+    "s": "published",
+    "n": 1
+   },
+   "2518c7097bdf03ca": {
+    "s": "skip",
+    "n": 1
+   },
+   "2863d78a68bbb058": {
+    "s": "skip",
+    "n": 1
+   },
+   "393afffc14c59858": {
+    "s": "skip",
+    "n": 1
+   },
+   "e47a1fe153544e40": {
+    "s": "published",
+    "n": 1
+   },
+   "36dc2752edc3b709": {
+    "s": "published",
+    "n": 1
+   },
+   "221b45e61162ce8d": {
+    "s": "skip",
+    "n": 1
+   },
+   "7b4cf18a2136ccdb": {
+    "s": "published",
+    "n": 1
+   },
+   "9346e23d05dae91a": {
+    "s": "published",
+    "n": 1
+   },
+   "c703d8ff442ecb32": {
+    "s": "published",
+    "n": 1
+   },
+   "269e0a4b1956b646": {
+    "s": "published",
+    "n": 1
+   },
+   "a88fce05dbc1eab9": {
+    "s": "skip",
+    "n": 1
+   },
+   "5890d5e7ff1115fa": {
+    "s": "skip",
+    "n": 1
+   },
+   "fdf259ce21b50449": {
+    "s": "published",
+    "n": 1
+   },
+   "f821b21a8ed0119e": {
+    "s": "published",
+    "n": 1
+   },
+   "293c4e3e7cdc9282": {
+    "s": "skip",
+    "n": 1
+   },
+   "3baae7f2b9416c83": {
+    "s": "published",
+    "n": 1
+   },
+   "44d68bfd8be3b4e8": {
+    "s": "published",
+    "n": 1
+   },
+   "b2b65f2e40aea253": {
+    "s": "skip",
+    "n": 1
+   },
+   "c185ff6c3e3e9e5c": {
+    "s": "published",
+    "n": 1
+   },
+   "8519f3828437b2bf": {
+    "s": "published",
+    "n": 1
+   },
+   "0cf903826e50ac56": {
+    "s": "published",
+    "n": 1
+   },
+   "2da938df04b6fcd5": {
+    "s": "skip",
+    "n": 1
+   },
+   "45b9c173b562a2e5": {
+    "s": "published",
+    "n": 1
+   },
+   "bbd9fe96da4fbef6": {
+    "s": "published",
+    "n": 1
+   },
+   "c4abf3c3977bcf4c": {
+    "s": "published",
+    "n": 1
+   },
+   "adbc28eba0534076": {
+    "s": "published",
+    "n": 1
+   },
+   "f78fa4dbfc123344": {
+    "s": "skip",
+    "n": 1
+   },
+   "8fe916b5174b9cab": {
+    "s": "published",
+    "n": 1
+   },
+   "4473a56063caf6a8": {
+    "s": "published",
+    "n": 1
+   },
+   "cd329e663ad4db64": {
+    "s": "published",
+    "n": 1
+   },
+   "714640e2549333d3": {
+    "s": "skip",
+    "n": 1
+   },
+   "7e6081739db1ecf2": {
+    "s": "published",
+    "n": 1
+   },
+   "8bdd248562d26069": {
+    "s": "published",
+    "n": 1
+   },
+   "946a34a29caa9bba": {
+    "s": "skip",
+    "n": 1
+   },
+   "a13b890842badb5f": {
+    "s": "skip",
+    "n": 1
+   },
+   "9a750f52168d25bc": {
+    "s": "published",
+    "n": 1
+   },
+   "e1a74516214b92d2": {
+    "s": "published",
+    "n": 1
+   },
+   "85dfc38f77aa02af": {
+    "s": "published",
+    "n": 1
+   },
+   "701952f0f7035982": {
+    "s": "skip",
+    "n": 1
+   },
+   "44eae19e13345930": {
+    "s": "skip",
+    "n": 1
+   },
+   "c8fe135b12b28cb6": {
+    "s": "published",
+    "n": 1
+   },
+   "3cedb15faadf5c77": {
+    "s": "published",
+    "n": 1
+   },
+   "1a3c5420f4e50d06": {
+    "s": "published",
+    "n": 1
+   },
+   "ce2e5148090e6833": {
+    "s": "published",
+    "n": 1
+   },
+   "2a793ac745b760c1": {
+    "s": "skip",
+    "n": 1
+   },
+   "e16351667100b38f": {
+    "s": "skip",
+    "n": 1
+   },
+   "b0fba10afaf162f4": {
+    "s": "published",
+    "n": 1
+   },
+   "d4ce9d204e85dacf": {
+    "s": "skip",
+    "n": 1
+   },
+   "b5126f64ea85f4f4": {
+    "s": "published",
+    "n": 1
+   },
+   "f6a4697e8d027038": {
+    "s": "published",
+    "n": 1
+   },
+   "df5e81b110d23ded": {
+    "s": "published",
+    "n": 1
+   },
+   "8df266863dc82058": {
+    "s": "skip",
+    "n": 1
+   },
+   "8e94232d72003395": {
+    "s": "published",
+    "n": 1
+   },
+   "8368d60c36b1a090": {
+    "s": "published",
+    "n": 1
+   },
+   "b0a4131cf179f897": {
+    "s": "skip",
+    "n": 1
+   },
+   "ba65d76cb962d711": {
+    "s": "skip",
+    "n": 1
+   },
+   "2899dbe2ecf0dd25": {
+    "s": "published",
+    "n": 1
+   },
+   "56eaed0c14fb908d": {
+    "s": "published",
+    "n": 1
+   },
+   "2495a93a7ca3e1b6": {
+    "s": "published",
+    "n": 1
+   },
+   "e5e991b0f163e045": {
+    "s": "published",
+    "n": 1
+   },
+   "93c1347da011808c": {
+    "s": "published",
+    "n": 1
+   },
+   "81de9eaf01db8102": {
+    "s": "published",
+    "n": 1
+   },
+   "b32d55d905dd4d38": {
+    "s": "published",
+    "n": 1
+   },
+   "3fa6dbcf8bd8d874": {
+    "s": "published",
+    "n": 1
+   },
+   "ffcf6ff4faddb83e": {
+    "s": "published",
+    "n": 1
+   },
+   "b4165f488e4134d1": {
+    "s": "published",
+    "n": 1
+   },
+   "42ada39d935f7105": {
+    "s": "published",
+    "n": 1
+   },
+   "ccd79dda23896c79": {
+    "s": "published",
+    "n": 1
+   },
+   "634b938842ebe6f1": {
+    "s": "published",
+    "n": 1
+   },
+   "3e2c52d1d2ce6a6d": {
+    "s": "skip",
+    "n": 1
+   },
+   "2bc0344696b22367": {
+    "s": "skip",
+    "n": 1
+   }
+  }
+ }
 }
