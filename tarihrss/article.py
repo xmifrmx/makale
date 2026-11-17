@@ -8,19 +8,19 @@ import hashlib
 import html
 import re
 import urllib.parse
-from datetime import datetime, timezone
+from datetime import timezone
 
 from . import config, wiki
-from .sources import _LINK, strip_markup
-from .textutil import (century_label, clean_name, date_phrase, first_sentences, make_title, norm_space,
-                       sentences, slugify, tr_lower, word_cut, year_label)
+from .sources import _LINK
+from .textutil import (century_label, clean_name, date_phrase, make_title, norm_space, sentences,
+                       slugify, split_first_sentences, tr_lower, word_cut, year_label)
 
 def esc(s, quote=False):
     return html.escape(s, quote=quote)
 
 SKIP_SECTIONS = re.compile(
-    r"kaynakça|dış bağlantı|ayrıca bak|^notlar|dipnot|konuyla ilgili|kaynaklar|bibliyografya|galeri|"
-    r"ilgili yayın|referans|dış kaynak|önemli kaynak|bağlantılar", re.I)
+    r"^(kaynakça|kaynaklar|dış bağlantılar?|dış kaynaklar?|ayrıca bak(ınız)?|notlar|dipnotlar?|referanslar?|"
+    r"bibliyografya|galeri|ilgili yayınlar|konuyla ilgili (yayınlar|okumalar)|önemli kaynaklar|bağlantılar)\b", re.I)
 BG_KEYS = re.compile(r"tarihçe|tarihi|arka plan|köken|öncesi|geçmiş|nedenleri|erken|çocukluk|gençlik|ilk yıl|hayatı|yaşamı|kuruluş", re.I)
 IMPACT_KEYS = re.compile(r"etki|sonuç|miras|sonras|değerlendirme|önemi|eleştiri|anma|anısı|ödül|günümüz|kültürel|popüler|bugün", re.I)
 
@@ -29,21 +29,50 @@ def wiki_url(lang, title):
     return f"https://{lang}.wikipedia.org/wiki/" + urllib.parse.quote(title.replace(" ", "_"), safe="()_,:'")
 
 
+def page_link(slug):
+    return f"{config.SITE_URL}/makale/{slug}.html"
+
+
+def _keep_line(s):
+    """Boş/süs satırlar dışında HER satır korunur (kısa liste maddeleri dahil; metin kaybı olmaz)."""
+    return len(s) >= 3 and re.search(r"\w", s) is not None
+
+
+def _prune(sections):
+    """Atlanacak bölümleri çıkarır; kendi metni olmayan ama altında metinli alt bölümü olan başlığı korur."""
+    keep = []
+    for i, sec in enumerate(sections):
+        if sec["skip"]:
+            continue
+        if sec["paras"]:
+            keep.append(sec)
+            continue
+        for nxt in sections[i + 1:]:
+            if nxt["level"] <= sec["level"]:
+                break
+            if not nxt["skip"] and nxt["paras"]:
+                keep.append(sec)
+                break
+    return keep
+
+
 def split_sections(text):
-    lead, sections, cur, skipping = [], [], None, False
+    lead, sections, cur, skip_at = [], [], None, None
     for line in (text or "").splitlines():
         s = line.strip()
         m = re.match(r"^(={2,6})\s*(.+?)\s*\1$", s)
         if m:
             level, title = len(m.group(1)), m.group(2).strip()
-            if level == 2:
-                skipping = bool(SKIP_SECTIONS.search(title))
-            cur = {"title": title, "level": level, "paras": [], "skip": skipping or bool(SKIP_SECTIONS.search(title))}
+            if skip_at is not None and level <= skip_at:
+                skip_at = None
+            if skip_at is None and SKIP_SECTIONS.search(title):
+                skip_at = level                       # bu başlık ve tüm alt başlıkları atlanır
+            cur = {"title": title, "level": level, "paras": [], "skip": skip_at is not None}
             sections.append(cur)
             continue
-        if len(s) >= 25:
+        if _keep_line(s):
             (cur["paras"] if cur else lead).append(norm_space(s))
-    return lead, [s for s in sections if s["paras"] and not s["skip"]]
+    return lead, _prune(sections)
 
 
 class Budget:
@@ -64,12 +93,59 @@ class Budget:
         return out
 
 
+_SENT_END = (".", "!", "?", "…", ":", '"', "”", "»")
+
+
+def _is_item(p):
+    return len(p) <= 140 and not p.endswith(_SENT_END)
+
+
 def paras_html(paras):
-    return "".join(f"<p>{esc(p)}</p>\n" for p in paras)
+    """Paragraflar <p> olur; cümle noktalaması olmayan, art arda 3+ kısa satır liste (<ul>) olarak yazılır."""
+    out, i = [], 0
+    while i < len(paras):
+        j = i
+        while j < len(paras) and _is_item(paras[j]):
+            j += 1
+        if j - i >= 3:
+            out.append("<ul>\n" + "".join(f"<li>{esc(p)}</li>\n" for p in paras[i:j]) + "</ul>\n")
+            i = j
+        else:
+            out.append(f"<p>{esc(paras[i])}</p>\n")
+            i += 1
+    return "".join(out)
+
+
+_HEAD = {2: "h3", 3: "h4"}
 
 
 def blocks_html(blocks):
-    return "".join(f"<h3>{esc(t)}</h3>\n{paras_html(ps)}" for t, ps in blocks)
+    """blocks: [(başlık, seviye, paragraflar)]. Vikipedi başlık hiyerarşisi h3/h4/h5 olarak korunur."""
+    out = []
+    for i, (t, lvl, ps) in enumerate(blocks):
+        if not ps and not (i + 1 < len(blocks) and blocks[i + 1][1] > lvl):
+            continue                                   # altı boş kalmış başlık yazılmaz
+        tag = _HEAD.get(lvl, "h5")
+        out.append(f"<{tag}>{esc(t)}</{tag}>\n{paras_html(ps)}")
+    return "".join(out)
+
+
+def _has_text(blocks):
+    return any(ps for _, _, ps in blocks)
+
+
+def unique_slug(rec, taken):
+    """Aynı slug başka makalede varsa -2, -3… eklenir; makale/içerik dosyası asla ezilmez."""
+    base = slug = rec["slug"]
+    n = 1
+    while slug in taken:
+        n += 1
+        slug = f"{base}-{n}"
+    if slug != rec["slug"]:
+        rec["slug"] = slug
+        rec["content_file"] = f"data/content/{slug}.html"
+        rec["link"] = page_link(slug)
+    return rec
 
 
 def _first_sentence(text, limit=220):
@@ -79,10 +155,7 @@ def _first_sentence(text, limit=220):
 
 def _related_titles(api, title, cand):
     titles = [t for t in cand["links"] if cand["lang"] == "tr"]
-    try:
-        wt = wiki.get_wikitext(api, "tr", title) or ""
-    except wiki.WikiError:
-        wt = ""
+    wt = wiki.get_wikitext(api, "tr", title) or ""       # WikiError yukarı iletilir: 'kisiler' eksiği olarak işaretlenir
     for m in _LINK.finditer(wt[:7000]):
         t = m.group(1).strip()
         if ":" not in t and not re.fullmatch(r"\d{1,4}", t):
@@ -95,17 +168,34 @@ def _related_titles(api, title, cand):
     return out[:30]
 
 
-def build_article(api, ev, day, now_utc, log=print):
-    """-> (kayıt sözlüğü, içerik HTML) ya da yetersiz içerikte None."""
+KEEP_KEYS = ("id", "slug", "pub", "date", "content_file", "link", "topic_key", "event_id")
+
+
+def build_article(api, ev, day, now_utc, log=print, keep=None):
+    """-> (kayıt sözlüğü, içerik HTML) ya da yetersiz içerikte None.
+
+    API geçici olarak yanıt vermezse WikiError fırlatır (çağıran adayı sonra yeniden dener). Makale yine de
+    üretilebiliyor ama bir parça eksik kalmışsa kayıttaki `gaps` listesine yazılır; 14:47 çalışması bunu
+    TEK PARÇA olarak yeniden derleyip tamamlar. `keep` verilirse (yeniden derleme) id/guid, slug, yayın
+    zamanı ve bağlantı aynen korunur."""
     c, title, info = ev["cand"], ev["title"], ev["info"]
     kind, year = c["kind"], c["year"]
     name = clean_name(title)
-    full = wiki.full_extract(api, "tr", title) or info.get("extract", "")
+    gaps = []
+    page = wiki.full_page(api, "tr", title)
+    full, rev = (page["extract"], page["rev"]) if page else ("", None)
+    if not full.strip():
+        gaps.append("metin")
+        full = info.get("extract", "")
     lead, sections = split_sections(full)
     if not lead:
-        lead = [norm_space(p) for p in (info.get("extract") or "").splitlines() if len(p.strip()) >= 40]
+        lead = [norm_space(p) for p in (info.get("extract") or "").splitlines() if _keep_line(p.strip())]
+    if not lead:
+        raise wiki.WikiError(f"metin alınamadı: {title}")
     total = sum(len(p) for p in lead) + sum(len(p) for s in sections for p in s["paras"])
     if total < config.MIN_TOTAL_CHARS:
+        if "metin" in gaps:
+            raise wiki.WikiError(f"tam metin alınamadı: {title}")      # kısa görünmesi API aksaklığından olabilir
         log(f"  atlandı (metin kısa: {total}): {title}")
         return None
 
@@ -122,21 +212,20 @@ def build_article(api, ev, day, now_utc, log=print):
         s1 = f"Tarihte bugün, {when}: {event_sentence}"
     else:
         s1 = ""
-    summary_text = first_sentences(lead[0], 380)
+    summary_text, lead_rest = split_first_sentences(lead[0], 380)
     summary = (f"<p>{esc(s1)}</p>\n" if s1 else "") + f"<p>{esc(summary_text)}</p>\n"
 
     # --- bölümlerin dağıtımı ---
     budget = Budget(config.MAX_BODY_CHARS)
     bg_blocks, dev_blocks, impact_blocks = [], [], []
-    bg_paras = budget.take(lead[1:])                 # girişin tamamı (ilk paragraf özette de geçer)
+    # girişin TAMAMI: ilk paragrafın özete sığmayan cümleleri + sonraki tüm giriş paragrafları
+    bg_paras = budget.take(([lead_rest] if lead_rest else []) + lead[1:])
     parent_bucket = dev_blocks
     for s in sections:
         if s["level"] <= 2:
             parent_bucket = (impact_blocks if IMPACT_KEYS.search(s["title"])
                              else bg_blocks if BG_KEYS.search(s["title"]) else dev_blocks)
-        ps = budget.take(s["paras"])
-        if ps:
-            parent_bucket.append((s["title"], ps))
+        parent_bucket.append((s["title"], s["level"], budget.take(s["paras"])))
     dev_intro = []
 
     # --- önemli kişiler ---
@@ -145,6 +234,7 @@ def build_article(api, ev, day, now_utc, log=print):
         related = wiki.people_info(api, "tr", _related_titles(api, title, c))
     except wiki.WikiError:
         related = []
+        gaps.append("kisiler")
     if kind in ("dogum", "olum"):
         people_items.append((title, _first_sentence(info.get("extract", ""))))
     for p in related[:5 if kind == "olay" else 4]:
@@ -155,6 +245,9 @@ def build_article(api, ev, day, now_utc, log=print):
     cover_credit = {}
     if img:
         cover_credit = wiki.image_credit(api, "tr", img["name"]) if img.get("name") else {}
+        if cover_credit is None:                       # API yanıt vermedi: görsel bilgisi sonra tamamlanır
+            cover_credit = {}
+            gaps.append("gorsel_bilgisi")
         src, w, h = img["url"], img.get("width") or 1280, img.get("height") or 720
     else:
         src, w, h = f"{config.SITE_URL}/{config.DEFAULT_COVER}", 1280, 720
@@ -179,14 +272,14 @@ def build_article(api, ev, day, now_utc, log=print):
     h2_dev = "Olayın Gelişimi" if kind == "olay" else "Hayatı ve Öne Çıkan Gelişmeler"
     h2_people = "Önemli Kişiler" if kind == "olay" else "Önemli Kişiler ve Çevresi"
     parts = [cover, "<h2>Kısa Özet</h2>\n", summary]
-    if bg_paras or bg_blocks:
+    if bg_paras or _has_text(bg_blocks):
         parts += ["<h2>Tarihî Arka Plan</h2>\n", paras_html(bg_paras), blocks_html(bg_blocks)]
-    if dev_intro or dev_blocks:
+    if dev_intro or _has_text(dev_blocks):
         parts += [f"<h2>{h2_dev}</h2>\n", paras_html(dev_intro), blocks_html(dev_blocks)]
     if people_items:
         lis = "".join(f"<li><strong>{esc(t)}</strong>{' – ' + esc(d) if d else ''}</li>\n" for t, d in people_items)
         parts += [f"<h2>{h2_people}</h2>\n<ul>\n{lis}</ul>\n"]
-    if impact_blocks:
+    if _has_text(impact_blocks):
         parts += ["<h2>Dünya Tarihindeki Etkileri</h2>\n", blocks_html(impact_blocks)]
 
     variant = int(hashlib.sha1(title.encode("utf-8")).hexdigest(), 16) % 3
@@ -224,7 +317,8 @@ def build_article(api, ev, day, now_utc, log=print):
     guid_src = f"{c['id']}|{title}"
     rec = {
         "id": "tarih-" + hashlib.sha1(guid_src.encode("utf-8")).hexdigest()[:20],
-        "slug": slug, "title": page_title, "description": meta,
+        "slug": slug, "title": page_title, "description": meta, "v": config.BUILD_VERSION,
+        "rev": rev, "gaps": gaps, "complete": not gaps, "chars": total, "src": {"cand": c},
         "pub": now_utc.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "date": day_iso, "kind": kind, "year": year, "topic_title": title,
         "topic_key": "tr:" + tr_lower(title.strip()), "event_id": c["id"], "wiki_url": wiki_url("tr", title),
@@ -232,6 +326,10 @@ def build_article(api, ev, day, now_utc, log=print):
         "categories": [{"olay": "Olay", "dogum": "Doğum", "olum": "Ölüm"}[kind], name, century_label(year),
                        "Tarihte Bugün", ev["topic"].capitalize()],
         "content_file": f"data/content/{slug}.html",
-        "link": f"{config.SITE_URL}/makale/{slug}.html",
+        "link": page_link(slug),
     }
+    if keep:
+        for k in KEEP_KEYS:
+            if k in keep:
+                rec[k] = keep[k]
     return rec, body

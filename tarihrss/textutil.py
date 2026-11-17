@@ -100,6 +100,25 @@ def first_sentences(text: str, max_chars: int) -> str:
     return out if len(out) <= max_chars else word_cut(out, max_chars, ellipsis=True)
 
 
+def split_first_sentences(text: str, max_chars: int) -> tuple[str, str]:
+    """-> (özet, kalan). Özet cümle sınırında biter; kalan metin hiçbir şey kaybetmeden döner.
+
+    Tek cümle bile sınırı aşıyorsa özet kelime sınırında kısaltılır ve kalan olarak
+    paragrafın tamamı döner (içerik kaybı olmaz)."""
+    sents = sentences(text)
+    out, used = "", 0
+    for s in sents:
+        if out and len(out) + 1 + len(s) > max_chars:
+            break
+        out = f"{out} {s}".strip()
+        used += 1
+        if len(out) >= max_chars * 0.6:
+            break
+    if len(out) > max_chars:
+        return word_cut(out, max_chars, ellipsis=True), text.strip()
+    return out, " ".join(sents[used:])
+
+
 _TRAIL = {"ve", "ile", "için", "bir", "bu", "de", "da", "ki", "olarak", "gibi", "kadar", "en", "çok"}
 
 

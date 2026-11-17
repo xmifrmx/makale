@@ -6,10 +6,12 @@
 """
 from __future__ import annotations
 import gzip
+import http.client
 import json
 import random
 import re
 import time
+import zlib
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -95,7 +97,8 @@ class Api:
                     self._backoff(attempt, e.headers.get("Retry-After") if e.headers else None)
                     continue
                 raise WikiError(f"HTTP {e.code}") from e
-            except (urllib.error.URLError, TimeoutError, ConnectionError, ValueError) as e:
+            except (OSError, http.client.HTTPException, EOFError, zlib.error, ValueError) as e:
+                # URLError/zaman aşımı/bağlantı kopması/yarım gövde/bozuk gzip/bozuk JSON: geçici sayılır
                 last = e
                 self._backoff(attempt)
                 continue
@@ -184,11 +187,39 @@ def intro_info(api, lang, titles):
     return out
 
 
+def full_page(api, lang, title):
+    """Maddenin TAM düz metni + son revizyon numarası -> {'title','extract','rev'} ya da None (sayfa yok).
+
+    Boş metin dönerse (API geçici olarak boş extract verebilir) bir kez daha denenir."""
+    p, text = None, ""
+    for _ in range(2):
+        q = api.query(lang, prop="extracts|info", explaintext=1, exsectionformat="wiki",
+                      titles=title, redirects=1)
+        p = page_index(q)(title)
+        if not p:
+            return None
+        text = p.get("extract") or ""
+        if text.strip():
+            break
+    return {"title": p.get("title", title), "extract": text, "rev": p.get("lastrevid")}
+
+
 def full_extract(api, lang, title):
-    q = api.query(lang, prop="extracts", explaintext=1, exsectionformat="wiki",
-                  titles=title, redirects=1)
-    p = page_index(q)(title)
-    return (p or {}).get("extract", "") or ""
+    page = full_page(api, lang, title)
+    return page["extract"] if page else ""
+
+
+def revisions(api, lang, titles):
+    """Başlık -> son revizyon numarası (içerik değişti mi kontrolü için; tek istekte 50 başlık)."""
+    out = {}
+    for chunk in chunks(list(dict.fromkeys(titles)), 50):
+        q = api.query(lang, prop="info", titles="|".join(chunk), redirects=1)
+        look = page_index(q)
+        for t in chunk:
+            p = look(t)
+            if p and p.get("lastrevid"):
+                out[t] = p["lastrevid"]
+    return out
 
 
 PERSON_CAT = re.compile(r"(doğumlular|ölenler|yaşayan insanlar|\bölümler\b|births|deaths|living people)", re.I)
@@ -212,7 +243,9 @@ def _strip_tags(s):
 
 
 def image_credit(api, lang, filename):
-    """Görsel için sanatçı/lisans bilgisi (Commons extmetadata). Hata olursa boş sözlük."""
+    """Görsel için sanatçı/lisans bilgisi (Commons extmetadata).
+
+    Bilgi yoksa {} ; API geçici olarak yanıt vermediyse None (çağıran eksik işaretler, sonra tamamlanır)."""
     try:
         q = api.query(lang, prop="imageinfo", iiprop="extmetadata|url", titles="File:" + filename)
         p = page_index(q, keep_missing=True)("File:" + filename)
@@ -221,5 +254,7 @@ def image_credit(api, lang, filename):
         g = lambda k: _strip_tags((ext.get(k) or {}).get("value", ""))
         return {"artist": g("Artist")[:120], "license": g("LicenseShortName"),
                 "license_url": g("LicenseUrl"), "page": ii.get("descriptionurl", "")}
-    except (WikiError, KeyError, IndexError, TypeError):
+    except WikiError:
+        return None
+    except (KeyError, IndexError, TypeError):
         return {}

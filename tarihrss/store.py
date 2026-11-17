@@ -29,18 +29,28 @@ def load(root, log=print):
                 data = _read(cand)
                 if cand != p:
                     log("::warning::index.json okunamadı, .bak yedeğinden devam ediliyor")
+                if not isinstance(data.get("days"), dict):
+                    data["days"] = {}          # günlük aday durumları (eski kayıtlarda yoktur)
                 return data
             except (OSError, ValueError):
                 continue
     if os.path.exists(p) or os.path.exists(p + ".bak"):
         raise StoreError("data/index.json bozuk ve yedek okunamadı; git geçmişinden geri yükleyin")
-    return {"version": 1, "articles": []}
+    return {"version": 2, "articles": [], "days": {}}
 
 
-def save(root, data):
+def prune_days(data, today_iso, keep_days):
+    """Eski günlerin aday durumlarını siler (index.json şişmesin)."""
+    from datetime import date, timedelta
+    floor = (date.fromisoformat(today_iso) - timedelta(days=keep_days)).isoformat()
+    data["days"] = {d: v for d, v in data.get("days", {}).items() if d >= floor}
+
+
+def save(root, data, backup=True):
+    """backup=False: .bak yedeği yenilenmez (bir çalışmada çok sayıda ara kayıtta gereksiz kopyayı önler)."""
     p = _path(root)
     os.makedirs(os.path.dirname(p), exist_ok=True)
-    if os.path.exists(p):
+    if backup and os.path.exists(p):
         try:
             _read(p)
             shutil.copyfile(p, p + ".bak")      # yalnızca sağlam dosya yedeklenir

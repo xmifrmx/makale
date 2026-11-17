@@ -64,6 +64,7 @@ def build_rss(records, contents, self_url, now):
 
 
 def build_sitemap(records):
+    records = records[:config.SITEMAP_MAX]          # sitemap protokolü: en fazla 50.000 adres (kayıtlar yeniden eskiye sıralı)
     urls = "".join(f"  <url><loc>{escape(r['link'])}</loc><lastmod>{r['date']}</lastmod></url>\n" for r in records)
     return ('<?xml version="1.0" encoding="UTF-8"?>\n'
             '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + urls + "</urlset>\n")
@@ -107,7 +108,11 @@ def write_text(path, text):
 
 def write_all(root, articles, now, log=print):
     ordered = sorted(articles, key=lambda a: (a["pub"], a["id"]), reverse=True)
-    latest, contents = ordered[:config.FEED_ITEMS], {}
+    if config.FEED_ITEMS <= 0 or not ordered:
+        limit = len(ordered)
+    else:   # günlük içerik sınırsız olduğundan en yeni günün tüm makaleleri RSS'te her zaman yer alır
+        limit = max(config.FEED_ITEMS, sum(1 for a in ordered if a["date"] == ordered[0]["date"]))
+    latest, contents = ordered[:limit], {}
     for r in latest:
         try:
             with open(os.path.join(root, r["content_file"]), encoding="utf-8") as f:

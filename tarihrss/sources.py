@@ -99,7 +99,8 @@ def parse_day_wikitext(text, lang, month, day):
     return cands
 
 
-def build_pool(api, month, day, log=print):
+def build_pool(api, month, day, log=print, failed=None):
+    """tr + en gün sayfalarındaki TÜM olay/doğum/ölüm adayları. Alınamayan dil `failed` listesine eklenir."""
     pool = []
     for lang in ("tr", "en"):
         title = wiki.date_page_title(lang, month, day)
@@ -107,6 +108,8 @@ def build_pool(api, month, day, log=print):
             text = wiki.get_wikitext(api, lang, title)
         except wiki.WikiError as e:
             log(f"::warning::{lang}.wikipedia '{title}' alınamadı: {e}")
+            if failed is not None:
+                failed.append(lang)
             continue
         if not text:
             log(f"::warning::{lang}.wikipedia '{title}' sayfası boş/bulunamadı")
@@ -184,7 +187,22 @@ def topic_key(title):
     return "tr:" + tr_lower(title.strip())
 
 
+def event_like_title(title):
+    return bool(EVENT_WORDS.search(tr_lower(title)))
+
+
+def enrich(best, c):
+    """Seçilen sayfa + aday -> çeşitlilik etiketleri (konu/bölge/dönem). Hem ilk üretimde hem yeniden derlemede kullanılır."""
+    ctx = (c["text"] if c["lang"] == "tr" else "") + " " + best["title"] + " " + (best["info"].get("extract") or "")[:300]
+    best.update({"cand": c, "topic": topic_of(ctx), "region": region_of(ctx), "era": era_bucket(c["year"]),
+                 "image_ok": bool(best["image"] and best["image"]["good"])})
+    return best
+
+
 def evaluate_chunk(api, chunk, used_topics, log=print):
+    """-> (uygun_liste, durumlar). durumlar: aday_id -> 'skip' (uygun değil) | 'dup' (konu zaten yayımlandı).
+
+    Ağ/API hatasında WikiError fırlatır; çağıran grubu 'error' işaretleyip sonra yeniden dener."""
     def src_links(c):
         return c["links"][:4] if c["kind"] == "olay" else c["links"][:1]
 
@@ -198,7 +216,7 @@ def evaluate_chunk(api, chunk, used_topics, log=print):
     uniq = list(dict.fromkeys(all_titles))
     infos = wiki.intro_info(api, "tr", uniq) if uniq else {}
 
-    out = []
+    out, status = [], {}
     for c in chunk:
         best = None
         for idx, t in enumerate(titles_for[c["id"]]):
@@ -209,8 +227,7 @@ def evaluate_chunk(api, chunk, used_topics, log=print):
             if len(extract) < config.MIN_INTRO_CHARS:
                 continue
             img = image_from_page(p)
-            low = tr_lower(p["title"])
-            event_like = bool(EVENT_WORDS.search(low))
+            event_like = event_like_title(p["title"])
             score = max(0, 3 - idx) + (1 if img and img["good"] else 0) + min(2, len(extract) // 800)
             if c["kind"] == "olay":
                 score += 4 if event_like else 0
@@ -220,16 +237,16 @@ def evaluate_chunk(api, chunk, used_topics, log=print):
             if best is None or score > best["score"]:
                 best = {"title": p["title"], "info": p, "image": img, "event_like": event_like, "score": score}
         if not best:
+            status[c["id"]] = "skip"
             continue
         if c["lang"] == "en" and c["kind"] == "olay" and not best["event_like"]:
-            continue       # İngilizce olay cümlesini çeviremeyiz; yalnızca olay sayfası net ise kullan
-        if topic_key(best["title"]) in used_topics:
+            status[c["id"]] = "skip"      # İngilizce olay cümlesini çeviremeyiz; yalnızca olay sayfası net ise kullan
             continue
-        ctx = (c["text"] if c["lang"] == "tr" else "") + " " + best["title"] + " " + best["info"]["extract"][:300]
-        best.update({"cand": c, "topic": topic_of(ctx), "region": region_of(ctx), "era": era_bucket(c["year"]),
-                     "image_ok": bool(best["image"] and best["image"]["good"])})
-        out.append(best)
-    return out
+        if topic_key(best["title"]) in used_topics:
+            status[c["id"]] = "dup"       # bu konu daha önce yayımlandı: asla tekrar eklenmez
+            continue
+        out.append(enrich(best, c))
+    return out, status
 
 
 # ---------- sıralama ve seçim ----------
@@ -253,6 +270,7 @@ def _weave(a, b, ra=1, rb=1):
 
 
 def diversify(pool, seed):
+    """Tüm adayları dönem/tür/dil çeşitliliği gözeten kararlı bir sıraya dizer (hiçbirini atmaz)."""
     rng = random.Random(seed)
 
     def by_era(items):
@@ -274,42 +292,52 @@ def diversify(pool, seed):
     return _weave(events, people, 1, 1)
 
 
-def plan_kinds(n, ordinal):
-    base = ["olay", "kisi", "olay"] if ordinal % 2 == 0 else ["kisi", "olay", "olay"]
-    return [base[i % 3] for i in range(n)]
+def needs_work(entry):
+    """Günlük aday durumu (data/index.json -> days) yeniden işlenmeli mi?
+
+    kayıt yok -> evet | 'error' (API hatası) -> sınırlı yeniden dene | 'skip' -> bir kez daha dene
+    (sabah-14:47 arası Vikipedi'de sayfa eklenmiş olabilir) | 'published'/'dup' -> hayır."""
+    if not entry:
+        return True
+    st, n = entry.get("s"), entry.get("n", 1)
+    if st == "error":
+        return n < config.MAX_ERROR_ATTEMPTS
+    if st == "skip":
+        return n < config.MAX_SKIP_ATTEMPTS
+    return False
 
 
-def pick_articles(viable, n, ordinal):
-    chosen = []
-    for want in plan_kinds(n, ordinal):
-        taken = {c["title"] for c in chosen}
-        rest = [v for v in viable if v["title"] not in taken]
-        pool = [v for v in rest if (v["cand"]["kind"] == "olay") == (want == "olay")] or rest
-        if not pool:
+def select_candidates(api, pool, used_topics, state, published, day, log=print, limit=0):
+    """Güne ait TÜM işlenmemiş adayları değerlendirir (sayı sınırı yok).
+
+    -> (uygun_liste_sirali, durumlar, hatalar)
+    published: bu güne ait yayımlanmış olay kimlikleri; state: günlük aday durumları."""
+    order = [c for c in diversify(pool, day.isoformat())
+             if c["id"] not in published and needs_work(state.get(c["id"]))]
+    viable, seen, status, errors, evaluated, streak = [], set(), {}, [], 0, 0
+    for chunk in wiki.chunks(order, 8):
+        if limit > 0 and evaluated >= limit:
             break
-
-        def penalty(v):
-            p = 0.0 if v["image_ok"] else 10.0
-            for c in chosen:
-                p += (v["era"] == c["era"]) + (v["topic"] == c["topic"]) + \
-                     (2 if v["region"] == c["region"] and v["region"] != "Diğer" else 0) + \
-                     (1 if v["cand"]["kind"] == c["cand"]["kind"] else 0)
-            return p - 0.1 * v["score"]
-        chosen.append(min(pool, key=penalty))
-    return chosen
-
-
-def select_candidates(api, pool, used_topics, need, day, log=print):
-    order = diversify(pool, day.isoformat())
-    viable, seen, evaluated = [], set(), 0
-    for i in range(0, len(order), 8):
-        chunk = order[i:i + 8]
         evaluated += len(chunk)
-        for ev in evaluate_chunk(api, chunk, used_topics, log):
-            if ev["title"] not in seen:
-                seen.add(ev["title"])
-                viable.append(ev)
-        if sum(1 for v in viable if v["image_ok"]) >= (need + 3) * 2 or evaluated >= config.MAX_EVALUATED:
-            break
+        try:
+            found, st = evaluate_chunk(api, chunk, used_topics, log)
+            streak = 0
+        except wiki.WikiError as e:
+            log(f"::warning::aday değerlendirmesi başarısız ({e}); bu grup sonraki çalışmada yeniden denenecek")
+            errors.append(str(e))
+            for c in chunk:
+                status[c["id"]] = "error"
+            streak += 1
+            if streak >= 3:        # API kesintisi: kalan adayları işaretlemeden bırak, sonraki çalışma sürdürsün
+                log("::warning::ardışık API hatası: değerlendirme durduruldu")
+                break
+            continue
+        status.update(st)
+        for ev in found:
+            if ev["title"] in seen:
+                status[ev["cand"]["id"]] = "dup"    # aynı konuya giden kardeş aday zaten sırada; sonuç konuya bağlıdır
+                continue
+            seen.add(ev["title"])
+            viable.append(ev)
     log(f"{evaluated} aday değerlendirildi, {len(viable)} uygun")
-    return pick_articles(viable, need + 3, day.toordinal())
+    return viable, status, errors
