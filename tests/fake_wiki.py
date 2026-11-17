@@ -45,18 +45,26 @@ def paras(t, n):
 
 def page(t, lead=3, image="Kapak_gorsel.jpg", cats=(), disamb=False, first=None,
          sections=(("Tarihçe", 2), ("Gelişmeler", 2), ("Etkileri", 2), ("Kaynakça", 1))):
+    """sections: (ad, paragraf_sayısı | satır_listesi[, başlık_seviyesi])"""
     lead_p = paras(t, lead)
     if first:
         lead_p[0] = first + " " + lead_p[0]
-    return {"lead": lead_p, "sections": [(n, paras(t, k)) for n, k in sections],
-            "image": image, "cats": list(cats), "disamb": disamb}
+    secs = []
+    for sec in sections:
+        n, k = sec[0], sec[1]
+        secs.append((n, k if isinstance(k, list) else paras(t, k), sec[2] if len(sec) > 2 else 2))
+    return {"lead": lead_p, "sections": secs, "image": image, "cats": list(cats), "disamb": disamb}
 
 
 TR_PAGES = {
     "Letonya": page("Letonya", first="Letonya, Kuzey Avrupa'da bir ülkedir."),
     "Rusya İmparatorluğu": page("Rusya İmparatorluğu", first="Rusya İmparatorluğu, tarihte bir devlet idi."),
-    "Somme Muharebesi": page("Somme Muharebesi", first="Somme Muharebesi, Birinci Dünya Savaşı sırasında yapılan büyük bir muharebedir."),
-    "Kadife Devrim": page("Kadife Devrim", first="Kadife Devrim, 1989'da Çekoslovakya'da yaşanan barışçıl bir devrimdir."),
+    "Somme Muharebesi": page("Somme Muharebesi", first="Somme Muharebesi, Birinci Dünya Savaşı sırasında yapılan büyük bir muharebedir.",
+                             sections=(("Tarihçe", 2), ("Gelişmeler", 2),
+                                       ("Komutanlar", ["Douglas Haig", "Joseph Joffre", "Ferdinand Foch", "Erich von Falkenhayn"], 3),
+                                       ("Etkileri", 2), ("Kaynakça", 1), ("Kitaplar", ["Kaynak kitap bir", "Kaynak kitap iki"], 3))),
+    "Kadife Devrim": page("Kadife Devrim", first="Kadife Devrim, 1989'da Çekoslovakya'da yaşanan barışçıl bir devrimdir.",
+                          sections=(("Tarihçe", 2), ("Gelişmeler", 2), ("Etkileri", [], 2), ("Siyasi Sonuçlar", 2, 3), ("Kaynakça", 1))),
     "Ada Demir": page("Ada Demir", cats=["Kategori:1860 doğumlular"], first="Ada Demir (d. 1860), Türk şairdir."),
     "Mehmet Kaya": page("Mehmet Kaya", image=None, cats=["Kategori:1923 yılında ölenler"], first="Mehmet Kaya, Türk devlet adamıdır."),
     "W. S. Gilbert": page("W. S. Gilbert", cats=["Kategori:1836 doğumlular"], first="W. S. Gilbert, İngiliz oyun yazarıdır."),
@@ -76,10 +84,17 @@ def _intro(p):
     return "\n".join(p["lead"])
 
 
+REV = {}       # başlık -> revizyon numarası (testler değiştirir)
+
+
+def _rev(t):
+    return REV.get(t, 1)
+
+
 def _full(p):
     out = list(p["lead"])
-    for n, ps in p["sections"]:
-        out.append(f"== {n} ==")
+    for n, ps, lvl in p["sections"]:
+        out.append(f"{'=' * lvl} {n} {'=' * lvl}")
         out += ps
     return "\n".join(out)
 
@@ -121,9 +136,14 @@ def transport(lang, p):
                 continue
             pages.append({"pageid": i + 1, "title": t, "extract": d["lead"][0][:300],
                           "categories": [{"ns": 14, "title": c} for c in d["cats"]]})
-    elif prop == "extracts":
+    elif prop in ("extracts", "extracts|info"):
         d = TR_PAGES.get(titles[0])
-        pages = [{"pageid": 1, "title": titles[0], "extract": _full(d)}] if d else [{"title": titles[0], "missing": True}]
+        pages = ([{"pageid": 1, "title": titles[0], "extract": _full(d), "lastrevid": _rev(titles[0])}]
+                 if d else [{"title": titles[0], "missing": True}])
+    elif prop == "info":
+        for i, t in enumerate(titles):
+            pages.append({"pageid": i + 1, "title": t, "lastrevid": _rev(t)} if t in TR_PAGES
+                         else {"title": t, "missing": True})
     elif prop == "imageinfo":
         pages = [{"title": titles[0], "missing": True, "imagerepository": "shared", "imageinfo": [{
             "descriptionurl": "https://commons.wikimedia.org/wiki/" + titles[0],
