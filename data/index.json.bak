@@ -1,0 +1,95 @@
+{
+ "version": 1,
+ "articles": [
+  {
+   "id": "tarih-cf5f3bc6d72f126a1543",
+   "slug": "2026-11-18-louis-daguerre",
+   "title": "Louis Daguerre Kimdir? Hayatı, Eserleri ve Tarihteki Yeri",
+   "description": "Louis Daguerre, 18 Kasım 1787 tarihinde dünyaya geldi.",
+   "pub": "2026-11-17T22:27:51Z",
+   "date": "2026-11-18",
+   "kind": "dogum",
+   "year": 1787,
+   "topic_title": "Louis Daguerre",
+   "topic_key": "tr:louis daguerre",
+   "event_id": "a36079242a932f03",
+   "wiki_url": "https://tr.wikipedia.org/wiki/Louis_Daguerre",
+   "image": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/Louis_Daguerre_2.jpg/1280px-Louis_Daguerre_2.jpg?utm_source=tr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "width": 1280,
+    "height": 1638,
+    "alt": "Louis Daguerre ile ilgili görsel",
+    "fallback": false
+   },
+   "categories": [
+    "Doğum",
+    "Louis Daguerre",
+    "18. yüzyıl",
+    "Tarihte Bugün",
+    "Bilim"
+   ],
+   "content_file": "data/content/2026-11-18-louis-daguerre.html",
+   "link": "https://umutevicom-commits.github.io/tarih/makale/2026-11-18-louis-daguerre.html"
+  },
+  {
+   "id": "tarih-88b677e422f3a76294cd",
+   "slug": "2026-11-18-birinci-hacli-seferi",
+   "title": "Birinci Haçlı Seferi (1095): Gelişmeler ve Tarihî Önemi",
+   "description": "Birinci Haçlı Seferi, 1096-1099 tarihleri arasında gerçekleşen tarihteki ilk haçlı seferidir.",
+   "pub": "2026-11-17T22:27:52Z",
+   "date": "2026-11-18",
+   "kind": "olay",
+   "year": 1095,
+   "topic_title": "Birinci Haçlı Seferi",
+   "topic_key": "tr:birinci haçlı seferi",
+   "event_id": "8b14de1471059082",
+   "wiki_url": "https://tr.wikipedia.org/wiki/Birinci_Ha%C3%A7l%C4%B1_Seferi",
+   "image": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/5/5c/1099jerusalem.jpg?utm_source=tr.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+    "width": 766,
+    "height": 802,
+    "alt": "Birinci Haçlı Seferi ile ilgili tarihî görsel (1095)",
+    "fallback": false
+   },
+   "categories": [
+    "Olay",
+    "Birinci Haçlı Seferi",
+    "11. yüzyıl",
+    "Tarihte Bugün",
+    "Savaş"
+   ],
+   "content_file": "data/content/2026-11-18-birinci-hacli-seferi.html",
+   "link": "https://umutevicom-commits.github.io/tarih/makale/2026-11-18-birinci-hacli-seferi.html"
+  },
+  {
+   "id": "tarih-0c4df8c31d98fdc78e88",
+   "slug": "2026-11-18-bm-guvenlik-konseyi-kktc-yi-tanimadi",
+   "title": "BM Güvenlik Konseyi, KKTC'yi tanımadı (1983) – Tarihte Bugün",
+   "description": "Tarihte bugün, 18 Kasım 1983: BM Güvenlik Konseyi, KKTC'yi tanımadı.",
+   "pub": "2026-11-17T22:27:53Z",
+   "date": "2026-11-18",
+   "kind": "olay",
+   "year": 1983,
+   "topic_title": "Birleşmiş Milletler Güvenlik Konseyi",
+   "topic_key": "tr:birleşmiş milletler güvenlik konseyi",
+   "event_id": "924285534bac6250",
+   "wiki_url": "https://tr.wikipedia.org/wiki/Birle%C5%9Fmi%C5%9F_Milletler_G%C3%BCvenlik_Konseyi",
+   "image": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/UN-Sicherheitsrat_-_UN_Security_Council_-_New_York_City_-_2014_01_06.jpg/1280px-UN-Sicherheitsrat_-_UN_Security_Council_-_New_York_City_-_2014_01_06.jpg?utm_source=tr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "width": 1280,
+    "height": 960,
+    "alt": "Birleşmiş Milletler Güvenlik Konseyi ile ilgili tarihî görsel (1983)",
+    "fallback": false
+   },
+   "categories": [
+    "Olay",
+    "Birleşmiş Milletler Güvenlik Konseyi",
+    "20. yüzyıl",
+    "Tarihte Bugün",
+    "Genel"
+   ],
+   "content_file": "data/content/2026-11-18-bm-guvenlik-konseyi-kktc-yi-tanimadi.html",
+   "link": "https://umutevicom-commits.github.io/tarih/makale/2026-11-18-bm-guvenlik-konseyi-kktc-yi-tanimadi.html"
+  }
+ ]
+}
