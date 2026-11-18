@@ -45,6 +45,10 @@ def date_phrase(day: int, month: int, year: int) -> str:
     return f"{day} {TR_MONTHS[month - 1]} {year_label(year)}"
 
 
+def day_phrase(day: int, month: int) -> str:
+    return f"{day} {TR_MONTHS[month - 1]}"
+
+
 def century_label(y: int) -> str:
     c = (abs(y) - 1) // 100 + 1
     return f"M.Ö. {c}. yüzyıl" if y < 0 else f"{c}. yüzyıl"
@@ -145,9 +149,11 @@ def _fit(options: list[str], limit: int = TITLE_MAX) -> str | None:
 
 def make_title(kind: str, year: int, topic: str, sentence: str = "", event_like: bool = False) -> str:
     """Konuya özel, doğal ve en fazla 70 karakterlik başlık. Garanti: len(sonuç) <= 70."""
-    y = year_label(year)
+    y = year_label(year) if year is not None else ""
     name = clean_name(topic) or topic
-    if kind == "dogum":
+    if kind == "ozel_gun":
+        opts = [f"{name}: Tarihi, Anlamı ve Önemi", f"{name}: Tarihi ve Önemi", f"{name} Nedir?", name]
+    elif kind == "dogum":
         opts = [f"{name} Kimdir? Hayatı, Eserleri ve Tarihteki Yeri", f"{name} Kimdir? Hayatı ve Tarihteki Yeri",
                 f"{name} Kimdir? Hayatı ve Önemi", f"{name} Kimdir?", name]
     elif kind == "olum":
@@ -160,8 +166,10 @@ def make_title(kind: str, year: int, topic: str, sentence: str = "", event_like:
             if len(s) <= 40:
                 opts.append(f"{s} ({y}) – Tarihte Bugün")
             opts.append(f"{s} ({y})")
-        if event_like or not s:
+        if event_like:
             opts += [f"{name} ({y}): Gelişmeler ve Tarihî Önemi", f"{name} ({y}): Tarihî Önemi", f"{name} ({y})"]
+        elif not s:      # olay sayfası olduğu belli olmayan madde: iddialı başlık yok
+            opts += [f"{name} ({y}) – Tarihte Bugün", f"{name} ({y})"]
         t = _fit(opts)
         if t:
             return t

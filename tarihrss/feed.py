@@ -119,6 +119,18 @@ def write_all(root, articles, now, log=print):
                 contents[r["id"]] = f.read()
         except OSError:
             log(f"::warning::içerik dosyası eksik, RSS'e eklenmedi: {r['content_file']}")
+    if config.FEED_MAX_MB > 0:                       # tek dosya GitHub sınırlarını aşmasın: en eski öğeler çıkarılır
+        cap, size, keep = config.FEED_MAX_MB * 1_000_000, 0, []
+        for r in latest:
+            if r["id"] not in contents:
+                continue
+            cost = len(contents[r["id"]].encode("utf-8")) + 2500
+            if keep and size + cost > cap:
+                log(f"::warning::RSS boyut sınırı ({config.FEED_MAX_MB} MB) nedeniyle {len(latest) - len(keep)} eski öğe RSS dışında bırakıldı")
+                break
+            keep.append(r)
+            size += cost
+        latest = keep
     write_text(os.path.join(root, "rss.xml"), build_rss(latest, contents, f"{config.SITE_URL}/rss.xml", now))
     write_text(os.path.join(root, "feed"), build_rss(latest, contents, f"{config.SITE_URL}/feed", now))
     write_text(os.path.join(root, "sitemap.xml"), build_sitemap(ordered))

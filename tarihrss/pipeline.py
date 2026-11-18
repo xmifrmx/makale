@@ -24,9 +24,12 @@ def local_today():
         return (datetime.now(timezone.utc) + timedelta(hours=3)).date()
 
 
-def _mark(state, cid, status):
+def _mark(state, cid, status, why=None):
+    """status 'skip:neden' biçiminde de verilebilir."""
+    if ":" in status:
+        status, why = status.split(":", 1)
     n = (state.get(cid) or {}).get("n", 0) + 1
-    state[cid] = {"s": status, "n": n}
+    state[cid] = {"s": status, "n": n, **({"r": why} if why else {})}
 
 
 def _read(path):
@@ -201,7 +204,7 @@ def run(root=None, today=None, per_day=None, api=None, now=None, log=print):
                 continue
             streak = 0
             if not built:
-                _mark(state, cid, "skip")
+                _mark(state, cid, "skip", "metin_kisa")
                 continue
             rec, body = built
             if rec["topic_key"] in used:
@@ -219,6 +222,17 @@ def run(root=None, today=None, per_day=None, api=None, now=None, log=print):
             log(f"+ {rec['title']}  [{len(rec['title'])} kr]" + (f"  eksik={rec['gaps']}" if rec["gaps"] else ""))
 
     pending = sum(1 for v in state.values() if v.get("s") == "error")
+    kinds = {}
+    for c in pool:
+        kinds[f"{c['lang']}/{c['kind']}"] = kinds.get(f"{c['lang']}/{c['kind']}", 0) + 1
+    why = {}
+    for v in state.values():
+        if v.get("s") == "skip":
+            why[v.get("r", "?")] = why.get(v.get("r", "?"), 0) + 1
+    log("ÖZET havuz=" + str(len(pool)) + " " + ", ".join(f"{k}={n}" for k, n in sorted(kinds.items())))
+    log(f"ÖZET bugün yayımlanan={have + len(new)} (yeni {len(new)}) | atlanan="
+        + (", ".join(f"{k}={n}" for k, n in sorted(why.items())) or "yok")
+        + f" | tekrar(dup)={sum(1 for v in state.values() if v.get('s') == 'dup')} | bekleyen(hata)={pending}")
     if pending:
         log(f"::warning::{pending} aday API hatası nedeniyle işlenemedi; sonraki çalışmada (14:47) tamamlanacak")
     store.prune_days(data, iso, config.KEEP_DAY_STATE)

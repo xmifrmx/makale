@@ -8,6 +8,10 @@ from . import config, wiki
 from .textutil import EN_MONTHS, TR_MONTHS, norm_space, tr_lower
 
 SECTION_KINDS = {"events": "olay", "olaylar": "olay", "births": "dogum", "doğumlar": "dogum",
+                 "holidays and observances": "ozel_gun", "holidays": "ozel_gun", "observances": "ozel_gun",
+                 "tatiller": "ozel_gun", "tatiller ve özel günler": "ozel_gun", "tatiller ve anma günleri": "ozel_gun",
+                 "özel günler": "ozel_gun", "anma günleri": "ozel_gun", "bayramlar": "ozel_gun",
+                 "kutlamalar ve anma günleri": "ozel_gun", "anma ve kutlama günleri": "ozel_gun",
                  "deaths": "olum", "ölümler": "olum"}
 
 _YEAR_TOKEN = re.compile(r"^(?:(?:AD|MS|MÖ|M\.Ö\.|M\.S\.)\s*)?\d{1,4}(?:\s*(?:BC|AD|MÖ|MS))?$")
@@ -17,6 +21,10 @@ _LINK = re.compile(r"\[\[([^\]|#]+)(?:#[^\]|]*)?(?:\|([^\]]*))?\]\]")
 _DATE_LIKE = re.compile(
     r"^(?:\d{1,4}(?:\s?(?:BC|AD|MÖ|MS))?|(?:%s) \d{1,2}|\d{1,2} (?:%s))$"
     % ("|".join(EN_MONTHS), "|".join(TR_MONTHS)))
+_INLINE_TPL = re.compile(
+    r"\{\{\s*(?:nowrap|nobr|small|smaller|big|larger|noitalic|nowrap begin)\s*\|([^{}|]*)\}\}"
+    r"|\{\{\s*lang(?:-[\w-]+)?\s*\|(?:[a-z-]{2,10}\|)?([^{}|]*)\}\}", re.I)
+_LIFE_MARK = re.compile(r"^(?:ö|d|b|ol|doğ)\.\s*\d", re.I)       # '(ö. 1851)' gibi doğum/ölüm notları bağlantı değildir
 _NS = re.compile(r"^(file|image|category|dosya|resim|kategori|vikipedi|wikipedia|şablon|template|help|yardım):", re.I)
 
 
@@ -34,6 +42,7 @@ def strip_markup(text):
     text = re.sub(r"<ref[^>]*/>", "", text)
     text = re.sub(r"<ref[^>]*>.*?</ref>", "", text, flags=re.S)
     for _ in range(4):
+        text = _INLINE_TPL.sub(lambda m: m.group(m.lastindex), text)    # {{nowrap|[[X]]}} gibi: içerik korunur
         text = re.sub(r"\{\{[^{}]*\}\}", "", text)
     text = re.sub(r"<[^>]+>", "", text)
     links = []
@@ -44,7 +53,7 @@ def strip_markup(text):
         disp = target if disp is None or disp.strip() == "" else disp.strip()
         if _NS.match(target) or target.startswith(":"):
             return "" if re.match(r"^(file|image|category|dosya|resim|kategori)", target, re.I) else disp
-        if not _DATE_LIKE.match(target) and target not in links:
+        if not _DATE_LIKE.match(target) and not _LIFE_MARK.match(target) and target not in links:
             links.append(target)
         return disp
     text = _LINK.sub(repl, text)
@@ -68,9 +77,19 @@ def _split_year(body):
     return None, body
 
 
-def parse_day_wikitext(text, lang, month, day):
-    cands, kind, pending = [], None, None
-    for raw in text.splitlines():
+def normalize_wikitext(text):
+    """Kürasyon sayfalarındaki HTML liste/satır sonu biçimlerini viki madde işaretine çevirir."""
+    text = re.sub(r"<li[^>]*>", "\n* ", text, flags=re.I)
+    text = re.sub(r"</li>|</?ul[^>]*>|</?ol[^>]*>", "\n", text, flags=re.I)
+    text = re.sub(r"<br\s*/?>", "\n", text, flags=re.I)
+    return text
+
+
+def parse_day_wikitext(text, lang, month, day, default_kind=None):
+    """Viki metninden aday çıkarır. default_kind: ilk başlıktan önceki (başlıksız) maddelerin türü
+    (küratörlü 'Tarihte bugün' şablonları çoğunlukla başlıksızdır)."""
+    cands, kind, pending = [], default_kind, None
+    for raw in normalize_wikitext(text).splitlines():
         line = raw.rstrip()
         h = re.match(r"^(={2,6})\s*(.*?)\s*\1\s*$", line)
         if h:
@@ -78,18 +97,22 @@ def parse_day_wikitext(text, lang, month, day):
                 name = tr_lower(re.sub(r"[\[\]']", "", h.group(2)).strip())
                 kind, pending = SECTION_KINDS.get(name), None
             continue
-        m = re.match(r"^(\*+)\s*(.*)$", line)
+        m = re.match(r"^([*#]+)\s*(.*)$", line)
         if not m or kind is None:
             continue
         depth, body = len(m.group(1)), m.group(2)
-        year, rest = _split_year(body)
-        if year is None and depth > 1 and pending is not None:
-            year, rest = pending, body
-        if year is None:
-            continue
-        if not rest.strip():
-            pending = year
-            continue
+        body = re.sub(r"^'{2,5}\s*(.+?)\s*'{2,5}", r"\1", body, count=1)     # kalın yıl: bold-year dash text
+        if kind == "ozel_gun":                    # tatil/anma günlerinde yıl yoktur
+            year, rest = None, body
+        else:
+            year, rest = _split_year(body)
+            if year is None and depth > 1 and pending is not None:
+                year, rest = pending, body
+            if year is None:
+                continue
+            if not rest.strip():
+                pending = year
+                continue
         plain, links = strip_markup(rest)
         if len(plain) < 12 or not links:
             continue
@@ -99,9 +122,30 @@ def parse_day_wikitext(text, lang, month, day):
     return cands
 
 
+def extra_sources(month, day):
+    """Gün sayfalarının dışındaki küratörlü 'Tarihte bugün' kaynakları.
+
+    tr: Vikipedi:Tarihte bugün/<Ay> sayfası günlük şablonları (Şablon:Tarihte bugün/<G Ay>) kullanır;
+        şablon expandtemplates ile açılır. en: Wikipedia:Selected anniversaries/<Month> <D>."""
+    tr_name = "Tarihte bugün/%d %s" % (day, TR_MONTHS[month - 1])
+    en_name = "Wikipedia:Selected anniversaries/%s %d" % (EN_MONTHS[month - 1], day)
+    return [("tr", "expand", "{{%s}}" % tr_name, "Şablon:" + tr_name),
+            ("en", "page", en_name, en_name)]
+
+
 def build_pool(api, month, day, log=print, failed=None):
-    """tr + en gün sayfalarındaki TÜM olay/doğum/ölüm adayları. Alınamayan dil `failed` listesine eklenir."""
-    pool = []
+    """Gün sayfaları (tr+en) + küratörlü 'Tarihte bugün' kaynaklarındaki TÜM adaylar.
+
+    Alınamayan gün sayfası dili `failed` listesine eklenir. Ek kaynaklar isteğe bağlıdır: alınamazsa
+    uyarı verilir ve bir sonraki çalışmada (14:47) yeniden denenir."""
+    pool, seen = [], set()
+
+    def add(found):
+        for c in found:
+            if c["id"] not in seen:
+                seen.add(c["id"])
+                pool.append(c)
+
     for lang in ("tr", "en"):
         title = wiki.date_page_title(lang, month, day)
         try:
@@ -116,12 +160,26 @@ def build_pool(api, month, day, log=print, failed=None):
             continue
         found = parse_day_wikitext(text, lang, month, day)
         log(f"{lang}: '{title}' -> {len(found)} aday")
-        pool += found
+        add(found)
+    for lang, mode, ref, label in extra_sources(month, day):
+        try:
+            text = wiki.expand_templates(api, lang, ref) if mode == "expand" else wiki.get_wikitext(api, lang, ref)
+        except wiki.WikiError as e:
+            log(f"::warning::{lang}: '{label}' alınamadı: {e}")
+            continue
+        if not text or text.lstrip().startswith("[[:"):
+            log(f"{lang}: '{label}' bulunamadı/boş (atlandı)")
+            continue
+        found = parse_day_wikitext(text, lang, month, day, default_kind="olay")
+        log(f"{lang}: '{label}' -> {len(found)} aday (küratörlü)")
+        add(found)
     return pool
 
 
 # ---------- sınıflandırma (çeşitlilik için) ----------
 def era_bucket(y):
+    if y is None:
+        return 3
     for i, limit in enumerate((500, 1500, 1800, 1900, 1950)):
         if y < limit:
             return i
@@ -169,6 +227,7 @@ EVENT_WORDS = re.compile(
     r"inişi|fırlatma|misyon|seçim|kuruluş|katliam|soykırım|krizi|buhran|barış|ateşkes|grev|olayı|harekât|"
     r"harekat|operasyon|baskın|patlama|yangın|açılış|kadife|bildirge|bildirisi|çıkarma|bombardıman)")
 GEO_INTRO = re.compile(r"\b(ülke|ülkesi|devlet|devleti|şehir|şehri|kent|kenti|ilçe|başkent|kıta|ada|adası|eyalet|bölge)\w*")
+HOLIDAY_WORDS = re.compile(r"(günü\b|bayram|anma|haftası|festival|yortu|şenlik|kutlama|arifesi)")
 BAD_IMG = re.compile(r"(flag|bayrak|coat[_ ]of|arms|logo|symbol|map\b|harita|signature|imza|locator|location)")
 
 
@@ -200,11 +259,12 @@ def enrich(best, c):
 
 
 def evaluate_chunk(api, chunk, used_topics, log=print):
-    """-> (uygun_liste, durumlar). durumlar: aday_id -> 'skip' (uygun değil) | 'dup' (konu zaten yayımlandı).
+    """-> (uygun_liste, durumlar). durumlar: aday_id -> 'skip:<neden>' | 'dup'.
 
-    Ağ/API hatasında WikiError fırlatır; çağıran grubu 'error' işaretleyip sonra yeniden dener."""
+    Nedenler: tr_madde_yok, anlam_ayrimi, kisa_giris, kisi_degil. Ağ/API hatasında WikiError fırlatır;
+    çağıran grubu 'error' işaretleyip sonra yeniden dener."""
     def src_links(c):
-        return c["links"][:4] if c["kind"] == "olay" else c["links"][:1]
+        return c["links"][:6] if c["kind"] in ("olay", "ozel_gun") else c["links"][:1]
 
     en_needed = [t for c in chunk if c["lang"] == "en" for t in src_links(c)]
     mapping = wiki.tr_titles_for(api, list(dict.fromkeys(en_needed))) if en_needed else {}
@@ -215,32 +275,46 @@ def evaluate_chunk(api, chunk, used_topics, log=print):
         all_titles += ts
     uniq = list(dict.fromkeys(all_titles))
     infos = wiki.intro_info(api, "tr", uniq) if uniq else {}
+    persons = wiki.person_titles(api, "tr", [t for t in uniq if infos.get(t)]) if uniq else set()
 
     out, status = [], {}
     for c in chunk:
-        best = None
+        best, why = None, "tr_madde_yok"
+        person_kind = c["kind"] in ("dogum", "olum")
         for idx, t in enumerate(titles_for[c["id"]]):
             p = infos.get(t)
-            if not p or "disambiguation" in (p.get("pageprops") or {}):
+            if not p:
+                continue
+            if "disambiguation" in (p.get("pageprops") or {}):
+                why = "anlam_ayrimi"
                 continue
             extract = (p.get("extract") or "").strip()
             if len(extract) < config.MIN_INTRO_CHARS:
+                why = "kisa_giris"
+                continue
+            is_person = t in persons
+            if person_kind and not is_person:
+                why = "kisi_degil"        # ör. adı bağlantısız satırda ilk bağlantı 'Türk' gibi bir madde olabilir
                 continue
             img = image_from_page(p)
             event_like = event_like_title(p["title"])
             score = max(0, 3 - idx) + (1 if img and img["good"] else 0) + min(2, len(extract) // 800)
-            if c["kind"] == "olay":
+            if c["kind"] == "ozel_gun":
+                event_like = event_like or bool(HOLIDAY_WORDS.search(tr_lower(p["title"])))
+            if c["kind"] in ("olay", "ozel_gun"):
                 score += 4 if event_like else 0
                 score += 2 if re.search(r"\d{3,4}", p["title"]) else 0
                 if GEO_INTRO.search(tr_lower(extract[:220])) and not event_like:
                     score -= 4
+                if is_person and not event_like:
+                    score -= 3            # olay satırında kişi maddesi yerine olay/eser maddesi tercih edilir
             if best is None or score > best["score"]:
                 best = {"title": p["title"], "info": p, "image": img, "event_like": event_like, "score": score}
         if not best:
-            status[c["id"]] = "skip"
+            status[c["id"]] = "skip:" + why
             continue
-        if c["lang"] == "en" and c["kind"] == "olay" and not best["event_like"]:
-            status[c["id"]] = "skip"      # İngilizce olay cümlesini çeviremeyiz; yalnızca olay sayfası net ise kullan
+        if config.STRICT_EN_EVENTS and c["lang"] == "en" and c["kind"] == "olay" and not best["event_like"]:
+            status[c["id"]] = "skip:tr_madde_yok"      # (isteğe bağlı sıkı mod) olay sayfası net değilse alma
             continue
         if topic_key(best["title"]) in used_topics:
             status[c["id"]] = "dup"       # bu konu daha önce yayımlandı: asla tekrar eklenmez
@@ -287,6 +361,7 @@ def diversify(pool, seed):
 
     sel = lambda lang, kind: by_era([c for c in pool if c["lang"] == lang and c["kind"] == kind])
     events = _weave(sel("tr", "olay"), sel("en", "olay"), 2, 1)
+    events = _weave(events, _weave(sel("tr", "ozel_gun"), sel("en", "ozel_gun"), 1, 1), 3, 1)
     people = _interleave([_weave(sel("tr", "dogum"), sel("en", "dogum"), 1, 1),
                           _weave(sel("tr", "olum"), sel("en", "olum"), 1, 1)])
     return _weave(events, people, 1, 1)

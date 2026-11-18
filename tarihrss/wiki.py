@@ -158,6 +158,13 @@ def get_wikitext(api, lang, title):
     return p["revisions"][0]["slots"]["main"]["content"]
 
 
+def expand_templates(api, lang, text):
+    """Şablon çağrısını (iç içe alt şablonlar dahil) viki metnine açar; biçimden bağımsız çalışır.
+    Şablon yoksa Vikipedi '[[:Şablon:…]]' kırmızı bağlantı metni döndürür (çağıran bunu liste olarak görmez)."""
+    data = api.request(lang, {"action": "expandtemplates", "text": text, "prop": "wikitext"})
+    return ((data.get("expandtemplates") or {}).get("wikitext") or "") if isinstance(data, dict) else ""
+
+
 def tr_titles_for(api, en_titles):
     """İngilizce başlık -> Türkçe Vikipedi başlığı (yalnızca karşılığı olanlar)."""
     out = {}
@@ -235,6 +242,19 @@ def people_info(api, lang, titles):
             cats = [c.get("title", "") for c in p.get("categories", [])]
             if any(PERSON_CAT.search(c) for c in cats) and (p.get("extract") or "").strip():
                 out.append({"title": p["title"], "intro": p["extract"].strip()})
+    return out
+
+
+def person_titles(api, lang, titles):
+    """Verilen başlıklardan KİŞİ olanların kümesi (kategoriye göre: doğumlular/ölenler/yaşayan insanlar)."""
+    out = set()
+    for chunk in chunks(list(dict.fromkeys(titles)), 20):
+        q = api.query(lang, prop="categories", cllimit="max", titles="|".join(chunk), redirects=1)
+        look = page_index(q)
+        for t in chunk:
+            p = look(t)
+            if p and any(PERSON_CAT.search(c.get("title", "")) for c in p.get("categories", [])):
+                out.add(t)
     return out
 
 

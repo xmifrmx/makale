@@ -12,8 +12,8 @@ from datetime import timezone
 
 from . import config, wiki
 from .sources import _LINK
-from .textutil import (century_label, clean_name, date_phrase, make_title, norm_space, sentences,
-                       slugify, split_first_sentences, tr_lower, word_cut, year_label)
+from .textutil import (TR_MONTHS, century_label, clean_name, date_phrase, day_phrase, make_title, norm_space,
+                       sentences, slugify, split_first_sentences, tr_lower, word_cut, year_label)
 
 def esc(s, quote=False):
     return html.escape(s, quote=quote)
@@ -33,9 +33,15 @@ def page_link(slug):
     return f"{config.SITE_URL}/makale/{slug}.html"
 
 
+_MATH = re.compile(r"\{\\displaystyle(?:[^{}]|\{(?:[^{}]|\{[^{}]*\})*\})*\}")
+
+
 def _keep_line(s):
     """Boş/süs satırlar dışında HER satır korunur (kısa liste maddeleri dahil; metin kaybı olmaz)."""
-    return len(s) >= 3 and re.search(r"\w", s) is not None
+    if len(s) < 3 or re.search(r"\w", s) is None:
+        return False
+    rest = _MATH.sub("", s)                         # yalnızca matematik gösterimi olan satırlar (okunamaz) atılır
+    return rest == s or re.search(r"[^\W\d_]{2,}", rest) is not None
 
 
 def _prune(sections):
@@ -199,8 +205,8 @@ def build_article(api, ev, day, now_utc, log=print, keep=None):
         log(f"  atlandı (metin kısa: {total}): {title}")
         return None
 
-    when = date_phrase(c["day"], c["month"], year)
-    event_sentence = c["text"].rstrip(" .") + "." if (kind == "olay" and c["lang"] == "tr") else ""
+    when = date_phrase(c["day"], c["month"], year) if year is not None else day_phrase(c["day"], c["month"])
+    event_sentence = c["text"].rstrip(" .") + "." if (kind in ("olay", "ozel_gun") and c["lang"] == "tr") else ""
     page_title = make_title(kind, year, title, c["text"] if event_sentence else "", ev["event_like"])
 
     # --- kısa özet ---
@@ -210,8 +216,8 @@ def build_article(api, ev, day, now_utc, log=print, keep=None):
         s1 = f"{name}, {when} tarihinde hayatını kaybetti."
     elif event_sentence:
         s1 = f"Tarihte bugün, {when}: {event_sentence}"
-    else:
-        s1 = ""
+    else:    # İngilizce gün sayfasından gelen olay/özel gün: cümle çevrilmez, uydurma bilgi eklenmez
+        s1 = f"Tarihte bugün, {when}: {name} maddesiyle ilişkilendirilen bir gelişme veya özel gün."
     summary_text, lead_rest = split_first_sentences(lead[0], 380)
     summary = (f"<p>{esc(s1)}</p>\n" if s1 else "") + f"<p>{esc(summary_text)}</p>\n"
 
@@ -237,7 +243,7 @@ def build_article(api, ev, day, now_utc, log=print, keep=None):
         gaps.append("kisiler")
     if kind in ("dogum", "olum"):
         people_items.append((title, _first_sentence(info.get("extract", ""))))
-    for p in related[:5 if kind == "olay" else 4]:
+    for p in related[:5 if kind in ("olay", "ozel_gun") else 4]:
         people_items.append((p["title"], _first_sentence(p["intro"])))
 
     # --- görsel ---
@@ -251,7 +257,8 @@ def build_article(api, ev, day, now_utc, log=print, keep=None):
         src, w, h = img["url"], img.get("width") or 1280, img.get("height") or 720
     else:
         src, w, h = f"{config.SITE_URL}/{config.DEFAULT_COVER}", 1280, 720
-    alt = f"{name} ile ilgili tarihî görsel ({year_label(year)})" if kind == "olay" else f"{name} ile ilgili görsel"
+    alt = (f"{name} ile ilgili tarihî görsel ({year_label(year)})" if kind == "olay" and year is not None
+           else f"{name} ile ilgili görsel")
     if img:
         bits = ["Görsel: Vikipedi / Wikimedia Commons"]
         if cover_credit.get("artist"):
@@ -269,8 +276,9 @@ def build_article(api, ev, day, now_utc, log=print, keep=None):
              f'<p style="text-align: center; font-size: 85%;"><em>{cap_inner}</em></p>\n')
 
     # --- gövde ---
-    h2_dev = "Olayın Gelişimi" if kind == "olay" else "Hayatı ve Öne Çıkan Gelişmeler"
-    h2_people = "Önemli Kişiler" if kind == "olay" else "Önemli Kişiler ve Çevresi"
+    is_event = kind in ("olay", "ozel_gun")
+    h2_dev = ("Olayın Gelişimi" if kind == "olay" else "Tarihi ve Gelişimi") if is_event else "Hayatı ve Öne Çıkan Gelişmeler"
+    h2_people = "Önemli Kişiler" if is_event else "Önemli Kişiler ve Çevresi"
     parts = [cover, "<h2>Kısa Özet</h2>\n", summary]
     if bg_paras or _has_text(bg_blocks):
         parts += ["<h2>Tarihî Arka Plan</h2>\n", paras_html(bg_paras), blocks_html(bg_blocks)]
@@ -291,7 +299,7 @@ def build_article(api, ev, day, now_utc, log=print, keep=None):
         "kisi": [f"{topic_txt}, tarih yazımında ve kültürel hafızada adı anılan isimlerden biridir. Yukarıdaki bilgiler Vikipedi'ye dayanır; ayrıntılar ve doğrulama için kaynak bağlantılarına göz atılabilir.",
                  f"{when} tarihiyle ilişkilendirilen {topic_txt}, yaşamı ve çalışmalarıyla incelenmeye değer bir isimdir. Kesin bilgiler için aşağıdaki kaynaklar esas alınmalıdır.",
                  f"{topic_txt} hakkındaki bu derleme, konuya giriş niteliğindedir. Daha geniş bir değerlendirme için ilgili Vikipedi maddesi ve kaynakçası incelenebilir."],
-    }["olay" if kind == "olay" else "kisi"]
+    }["olay" if is_event else "kisi"]
     parts += ["<h2>Sonuç</h2>\n", f"<p>{conclusions[variant]}</p>\n"]
 
     src_items = [f'<li><a href="{esc(wiki_url("tr", title), True)}" rel="noopener">{esc(title)} – Vikipedi</a></li>']
@@ -313,7 +321,7 @@ def build_article(api, ev, day, now_utc, log=print, keep=None):
         or word_cut(norm_space(options[0] or options[2]), 155, ellipsis=True)
 
     day_iso = day.isoformat()
-    slug = f"{day_iso}-{slugify(name if kind != 'olay' else (c['text'] if event_sentence else name), 48)}"
+    slug = f"{day_iso}-{slugify(c['text'] if (kind == 'olay' and event_sentence) else name, 48)}"
     guid_src = f"{c['id']}|{title}"
     rec = {
         "id": "tarih-" + hashlib.sha1(guid_src.encode("utf-8")).hexdigest()[:20],
@@ -323,8 +331,9 @@ def build_article(api, ev, day, now_utc, log=print, keep=None):
         "date": day_iso, "kind": kind, "year": year, "topic_title": title,
         "topic_key": "tr:" + tr_lower(title.strip()), "event_id": c["id"], "wiki_url": wiki_url("tr", title),
         "image": {"url": src, "width": w, "height": h, "alt": alt, "fallback": not bool(img)},
-        "categories": [{"olay": "Olay", "dogum": "Doğum", "olum": "Ölüm"}[kind], name, century_label(year),
-                       "Tarihte Bugün", ev["topic"].capitalize()],
+        "categories": [c for c in [{"olay": "Olay", "dogum": "Doğum", "olum": "Ölüm", "ozel_gun": "Özel Gün"}[kind], name,
+                                    century_label(year) if year is not None else "", "Tarihte Bugün",
+                                    ev["topic"].capitalize()] if c],
         "content_file": f"data/content/{slug}.html",
         "link": page_link(slug),
     }

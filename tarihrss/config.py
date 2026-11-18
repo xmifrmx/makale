@@ -18,13 +18,15 @@ SITE_DESC = ("Her gün dünya tarihinden önemli olaylar, doğumlar, ölümler, 
              "dönüm noktaları. Vikipedi kaynaklı, Türkçe, günlük güncellenen tarih akışı.")
 ARTICLES_PER_DAY = _int("ARTICLES_PER_DAY", 0)      # 0 = sınırsız: güne ait tüm uygun olay/doğum/ölüm
 FEED_ITEMS = _int("FEED_ITEMS", 150)                 # RSS'teki en az öğe sayısı; en yeni günün tamamı her zaman girer (<=0: hepsi)
+FEED_MAX_MB = _int("FEED_MAX_MB", 48)               # rss.xml/feed üst boyutu (GitHub 50 MB uyarır, 100 MB reddeder); en eski öğeler çıkar
 TIMEZONE = "Europe/Istanbul"
 CONTACT = os.environ.get("WIKI_CONTACT") or "https://github.com/xmifrmx/makale"
 USER_AGENT = f"TarihteBugunRSS/1.0 ({CONTACT}; GitHub Actions)"
 MAX_BODY_CHARS = _int("MAX_BODY_CHARS", 0)           # 0 = sınırsız: maddenin tüm metni alınır
-MIN_INTRO_CHARS = 350       # aday sayfa girişi en az bu kadar olmalı
-MIN_TOTAL_CHARS = 1400      # makale için toplam ham metin alt sınırı
+MIN_INTRO_CHARS = _int("MIN_INTRO_CHARS", 60)      # yalnızca "boş/tek kelimelik" taslakları eler; kısa maddeler de alınır
+MIN_TOTAL_CHARS = _int("MIN_TOTAL_CHARS", 150)     # makale için toplam ham metin alt sınırı (kısa maddeler de yayımlanır)
 MAX_EVALUATED = _int("MAX_EVALUATED", 0)             # bir çalışmada değerlendirilecek en fazla aday (0 = hepsi)
+STRICT_EN_EVENTS = bool(_int("STRICT_EN_EVENTS", 0))   # 1: İngilizce olayları yalnızca olay sayfası net ise al (varsayılan 0: hepsi)
 DEFAULT_COVER = "assets/kapak-varsayilan.svg"
 
 # --- tamamlama / yeniden deneme ---
