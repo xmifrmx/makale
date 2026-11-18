@@ -259,7 +259,7 @@
    "title": "Dersim İsyanı bastırıldı (1937) – Tarihte Bugün",
    "description": "Tarihte bugün, 18 Kasım 1937: Dersim İsyanı bastırıldı.",
    "v": 2,
-   "rev": 38613378,
+   "rev": 38624197,
    "gaps": [],
    "complete": true,
    "chars": 21245,
@@ -2411,10 +2411,10 @@
    "title": "Steven Moffat Kimdir? Hayatı, Eserleri ve Tarihteki Yeri",
    "description": "Steven Moffat, 18 Kasım 1961 tarihinde dünyaya geldi.",
    "v": 2,
-   "rev": 36084175,
+   "rev": 38621085,
    "gaps": [],
    "complete": true,
-   "chars": 1469,
+   "chars": 1470,
    "src": {
     "cand": {
      "id": "2899dbe2ecf0dd25",
@@ -2438,9 +2438,9 @@
    "event_id": "2899dbe2ecf0dd25",
    "wiki_url": "https://tr.wikipedia.org/wiki/Steven_Moffat",
    "image": {
-    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Steven_Moffat_by_Gage_Skidmore.jpg/1280px-Steven_Moffat_by_Gage_Skidmore.jpg?utm_source=tr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/Steven_Moffat_at_Series_mania_2026_%28cropped%29.jpg/1280px-Steven_Moffat_at_Series_mania_2026_%28cropped%29.jpg?utm_source=tr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "width": 1280,
-    "height": 1544,
+    "height": 1594,
     "alt": "Steven Moffat ile ilgili görsel",
     "fallback": false
    },
@@ -2452,7 +2452,8 @@
     "Genel"
    ],
    "content_file": "data/content/2026-11-18-steven-moffat.html",
-   "link": "https://xmifrmx.github.io/makale/makale/2026-11-18-steven-moffat.html"
+   "link": "https://xmifrmx.github.io/makale/makale/2026-11-18-steven-moffat.html",
+   "updated": "2026-11-18T19:38:39Z"
   },
   {
    "id": "tarih-eb830a968222c7823e07",
@@ -7688,7 +7689,7 @@
    "title": "Alan Moore Kimdir? Hayatı, Eserleri ve Tarihteki Yeri",
    "description": "Alan Moore, 18 Kasım 1953 tarihinde dünyaya geldi. Alan Moore (d. 18 Kasım 1953, Northampton) İngiliz yazar ve çizgi roman yazarıdır.",
    "v": 2,
-   "rev": 36365384,
+   "rev": 38624864,
    "gaps": [],
    "complete": true,
    "chars": 1494,
@@ -8628,10 +8629,10 @@
    "title": "Nathan Kress Kimdir? Hayatı, Eserleri ve Tarihteki Yeri",
    "description": "Nathan Kress, 18 Kasım 1992 tarihinde dünyaya geldi.",
    "v": 2,
-   "rev": 37269815,
+   "rev": 38621090,
    "gaps": [],
    "complete": true,
-   "chars": 3340,
+   "chars": 3336,
    "src": {
     "cand": {
      "id": "dcae057fae84eff2",
@@ -8655,9 +8656,9 @@
    "event_id": "dcae057fae84eff2",
    "wiki_url": "https://tr.wikipedia.org/wiki/Nathan_Kress",
    "image": {
-    "url": "https://upload.wikimedia.org/wikipedia/commons/2/26/Nathan_Kress_2011%2C_2.jpg?utm_source=tr.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-    "width": 1265,
-    "height": 2260,
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Nathan_Kress_GalaxyCon_St_Louis_10-24-2026_0019.JPG/1280px-Nathan_Kress_GalaxyCon_St_Louis_10-24-2026_0019.JPG?utm_source=tr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "width": 1280,
+    "height": 1600,
     "alt": "Nathan Kress ile ilgili görsel",
     "fallback": false
    },
@@ -8669,7 +8670,8 @@
     "Bilim"
    ],
    "content_file": "data/content/2026-11-18-nathan-kress.html",
-   "link": "https://xmifrmx.github.io/makale/makale/2026-11-18-nathan-kress.html"
+   "link": "https://xmifrmx.github.io/makale/makale/2026-11-18-nathan-kress.html",
+   "updated": "2026-11-18T19:38:39Z"
   },
   {
    "id": "tarih-1bf53c43aabe7ded9735",
@@ -9413,7 +9415,7 @@
    "title": "James Coburn: Hayatı, Mirası ve Tarihteki Etkisi (2002)",
    "description": "James Coburn, 18 Kasım 2002 tarihinde hayatını kaybetti. James Harrison Coburn III (31 Ağustos 1928 – 18 Kasım 2002), Amerikalı oyuncu.",
    "v": 2,
-   "rev": 37469707,
+   "rev": 38624696,
    "gaps": [],
    "complete": true,
    "chars": 169,
@@ -10297,12 +10299,12 @@
    "id": "tarih-3c04a44cfb8fcc79ca53",
    "slug": "2026-11-18-kirk-hammett",
    "title": "Kirk Hammett Kimdir? Hayatı, Eserleri ve Tarihteki Yeri",
-   "description": "Kirk Hammett, 18 Kasım 1963 tarihinde dünyaya geldi.",
+   "description": "Kirk Hammett, 18 Kasım 1963 tarihinde dünyaya geldi. Kirk Lee Hammett (d. 18 Kasım 1962, San Francisco), Metallica'nın solo gitaristi ve şarkı yazarıdır.",
    "v": 2,
-   "rev": 38223696,
+   "rev": 38621087,
    "gaps": [],
    "complete": true,
-   "chars": 6404,
+   "chars": 6399,
    "src": {
     "cand": {
      "id": "1e717b32d57d2f38",
@@ -10327,9 +10329,9 @@
    "event_id": "1e717b32d57d2f38",
    "wiki_url": "https://tr.wikipedia.org/wiki/Kirk_Hammett",
    "image": {
-    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Kirk_Hammett_2017.jpg/1280px-Kirk_Hammett_2017.jpg?utm_source=tr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Kirk_Hammett_2025_Marvel_Stadium_%284%29.jpg/1280px-Kirk_Hammett_2025_Marvel_Stadium_%284%29.jpg?utm_source=tr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "width": 1280,
-    "height": 1734,
+    "height": 1920,
     "alt": "Kirk Hammett ile ilgili görsel",
     "fallback": false
    },
@@ -10341,7 +10343,8 @@
     "Kültür"
    ],
    "content_file": "data/content/2026-11-18-kirk-hammett.html",
-   "link": "https://xmifrmx.github.io/makale/makale/2026-11-18-kirk-hammett.html"
+   "link": "https://xmifrmx.github.io/makale/makale/2026-11-18-kirk-hammett.html",
+   "updated": "2026-11-18T19:38:39Z"
   },
   {
    "id": "tarih-6f37e7b1d4638b16938d",
@@ -13332,22 +13335,22 @@
    },
    "03c13708790588da": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "68a5b868f63e1f85": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "5fd3bffc3711c3b2": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "914b6a34109ec0ee": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "c2a8806963b5c11b": {
@@ -13356,17 +13359,17 @@
    },
    "fa81b1fca367ada8": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "f2ff75c27fe0e355": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "e29c5666dedcd642": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "559a996e963f4ba1": {
@@ -13375,7 +13378,7 @@
    },
    "980f35c2ec948251": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "e2edb20f14b935d9": {
@@ -13384,12 +13387,12 @@
    },
    "ba032ce4dfea6514": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "951e72ccc2865f70": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "6526cdd3c2350798": {
@@ -13434,6 +13437,14 @@
    },
    "25da41f46e5c130c": {
     "s": "published",
+    "n": 1
+   },
+   "9979639fba72ec12": {
+    "s": "dup",
+    "n": 1
+   },
+   "923289ff683d00b5": {
+    "s": "dup",
     "n": 1
    }
   }
