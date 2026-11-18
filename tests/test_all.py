@@ -46,9 +46,9 @@ class TextTests(unittest.TestCase):
         for _ in range(600):
             sent = " ".join(rng.choice(words) for _ in range(rng.randint(2, 30)))
             name = " ".join(rng.choice(words) for _ in range(rng.randint(1, 14)))
-            for kind in ("olay", "dogum", "olum"):
+            for kind in ("olay", "dogum", "olum", "ozel_gun"):
                 for el in (True, False):
-                    t = textutil.make_title(kind, rng.choice([-44, 476, 1453, 2001]), name, sent if kind == "olay" else "", el)
+                    t = textutil.make_title(kind, None if kind == "ozel_gun" else rng.choice([-44, 476, 1453, 2001]), name, sent if kind == "olay" else "", el)
                     self.assertLessEqual(len(t), 70, t)
                     self.assertTrue(t.strip())
 
@@ -86,7 +86,8 @@ class TextTests(unittest.TestCase):
         self.assertIn(("olay", -44), kinds)
         self.assertIn(("dogum", 1860), kinds)
         self.assertIn(("olum", 1923), kinds)
-        self.assertEqual(len(tr), 6)                      # 'Tatiller' bölümü alınmaz
+        self.assertEqual(len(tr), 8)                      # tatil/özel günler de alınır
+        self.assertIn(("ozel_gun", None), kinds)
         lv = next(c for c in tr if c["year"] == 1918)
         self.assertEqual(lv["links"], ["Letonya", "Rusya İmparatorluğu"])
         self.assertNotIn("<ref", lv["text"])
@@ -118,6 +119,102 @@ class ArticleTextTests(unittest.TestCase):
         self.assertEqual(rec["slug"], "2026-11-18-x-3")
         self.assertEqual(rec["content_file"], "data/content/2026-11-18-x-3.html")
         self.assertTrue(rec["link"].endswith("/makale/2026-11-18-x-3.html"))
+
+
+class AuditTests(unittest.TestCase):
+    def test_realistic_wikitext(self):
+        tr = ("== Olaylar ==\n* [[1928]] - {{nowrap|[[Walt Disney]]'in}} filmi gösterime girdi.<ref>x</ref>\n"
+              "== Doğumlar ==\n* [[1787]] - [[Louis Daguerre]], Fransız sanatçı ([[ö. 1851]])\n== Kaynakça ==\n* [[1999]] - [[Hayır]] alınmaz burada.\n")
+        c = sources.parse_day_wikitext(tr, "tr", 11, 18)
+        self.assertEqual([x["year"] for x in c], [1928, 1787])
+        self.assertEqual(c[0]["links"], ["Walt Disney"])               # şablon içindeki bağlantı/içerik korunur
+        self.assertIn("Walt Disney'in filmi", c[0]["text"])
+        self.assertEqual(c[1]["links"], ["Louis Daguerre"])            # '(ö. 1851)' sahte bağlantısı yok
+
+    def test_non_person_birth_is_not_published(self):
+        pipeline.run(root=self.root, today=date(2026, 11, 18), api=fake_api(), now=self.now, log=QUIET)
+        arts = store.load(self.root)
+        self.assertNotIn("Türk", {a["topic_title"] for a in arts["articles"]})      # adı bağlantısız doğum satırı
+        why = {v.get("r") for v in arts["days"]["2026-11-18"].values() if v["s"] == "skip"}
+        self.assertIn("kisi_degil", why)
+        self.assertIn("tr_madde_yok", why)
+
+    def setUp(self):
+        self.root = tempfile.mkdtemp()
+        shutil.copytree("assets", os.path.join(self.root, "assets"))
+        self.now = datetime(2026, 11, 18, 3, 17, tzinfo=timezone.utc)
+
+    def tearDown(self):
+        shutil.rmtree(self.root, ignore_errors=True)
+
+    def test_math_only_lines_dropped_text_kept(self):
+        self.assertFalse(article._keep_line("{\\displaystyle E=mc^{2}}"))
+        self.assertTrue(article._keep_line("Formül {\\displaystyle E=mc^{2}} enerjiyi açıklar."))
+
+    def test_generated_html_is_well_formed_and_feed_capped(self):
+        from html.parser import HTMLParser
+        pipeline.run(root=self.root, today=date(2026, 11, 18), api=fake_api(), now=self.now, log=QUIET)
+
+        class Bal(HTMLParser):
+            VOID = {"img", "meta", "link", "br", "hr"}
+
+            def __init__(self):
+                super().__init__()
+                self.stack, self.bad = [], []
+
+            def handle_starttag(self, tag, attrs):
+                if tag not in self.VOID:
+                    self.stack.append(tag)
+
+            def handle_startendtag(self, tag, attrs):
+                pass                                           # <img ... /> kendi kendini kapatır
+
+            def handle_endtag(self, tag):
+                if tag in self.VOID:
+                    return
+                if not self.stack or self.stack.pop() != tag:
+                    self.bad.append(tag)
+        for a in store.load(self.root)["articles"]:
+            for path in (a["content_file"], os.path.join("makale", a["slug"] + ".html")):
+                p = Bal()
+                p.feed(read(os.path.join(self.root, path)))
+                self.assertEqual((p.stack, p.bad), ([], []), path)
+        old, config.FEED_MAX_MB = config.FEED_MAX_MB, 0.02          # ~20 KB: yalnızca en yeni öğeler sığar
+        try:
+            n = feed.write_all(self.root, store.load(self.root)["articles"], self.now, QUIET)
+        finally:
+            config.FEED_MAX_MB = old
+        self.assertGreaterEqual(n, 1)
+        self.assertLess(read(os.path.join(self.root, "rss.xml")).count("<item>"), len(store.load(self.root)["articles"]))
+        ET.fromstring(read(os.path.join(self.root, "rss.xml")).encode("utf-8"))
+
+
+class CuratedSourceTests(unittest.TestCase):
+    def test_bold_year_li_and_default_kind(self):
+        c = sources.parse_day_wikitext(fake_wiki.TBUGUN_TR, "tr", 11, 18, default_kind="olay")
+        self.assertEqual([(x["kind"], x["year"]) for x in c], [("olay", 1601), ("olay", 1927)])
+        self.assertEqual(c[0]["links"], ["Kanije Savunması"])
+        self.assertEqual(sources.parse_day_wikitext("* [[1601]] – [[X]] bir olay yaşandı burada.", "tr", 11, 18), [])  # başlıksızda tür yok
+        c = sources.parse_day_wikitext("# '''1601 –''' [[Kanije Savunması]] kazanıldı bugün.", "tr", 11, 18, default_kind="olay")
+        self.assertEqual(c[0]["year"], 1601)
+
+    def test_pool_has_curated_items_and_survives_source_failures(self):
+        pool = sources.build_pool(fake_api(), 11, 18, QUIET)
+        got = {(c["lang"], c["year"]) for c in pool}
+        self.assertTrue({("tr", 1601), ("tr", 1927), ("en", 1865)} <= got)
+        failed = []
+        down = flaky_api(lambda l, p: p.get("action") == "expandtemplates" or "Selected" in str(p.get("titles")))
+        pool = sources.build_pool(down, 11, 18, QUIET, failed)
+        self.assertEqual(failed, [])                                   # ek kaynak arızası gün sayfası arızası sayılmaz
+        self.assertFalse(any(c["year"] == 1601 for c in pool))
+        self.assertTrue(any(c["year"] == 1918 for c in pool))
+
+    def test_missing_template_is_ignored(self):
+        self.assertEqual(sources.extra_sources(11, 18)[0][2], "{{Tarihte bugün/18 Kasım}}")
+        pool = sources.build_pool(fake_api(), 11, 18, QUIET)           # 18 Kasım şablonu var
+        self.assertTrue(pool)
+        # kırmızı bağlantı çıktısı ('[[:Şablon:…]]') aday üretmez
+        self.assertEqual(sources.parse_day_wikitext("[[:Şablon:Tarihte bugün/19 Kasım]]", "tr", 11, 19, default_kind="olay"), [])
 
 
 class ApiTests(unittest.TestCase):
@@ -252,10 +349,18 @@ class PipelineTests(unittest.TestCase):
         arts = store.load(self.root)["articles"]
         self.assertEqual(res["new"], len(arts))
         kinds = {a["kind"] for a in arts}
-        self.assertEqual(kinds, {"olay", "dogum", "olum"})
+        self.assertEqual(kinds, {"olay", "dogum", "olum", "ozel_gun"})
         titles = {a["topic_title"] for a in arts}
         self.assertTrue({"Somme Muharebesi", "Kadife Devrim", "Ada Demir", "Mehmet Kaya", "W. S. Gilbert",
-                         "Aleksandr Orlov"} <= titles, titles)
+                         "Aleksandr Orlov", "Letonya Bağımsızlık Günü", "William Caxton",
+                         "Kanije Savunması", "Ankara Radyosu", "Mark Twain"} <= titles, titles)
+        cax = next(a for a in arts if a["topic_title"] == "William Caxton")
+        self.assertEqual(cax["kind"], "olay")                                # İngilizce olay: elenmez, çevrilmemiş cümle uydurulmaz
+        self.assertIn("maddesiyle ilişkilendirilen", read(os.path.join(self.root, cax["content_file"])))
+        hol = next(a for a in arts if a["kind"] == "ozel_gun")
+        self.assertIsNone(hol["year"])
+        self.assertIn("Özel Gün", hol["categories"])
+        self.assertLessEqual(len(hol["title"]), 70)
         self.assertEqual(len(titles), len({a["topic_key"] for a in arts}))   # aynı konu iki kez yok (Somme tr+en)
         self.assertEqual(len({a["slug"] for a in arts}), len(arts))
         again = self.run_day(per_day=None)

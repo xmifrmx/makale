@@ -10,10 +10,11 @@ TR_DAY = """'''18 Kasım''' yılın 322. günüdür.
 * [[MÖ 44]] - [[Bilinmeyen Sayfa]] hakkında bir olay yaşandı.
 == Doğumlar ==
 * [[1860]] - [[Ada Demir]], Türk şair
+* [[1900]] - Ahmet Yılmaz, [[Türk]] şair
 == Ölümler ==
 * [[1923]] - [[Mehmet Kaya]], Türk devlet adamı
-== Tatiller ==
-* [[Letonya]] bağımsızlık günü
+== Tatiller ve özel günler ==
+* [[Letonya Bağımsızlık Günü]], Letonya'da ulusal bayram olarak kutlanır
 """
 EN_DAY = """'''November 18''' is the 322nd day.
 ==Events==
@@ -28,7 +29,13 @@ EN_DAY = """'''November 18''' is the 322nd day.
 ==Holidays and observances==
 * Something
 """
-EN_TR = {"Battle of the Somme": "Somme Muharebesi", "W. S. Gilbert": "W. S. Gilbert",
+TBUGUN_TR = """* '''[[1601]]''' – [[Kanije Savunması]]'nı Tiryaki Hasan Paşa komutasındaki Osmanlı ordusu kazandı.
+<ul><li>[[1927]] – [[Ankara Radyosu]] yayına başladı.</li></ul>
+"""
+SA_EN = """{{Selected anniversaries}}
+* '''[[1865]]''' – [[Mark Twain]]'s first story, "Jim Smiley and His Jumping Frog", was published.
+"""
+EN_TR = {"Mark Twain": "Mark Twain", "Battle of the Somme": "Somme Muharebesi", "W. S. Gilbert": "W. S. Gilbert",
          "Alexander Orlov": "Aleksandr Orlov", "William Caxton": "William Caxton"}
 
 SENT = [
@@ -63,6 +70,11 @@ TR_PAGES = {
                              sections=(("Tarihçe", 2), ("Gelişmeler", 2),
                                        ("Komutanlar", ["Douglas Haig", "Joseph Joffre", "Ferdinand Foch", "Erich von Falkenhayn"], 3),
                                        ("Etkileri", 2), ("Kaynakça", 1), ("Kitaplar", ["Kaynak kitap bir", "Kaynak kitap iki"], 3))),
+    "Letonya Bağımsızlık Günü": page("Letonya Bağımsızlık Günü", first="Letonya Bağımsızlık Günü, Letonya'nın bağımsızlığını ilan etmesinin yıl dönümüdür."),
+    "Kanije Savunması": page("Kanije Savunması", first="Kanije Savunması, 1601'de Osmanlı ordusunun kazandığı savunmadır."),
+    "Ankara Radyosu": page("Ankara Radyosu", first="Ankara Radyosu, Türkiye'nin ilk radyo yayınını yapan kuruluştur."),
+    "Mark Twain": page("Mark Twain", cats=["Kategori:1835 doğumlular"], first="Mark Twain, Amerikalı yazardır."),
+    "Türk": page("Türk", first="Türk, Orta Asya kökenli bir halktır."),
     "Kadife Devrim": page("Kadife Devrim", first="Kadife Devrim, 1989'da Çekoslovakya'da yaşanan barışçıl bir devrimdir.",
                           sections=(("Tarihçe", 2), ("Gelişmeler", 2), ("Etkileri", [], 2), ("Siyasi Sonuçlar", 2, 3), ("Kaynakça", 1))),
     "Ada Demir": page("Ada Demir", cats=["Kategori:1860 doğumlular"], first="Ada Demir (d. 1860), Türk şairdir."),
@@ -100,12 +112,17 @@ def _full(p):
 
 
 def transport(lang, p):
+    if p.get("action") == "expandtemplates":
+        text = p.get("text", "")
+        body = TBUGUN_TR if "18 Kasım" in text else "[[:Şablon:" + text.strip("{}") + "]]"
+        return {"expandtemplates": {"wikitext": body}}
     prop = p.get("prop", "")
     titles = p["titles"].split("|") if p.get("titles") else []
     pages = []
     if prop == "revisions":
         t = titles[0]
-        text = {("tr", "18 Kasım"): TR_DAY, ("en", "November 18"): EN_DAY}.get((lang, t)) or PAGE_WT.get(t)
+        text = {("tr", "18 Kasım"): TR_DAY, ("en", "November 18"): EN_DAY,
+                ("en", "Wikipedia:Selected anniversaries/November 18"): SA_EN}.get((lang, t)) or PAGE_WT.get(t)
         if text is None:
             return {"query": {"pages": [{"title": t, "missing": True}]}}
         pages = [{"pageid": 1, "title": t, "revisions": [{"slots": {"main": {"content": text}}}]}]
@@ -128,6 +145,11 @@ def transport(lang, p):
             if d["disamb"]:
                 pg["pageprops"] = {"disambiguation": ""}
             pages.append(pg)
+    elif prop == "categories":
+        for i, t in enumerate(titles):
+            d = TR_PAGES.get(t)
+            pages.append({"pageid": i + 1, "title": t, "categories": [{"ns": 14, "title": c} for c in d["cats"]]}
+                         if d else {"title": t, "missing": True})
     elif prop == "categories|extracts":
         for i, t in enumerate(titles):
             d = TR_PAGES.get(t)
