@@ -11485,7 +11485,7 @@
    "title": "Futbol (1969) – Tarihte Bugün",
    "description": "Tarihte bugün, 19 Kasım 1969: Futbol maddesiyle ilişkilendirilen bir gelişme veya özel gün.",
    "v": 2,
-   "rev": 38161666,
+   "rev": 38631417,
    "gaps": [],
    "complete": true,
    "chars": 37955,
@@ -12926,7 +12926,7 @@
    "title": "Atatürk'ün naaşı, İstanbul'dan Ankara'ya (1938)",
    "description": "Tarihte bugün, 19 Kasım 1938: Atatürk'ün naaşı, İstanbul'dan Ankara'ya, resmi bir törenle yola çıkarıldı.",
    "v": 2,
-   "rev": 38593437,
+   "rev": 38630518,
    "gaps": [],
    "complete": true,
    "chars": 90472,
@@ -12969,7 +12969,8 @@
     "Bilim"
    ],
    "content_file": "data/content/2026-11-19-ataturk-un-naasi-istanbul-dan-ankara-ya-resmi.html",
-   "link": "https://xmifrmx.github.io/makale/makale/2026-11-19-ataturk-un-naasi-istanbul-dan-ankara-ya-resmi.html"
+   "link": "https://xmifrmx.github.io/makale/makale/2026-11-19-ataturk-un-naasi-istanbul-dan-ankara-ya-resmi.html",
+   "updated": "2026-11-19T19:38:29Z"
   },
   {
    "id": "tarih-39ad428fc8642d3dbe6d",
@@ -16435,7 +16436,7 @@
    "title": "Madeira (1977) – Tarihte Bugün",
    "description": "Tarihte bugün, 19 Kasım 1977: Madeira maddesiyle ilişkilendirilen bir gelişme veya özel gün.",
    "v": 2,
-   "rev": 38497304,
+   "rev": 38631194,
    "gaps": [],
    "complete": true,
    "chars": 588,
@@ -22166,6 +22167,58 @@
    ],
    "content_file": "data/content/2026-11-19-fred-warner.html",
    "link": "https://xmifrmx.github.io/makale/makale/2026-11-19-fred-warner.html"
+  },
+  {
+   "id": "tarih-ee72fcfc2d7fdf7992bd",
+   "slug": "2026-11-19-arakan-soykirimi",
+   "title": "Arakan Soykırımı (2026): Gelişmeler ve Tarihî Önemi",
+   "description": "Tarihte bugün, 19 Kasım 2026: Arakan Soykırımı maddesiyle ilişkilendirilen bir gelişme veya özel gün.",
+   "v": 2,
+   "rev": 38569484,
+   "gaps": [],
+   "complete": true,
+   "chars": 33388,
+   "src": {
+    "cand": {
+     "id": "5820313e6bfaa09d",
+     "lang": "en",
+     "kind": "olay",
+     "year": 2026,
+     "text": "Rohingya genocide: The International Court of Justice delivers a 9-6 ruling finding Myanmar committed a genocide against the Rohingya people.",
+     "links": [
+      "Rohingya genocide",
+      "International Court of Justice",
+      "Rohingya genocide case",
+      "Myanmar"
+     ],
+     "month": 11,
+     "day": 19
+    }
+   },
+   "pub": "2026-11-19T19:38:29Z",
+   "date": "2026-11-19",
+   "kind": "olay",
+   "year": 2026,
+   "topic_title": "Arakan Soykırımı",
+   "topic_key": "tr:arakan soykırımı",
+   "event_id": "5820313e6bfaa09d",
+   "wiki_url": "https://tr.wikipedia.org/wiki/Arakan_Soyk%C4%B1r%C4%B1m%C4%B1",
+   "image": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Aerial_view_of_a_burned_Rohingya_village_in_Rakhine_state%2C_Myanmar_-_September_2017.JPG/1280px-Aerial_view_of_a_burned_Rohingya_village_in_Rakhine_state%2C_Myanmar_-_September_2017.JPG?utm_source=tr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "width": 1280,
+    "height": 720,
+    "alt": "Arakan Soykırımı ile ilgili tarihî görsel (2026)",
+    "fallback": false
+   },
+   "categories": [
+    "Olay",
+    "Arakan Soykırımı",
+    "21. yüzyıl",
+    "Tarihte Bugün",
+    "Genel"
+   ],
+   "content_file": "data/content/2026-11-19-arakan-soykirimi.html",
+   "link": "https://xmifrmx.github.io/makale/makale/2026-11-19-arakan-soykirimi.html"
   }
  ],
  "days": {
@@ -24593,47 +24646,47 @@
    },
    "c333762433142edc": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "c349c6ac737dafca": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "01460ba8b90b7c9c": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "ae6e4cedff2e2d32": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "f413ab7c2de968ca": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "c3959f66c42ac484": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "1d0a4ee3d66e5125": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "45747a0cbc0cf630": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "d4f8032fb9990d3e": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "708adbdbdf7eaceb": {
@@ -24650,17 +24703,17 @@
    },
    "3123e16911fa5537": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "e45cd1b91bf947b3": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "a682d56fb4609fa8": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "e915b50eddbcd12d": {
@@ -24669,7 +24722,7 @@
    },
    "d54116df35d7aa43": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "8759f607469e0eb4": {
@@ -24678,7 +24731,7 @@
    },
    "55b392fa790ff842": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "8f96169e37dfc4c9": {
@@ -24703,7 +24756,7 @@
    },
    "4473889b628a2f67": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "766b074bd5b9a53a": {
@@ -24712,7 +24765,7 @@
    },
    "28d19ff71df79769": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "c477b3afebc6140f": {
@@ -24725,7 +24778,7 @@
    },
    "059a44045880535a": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "5dedf3688feaa6cf": {
@@ -24738,12 +24791,12 @@
    },
    "ed93124fd2dac486": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "521ebed56307da10": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "a7c7e73025ac9e6c": {
@@ -24756,12 +24809,12 @@
    },
    "87cfd32c253641a6": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "982ba8428e57636d": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "367f2b0df7d3f91f": {
@@ -24770,7 +24823,7 @@
    },
    "9144b395439f028a": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "0dbb2cea56ee8bec": {
@@ -24783,17 +24836,17 @@
    },
    "ae72c83d6f5ea411": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "a0e0a87590bd069b": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "4ed2761f02c6e7c9": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "196b138118f6c78b": {
@@ -24802,12 +24855,12 @@
    },
    "2a06442504423cbe": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "48676de034de4368": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "0900b6669de7f24c": {
@@ -24816,42 +24869,42 @@
    },
    "a44c4d826ecaa301": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "d6d2e21419eabcf7": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "46f8507788ba8e41": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "2f75e35ee3c986ee": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "999e70bbfda4cfd2": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "71a87bc9fff66c8a": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "c34230766f0e6bb0": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "61c0ce8b01d83994": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "5cf640a3b611f085": {
@@ -24860,77 +24913,77 @@
    },
    "1d5f8fe9096eb4b3": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "kisa_giris"
    },
    "b355cca04705fc27": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "de26487f6e72f70d": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "daf5e641bdddc25a": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "d18704d7de297c06": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "a9c4b3f6f12ceccd": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "de647961caefc638": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "3cf9d486c1d5ad6a": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "44eb78f9b5c151b8": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "937a641a3eb9667e": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "1eac9536d060b523": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "cf1f40a565d2f6df": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "9cb9cd0fa6cbd39a": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "fb0b8f176d94dd16": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "8c24963e769c8a32": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "0d308caa23c26245": {
@@ -24943,12 +24996,12 @@
    },
    "e62106c40820c49b": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "464b74f34a8672eb": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "c190281ca3209c29": {
@@ -24957,17 +25010,17 @@
    },
    "c44180debd868887": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "cc54aa0d68bfb8ec": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "31883aff6362d9d6": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "2c88b61788d79298": {
@@ -24976,17 +25029,17 @@
    },
    "69190eaa9c35ef68": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "725d4de988f59866": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "6a365c0e7c0f8979": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "4559f9c1513d0742": {
@@ -24995,12 +25048,12 @@
    },
    "fc3ca2e808315d9d": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "874f5c70ca82684a": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "14d1d9baa7b75f29": {
@@ -25017,17 +25070,17 @@
    },
    "6902b74c8b526cef": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "034dddc6e7bf8e19": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "8dd6d497734c2dee": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "kisi_degil"
    },
    "e00af6bf6f1f9aba": {
@@ -25036,47 +25089,47 @@
    },
    "f19f8e08078e8576": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "5300d701a2c460bb": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "5b65ded5e7586eef": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "b3642c71fb4929e9": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "11d9697c028761e3": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "e4f41da3cd048e22": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "b7b7a3ae7a82ad6f": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "77a62b8e349a9006": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "7cbd994bbd9a59bd": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "cab1e1b95b5388a0": {
@@ -25085,22 +25138,22 @@
    },
    "7fe7d0373b46d4cd": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "562068378dfa81d3": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "e98aa69928b5bbbb": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "b6cb19c504550088": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "216febbf33d0dd33": {
@@ -25109,22 +25162,22 @@
    },
    "7dfa8c6e31bf6147": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "kisa_giris"
    },
    "29eb3f5bb10d8e71": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "04ddcb62b760fcb8": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "b5124212de74972b": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "8dbca820e83f281e": {
@@ -25137,22 +25190,22 @@
    },
    "5171cf25695a6fb0": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "a7e8e0e7dd2a530a": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "fe59dfdfed22eebe": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "4cc6e2f594076c4d": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "469c1ce5d6e6771b": {
@@ -25161,27 +25214,27 @@
    },
    "e77693711cab1762": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "e4494a41cbc99105": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "2c515862562b02b6": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "9e42be568448821a": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "2c8c3b03d6a4df92": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "caaff807f2434e0b": {
@@ -25190,32 +25243,32 @@
    },
    "dd9c2947f9c34563": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "6ee17cd88da7f5e5": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "01a7e4236a1f0189": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "392c00ed124d28a5": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "fc80892ba9af1df0": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "8adb8f43076cd85e": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "ca09866ccf5faf1e": {
@@ -25224,27 +25277,27 @@
    },
    "feadf3aed29cc3a3": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "0afe9e07568d8c6d": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "bb768089b8b5376c": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "3c27cd85a24a5340": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "330a8316f5812b55": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "37f1a75a6da0454c": {
@@ -25253,22 +25306,22 @@
    },
    "ebe5795ca0c5cfa3": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "d4c57a13a897bb6b": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "9399248a2a2a5516": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "2329cfa1c462e4db": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "f0b0029c9c6a3fb1": {
@@ -25281,22 +25334,22 @@
    },
    "ba943eb9dd65e2d9": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "3a5c726cef62fb01": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "ad3f815724d002a2": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "ee2935f1fc303ff9": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "0271f10b3fabb776": {
@@ -25313,17 +25366,17 @@
    },
    "d13f6f693461ed9a": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "6e6c14029d30ba93": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "0efc871bef892d4d": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "c98040029a8831d3": {
@@ -25340,22 +25393,22 @@
    },
    "d8c476164565f23c": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "9fd4628ff9abc7c7": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "0b65c8a39b10abdf": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "23b35aae3c26354c": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "c397f0ae8e7cd5c8": {
@@ -25372,52 +25425,52 @@
    },
    "6429a2590673537d": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "63e4532b22850ca1": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "95b3e5dd0e518e01": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "77ab86b55fa6b5e3": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "291738274da897e0": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "9fd7d129a98222eb": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "1083b5ead193f321": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "9c8d32165cf08a6d": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "523bf771df4d62fd": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "72e6e7c9b49ff7e0": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "51cab0c66d375b02": {
@@ -25434,27 +25487,27 @@
    },
    "4e497fff12566e10": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "d55f47cce295bf4f": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "8bebeef729e4a00b": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "49fbe9f607641381": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "0149419afca77483": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "9f569cbd04759ca6": {
@@ -25467,22 +25520,22 @@
    },
    "fa821140d717cec5": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "2e7323dda7b07584": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "aee299ce59a542fe": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "438847061f81d072": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "e3e74c672e8e5979": {
@@ -25491,27 +25544,27 @@
    },
    "7907b895f4d674d8": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "e1e060aba1e7a529": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "14caed11b2207e7c": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "835ddc2e16e4212a": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "9606ada1a3ae67a8": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "397c88703ae328ca": {
@@ -25520,22 +25573,22 @@
    },
    "351d66b742dbfb2a": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "6bdfabce6fbf0017": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "33988fe15057f9fa": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "408f400f6766acb8": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "e7503e0558e56866": {
@@ -25544,17 +25597,17 @@
    },
    "039f214aa4b47b31": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "2aeee9787d48d386": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "500e6744b2b4a3b3": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "39702007d3948434": {
@@ -25563,32 +25616,32 @@
    },
    "af534f2685bc1a46": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "e7601954948e927a": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "cb6be1b75b1454f5": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "818f70593d51aef1": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "dff5690814f0a311": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "dc200792184a186c": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "12f98037e43891a8": {
@@ -25597,27 +25650,27 @@
    },
    "8461398949a347ad": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "6fe10e7bfe16a6c9": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "d91ef3c1e29644a8": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "059cf9dc16d6af0a": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "762f41981fbefa97": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "08d7284209f5fcf9": {
@@ -25634,27 +25687,27 @@
    },
    "77a3946e35ec6236": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "f017327c70df4a3c": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "00fae86d34635d2d": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "8567337e73604191": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "e9646aa64a4af327": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "634aa6de978bac38": {
@@ -25671,37 +25724,37 @@
    },
    "81047afd6a74cfd1": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "150b805ef85c8685": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "b461c1cae24b9fc1": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "6f9a48ffbf1c783c": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "2a2c0d516b891a5c": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "a10dce069583c6fc": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "95097d3d46738bf2": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "39153b5c0866dc57": {
@@ -25710,12 +25763,12 @@
    },
    "fb1fdbfadbd57775": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "0da0a401148a99ce": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "556fb4080491238a": {
@@ -25740,122 +25793,122 @@
    },
    "ad9932425c92b072": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "b486710a09791ff4": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "72d6855a8ea1a81f": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "a6ad1bbaad6a9aa8": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "f0dcb293bc04d6c2": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "5e9f2d321eb2afd9": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "68d66fb3108977d5": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "1a722fe19135ec0b": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "7449eaba99a0f391": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "7cd3f7fcd8ea5725": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "ee6908a0c58af30f": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "0fa5101d78e3b7f3": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "20dbfdcb876f60e2": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "8ff469d0c5c66419": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "b6f0a170a8cdbc55": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "aa83add60a7c0a16": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "ae2ccb02e5fb3ca7": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "c7983c822c1019e3": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "886d478ff7a5a3c2": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "4780c6e7c7e9e84b": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "cdee5d79a5792bbe": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "ac9dc9eea8df7cfe": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "1de9c37003dad0d6": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "66ee08fe157bd348": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "107d640c9d591a8d": {
@@ -25865,52 +25918,52 @@
    },
    "32090fd5ded009a7": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "58d233c921153f59": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "53cc1df50a9deea1": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "67ff17142bc71d0e": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "c505fa66a7e49b02": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "c65c1dabb96fba22": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "bb168ae4e69d3652": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "c2a4b8311f824bf0": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "622869e61b1eeca2": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "0ed63a8161f62625": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "217b67d51f29b772": {
@@ -25919,27 +25972,27 @@
    },
    "9f1c0b6557f44361": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "01c5052956f34aa7": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "5ba6f0abcc9e16ef": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "cbd3649a2eba520b": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "2e8f406614eeb4b0": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "50efa8b96da3b090": {
@@ -25956,27 +26009,27 @@
    },
    "1fc9465f09fe7890": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "3094778f582a0ba4": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "a09cd71507a33bcc": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "c9165e38520e7cce": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "3185ac7a5506a649": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "35daeb143cd3dc31": {
@@ -25989,27 +26042,27 @@
    },
    "c7f2fc8cec2972f1": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "11c84eebf34e6323": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "26f01d625d0596de": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "8bf2c3dca1e60962": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "7fb99ebf8a93ee15": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "e00110a96ffdd2a8": {
@@ -26026,27 +26079,27 @@
    },
    "ebe3f24469e89e8d": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "233fe5539ab2a2f0": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "d10d0f82e3743b36": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "396148fb080703bb": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "88ab6ab29c3e9af7": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "c8c5c2e07332746e": {
@@ -26055,27 +26108,27 @@
    },
    "fd218a12f7ccd247": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "ac63a716853f2535": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "e2514e8ab2230337": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "eee1b8e3f1b7cc93": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "499882d7eb3d7aeb": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "5814531c912c0ab8": {
@@ -26088,32 +26141,32 @@
    },
    "54e156b6e4d9deef": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "b3e6761b820de75a": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "7999cf46a1e58655": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "d24695d97aa0b5f3": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "0ef0e97c239c918a": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "8b83ee96512fcbcb": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "e48ae01ff4dff2a3": {
@@ -26126,32 +26179,32 @@
    },
    "bee4f1025b4e1f9a": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "e3f023476b87cbea": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "b0bb270d4f0822c2": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "30fee453db051445": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "f4e9e651dd75f66f": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "5a7d07e5aea209ec": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "285e435537b5e46e": {
@@ -26164,27 +26217,27 @@
    },
    "b31f2ccaabf8a7c0": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "ef8396c869e5412c": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "1dce4eb8d8a9e15c": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "577742d63ded820e": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "2c08ec9811664add": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "16c7aa38c7d59a7c": {
@@ -26201,27 +26254,27 @@
    },
    "4dc099f93f302cdc": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "60e813820ddc20bf": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "1614589e7b5269ef": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "58f8830a76371fdf": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "f1e076c5e6a622fd": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "3c3dc33919287bf4": {
@@ -26238,72 +26291,72 @@
    },
    "3856cbb5d29de9de": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "a2ac3e41f75864d2": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "47f47d4356886257": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "dd4297ccab161a7c": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "54add111244a5d8d": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "e16593585da7164c": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "ecd9d40d3361eeac": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "a1f0df51c38035c3": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "0a4dbbf2b0c9724e": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "d18d471b8c471f3f": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "cdec8a4e1cbc34f5": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "f82881182be2fbbe": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "0f4ecea8425f21a4": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "783634fbdcca6173": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "92f8f76835e3912a": {
@@ -26312,32 +26365,32 @@
    },
    "5c40eec561672e9e": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "4256a76dc224fd20": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "6173f5341ffea1a1": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "fe9a5f8ff1d262cb": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "ce74948fa9b960ac": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "3ce8c4433b530466": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "8f02c7bed70ccfc7": {
@@ -26346,22 +26399,22 @@
    },
    "9681ce8d59917307": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "ec3c9a4eb1eb0748": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "ebdbfd6537eb2720": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "5fb2e27f2746f00a": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "320ffb50cd3e73b8": {
@@ -26382,22 +26435,22 @@
    },
    "a8192806a8e009f9": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "a5d52daf7bec6397": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "b7037bb2be109753": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "a48a9586e031b946": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "tr_madde_yok"
    },
    "7328d656a9ac5a9b": {
@@ -26750,7 +26803,7 @@
    },
    "afa3950076b24bd0": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "metin_kisa"
    },
    "a9f6cdcb5280f42e": {
@@ -26771,7 +26824,7 @@
    },
    "2be8c2dace47c501": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "metin_kisa"
    },
    "ca9739e1b32bb8c9": {
@@ -26868,7 +26921,7 @@
    },
    "e4f60cb29e48a311": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "metin_kisa"
    },
    "9d35c7573fa38747": {
@@ -26889,7 +26942,7 @@
    },
    "04f888c0985f0b15": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "metin_kisa"
    },
    "4b85a4962022d858": {
@@ -27226,7 +27279,7 @@
    },
    "5f87b870fb6887a4": {
     "s": "skip",
-    "n": 1,
+    "n": 2,
     "r": "metin_kisa"
    },
    "498bcb7e0c31fde6": {
@@ -27322,6 +27375,25 @@
     "n": 1
    },
    "828ac7d3c0582ef7": {
+    "s": "published",
+    "n": 1
+   },
+   "82e6e3514f59fd7a": {
+    "s": "skip",
+    "n": 1,
+    "r": "tr_madde_yok"
+   },
+   "530eefb162b573df": {
+    "s": "skip",
+    "n": 1,
+    "r": "tr_madde_yok"
+   },
+   "4b2f8fa72ee46552": {
+    "s": "skip",
+    "n": 1,
+    "r": "tr_madde_yok"
+   },
+   "5820313e6bfaa09d": {
     "s": "published",
     "n": 1
    }
