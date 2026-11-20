@@ -1,3 +1,10 @@
 __pycache__/
 *.pyc
-data/index.json.tmp
+_site/
+
+# Üretilen çıktılar git'e girmez (Actions önbelleği + Pages kullanılır)
+data/
+makale/
+rss.xml
+feed
+sitemap.xml
