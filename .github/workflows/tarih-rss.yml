@@ -3,19 +3,21 @@ name: Günlük Tarihte Bugün RSS
 on:
   schedule:
     - cron: "17 3 * * *"    # 06:17 (TSİ) – ana çalışma
-    - cron: "47 11 * * *"   # 14:47 (TSİ) – sabah alınanları denetler; yalnızca eksikleri ekler/tamamlar, tamamsa hiçbir şey değişmez
+    - cron: "47 11 * * *"   # 14:47 (TSİ) – eksikleri tamamlar
   workflow_dispatch:
     inputs:
       date:
         description: "YYYY-MM-DD (boş = Türkiye saatiyle bugün)"
         required: false
       count:
-        description: "Günlük makale üst sınırı (boş = sınırsız: güne ait tüm uygun içerik)"
+        description: "Günlük makale üst sınırı (boş = sınırsız)"
         required: false
 
+# Depoya yazılmaz; RSS doğrudan GitHub Pages'e dağıtılır.
 permissions:
-  contents: write
+  contents: read
   pages: write
+  id-token: write
 
 concurrency:
   group: tarih-rss
@@ -28,8 +30,8 @@ jobs:
     env:
       SITE_URL: https://xmifrmx.github.io/makale/
       WIKI_CONTACT: https://github.com/xmifrmx/makale
-      ARTICLES_PER_DAY: "0"      # 0 = sınırsız
-      MAX_BODY_CHARS: "0"        # 0 = karakter sınırı yok, maddenin tamamı
+      ARTICLES_PER_DAY: "0"
+      MAX_BODY_CHARS: "0"
       PYTHONUTF8: "1"
     steps:
       - uses: actions/checkout@v4
@@ -37,6 +39,18 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+
+      # Konu hafızası (tekrar önleme) ve önceki RSS git yerine önbellekte tutulur
+      - name: Önceki durumu geri yükle
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            data
+            makale
+            rss.xml
+          key: tarih-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: |
+            tarih-
 
       - name: Testler
         run: python -m unittest discover -s tests
@@ -47,25 +61,56 @@ jobs:
           IN_DATE: ${{ inputs.date }}
           IN_COUNT: ${{ inputs.count }}
         run: |
+          mkdir -p data/content makale
           args=()
           [ -n "$IN_DATE" ] && args+=(--date "$IN_DATE")
           [ -n "$IN_COUNT" ] && args+=(--count "$IN_COUNT")
           python -m tarihrss "${args[@]}"
 
-      - name: Değişiklikleri depoya yaz
+      - name: Eski dosyaları temizle (7 günden eski)
         if: ${{ always() && steps.gen.conclusion != 'skipped' }}
         run: |
-          git config user.name "tarih-rss-bot"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add rss.xml feed sitemap.xml makale data assets
-          if git diff --cached --quiet; then echo "Değişiklik yok"; exit 0; fi
-          git commit -m "Tarihte Bugün: $(TZ=Europe/Istanbul date +%F) otomatik güncelleme"
-          git pull --rebase origin "${GITHUB_REF_NAME}"
-          git push
+          find data/content makale -type f -name '*.html' -mtime +7 -delete 2>/dev/null || true
+          rm -f data/index.json.bak data/index.json.tmp
+          python - <<'PY'
+          import json, datetime, pathlib
+          p = pathlib.Path("data/index.json")
+          if p.exists():
+              d = json.loads(p.read_text(encoding="utf-8"))
+              limit = (datetime.date.today() - datetime.timedelta(days=14)).isoformat()
+              d["days"] = {k: v for k, v in d.get("days", {}).items() if k >= limit}
+              tmp = p.with_suffix(".tmp")
+              tmp.write_text(json.dumps(d, ensure_ascii=False, indent=1), encoding="utf-8")
+              tmp.replace(p)
+          PY
 
-      - name: GitHub Pages derlemesini tetikle
+      - name: Durumu önbelleğe kaydet
         if: ${{ always() && steps.gen.conclusion != 'skipped' }}
-        continue-on-error: true
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: gh api -X POST "repos/${{ github.repository }}/pages/builds" --silent
+        uses: actions/cache/save@v4
+        with:
+          path: |
+            data
+            makale
+            rss.xml
+          key: tarih-${{ github.run_id }}-${{ github.run_attempt }}
+
+      - name: Yayın klasörünü hazırla
+        run: |
+          mkdir -p _site
+          cp rss.xml _site/rss.xml
+          [ -d assets ] && cp -r assets _site/ || true
+          [ -d makale ] && cp -r makale _site/ || true
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.dep.outputs.page_url }}
+    steps:
+      - id: dep
+        uses: actions/deploy-pages@v4
