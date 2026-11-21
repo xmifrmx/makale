@@ -309,12 +309,11 @@ class PipelineTests(unittest.TestCase):
             self.assertNotIn("&#x27;", body)
             self.assertGreater(len(body), 2500)
         self.assertIn("ç, ğ, ı, İ, ö, ş ve ü", rss)                       # Türkçe karakterler eksiksiz
-        # 'feed' ayrı dosya, kendi self-link'i ile geçerli XML
-        feed_root = ET.fromstring(read(os.path.join(self.root, "feed"), "rb"))
-        self.assertEqual(feed_root.find("channel/a:link", NS).attrib["href"], "https://xmifrmx.github.io/makale/feed")
+        # yalnızca rss.xml üretilir: 'feed' ve sitemap.xml yok
+        self.assertFalse(os.path.exists(os.path.join(self.root, "feed")))
+        self.assertFalse(os.path.exists(os.path.join(self.root, "sitemap.xml")))
         self.assertEqual(root.find("channel/a:link", NS).attrib["href"], "https://xmifrmx.github.io/makale/rss.xml")
         self.assertTrue(all(i.find("link").text.startswith("https://xmifrmx.github.io/makale/makale/") for i in items))
-        ET.parse(os.path.join(self.root, "sitemap.xml"))
         pages = os.listdir(os.path.join(self.root, "makale"))
         self.assertEqual(len([p for p in pages if p.endswith(".html")]), 3)
         topics = [a["topic_key"] for a in store.load(self.root)["articles"]]
