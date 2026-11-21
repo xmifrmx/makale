@@ -1,4 +1,4 @@
-"""RSS 2.0 (rss.xml + feed), sitemap.xml ve makale sayfalarının üretimi."""
+"""RSS 2.0 (yalnızca rss.xml) ve makale sayfalarının üretimi. Sitemap ve ikinci feed dosyası üretilmez."""
 from __future__ import annotations
 import html
 import json
@@ -132,6 +132,4 @@ def write_all(root, articles, now, log=print):
             size += cost
         latest = keep
     write_text(os.path.join(root, "rss.xml"), build_rss(latest, contents, f"{config.SITE_URL}/rss.xml", now))
-    write_text(os.path.join(root, "feed"), build_rss(latest, contents, f"{config.SITE_URL}/feed", now))
-    write_text(os.path.join(root, "sitemap.xml"), build_sitemap(ordered))
     return len(contents)
