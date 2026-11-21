@@ -13,7 +13,7 @@ on:
         description: "Günlük makale üst sınırı (boş = sınırsız)"
         required: false
 
-# Depoya yazılmaz; RSS doğrudan GitHub Pages'e dağıtılır.
+# Depoya hiçbir şey yazılmaz; yalnızca rss.xml GitHub Pages'e dağıtılır (makale/sitemap/feed yayınlanmaz).
 permissions:
   contents: read
   pages: write
@@ -40,14 +40,11 @@ jobs:
         with:
           python-version: "3.12"
 
-      # Konu hafızası (tekrar önleme) ve önceki RSS git yerine önbellekte tutulur
+      # Konu hafızası (data/index.json: aynı makale bir daha üretilmesin) git yerine Actions önbelleğinde tutulur
       - name: Önceki durumu geri yükle
         uses: actions/cache/restore@v4
         with:
-          path: |
-            data
-            makale
-            rss.xml
+          path: data
           key: tarih-${{ github.run_id }}-${{ github.run_attempt }}
           restore-keys: |
             tarih-
@@ -88,18 +85,13 @@ jobs:
         if: ${{ always() && steps.gen.conclusion != 'skipped' }}
         uses: actions/cache/save@v4
         with:
-          path: |
-            data
-            makale
-            rss.xml
+          path: data
           key: tarih-${{ github.run_id }}-${{ github.run_attempt }}
 
       - name: Yayın klasörünü hazırla
         run: |
           mkdir -p _site
           cp rss.xml _site/rss.xml
-          [ -d assets ] && cp -r assets _site/ || true
-          [ -d makale ] && cp -r makale _site/ || true
 
       - uses: actions/upload-pages-artifact@v3
         with:
